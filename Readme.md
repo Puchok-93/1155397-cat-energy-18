@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел Пучков](https://up.htmlacademy.ru/adaptive/18/user/1155397).
-* Наставник: `Неизвестно`.
+* Наставник: `Святослав Родионов`.
 
 ---
 
