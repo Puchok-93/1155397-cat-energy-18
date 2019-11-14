@@ -29,33 +29,121 @@
     </nav>
   </header>
 
-  <main> </main>
+
+  <main class="page-main">
+    <h1 class="page-title">Подбор программы</h1>
+    <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    
+    <form class="program-selection" method="post" action="#">
+<!---->
+      <p class="program-selection__field">
+        <label for="name">Имя:*</label>
+        <input type="text" id="name" name="username" placeholder="Барсик">
+      </p>
+
+      <p class="program-selection__field">
+        <label for="weight">Вес(кг):*</label>
+        <input type="text" id="weight" name="user-weight" placeholder="7">
+      </p>
+
+      <p class="program-selection__field">
+        <label for="age">Возраст(лет):*</label>
+        <input type="text" id="age" name="user-age" placeholder="7">
+      </p>
+<!--Выбор программы-->
+<fieldset></fieldset>
+      <p class="program-selection__field">
+        <input type="radio" id="slim" name="user-slim">
+        <label for="slim">Похудение</label>
+      </p>
+      <p class="program-selection__field">
+        <input type="radio" id="pro" name="user-pro">
+        <label for="pro">Набор массы</label>
+
+      </p>
+      <p class="program-selection__field">
+        <input type="radio" id="dont-now" name="user-dont-now">
+        <label for="dont-now">Не знаю (Нужен ваш совет)</label>
+      </p>
+<!--Контактные данные-->
+<fieldset>
+      <h2 class="page-title">Контактные данные (владельца кота)</h2>
+      <ul>
+          <li class="program-selection__field">
+          <label for="email">E-mail:*</label>
+          <input type="text" id="email" name="user-email" placeholder="kuklachev@gmail.com">
+        </li>
+  
+        <li class="program-selection__field">
+          <label for="phone">Телефон:*</label>
+          <input type="text" id="phone" name="user-phone" placeholder="8 (960) 900-60-90">
+        </li>
+      </ul>
+</fieldset>
+<!--Комментарии-->
+<div>
+        <h2 class="page-title">Комментарий</h2>
+        <p class="field">
+            <label for="text-letter">Текст письма:</label>
+            <textarea class="letter" id="text-letter" name="letter" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </p>
+</div>
+<!--дополнительно-->
+
+<fieldset>
+    <h2 class="page-title">Дополнительно</h2>
+    <ul>
+        <li class="program-selection__field">
+            <input type="checkbox" id="dont-now" name="user-dont-now">
+            <label for="dont-now">Сахарозаменитель</label>
+        </li>
+
+        <li class="program-selection__field">
+            <input type="checkbox" id="dont-now" name="user-dont-now">
+            <label for="dont-now">Питьевая вода</label>
+          </li>
+
+        <li class="program-selection__field">
+            <input type="checkbox" id="dont-now" name="user-dont-now">
+            <label for="dont-now">Молоко</label>
+        </p>
+
+        <li class="program-selection__field">
+            <input type="checkbox" id="dont-now" name="user-dont-now">
+            <label for="dont-now">Витамины</label>
+          </li>
+      </ul>
+  </fieldset>
+        <button class="send-button" type="submit" aria-label="Отправить сообщение">Отправить</button>
+</form>
+
+  </main>
   <footer class="page-footer">
-      <div class="wrapper">
-        <a class="page-footer__logo" href="index.html">
-          <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип Cat Energy">
-        </a>
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--vkontakte"
-              aria-label="Перейти на страницу Вконтакте">Вконтакте</a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--instagram"
-              aria-label="Перейти на страницу Instagram">Instagram</a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--facebook"
-              aria-label="Перейти на страницу Facebook">Facebook</a>
-          </li>
-        </ul>
-        <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
-          title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
-          <img class="developer__icon" src="https://via.placeholder.com/150x150" width="150" height="150"
-            alt="Лого академии">
-        </a>
-      </div>
-      </footer>
+    <div class="wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип Cat Energy">
+      </a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--vkontakte"
+            aria-label="Перейти на страницу Вконтакте">Вконтакте</a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--instagram"
+            aria-label="Перейти на страницу Instagram">Instagram</a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--facebook"
+            aria-label="Перейти на страницу Facebook">Facebook</a>
+        </li>
+      </ul>
+      <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
+        title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
+        <img class="developer__icon" src="https://via.placeholder.com/150x150" width="150" height="150"
+          alt="Лого академии">
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>
