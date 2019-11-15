@@ -31,93 +31,114 @@
 
 
   <main class="page-main">
-    <h1 class="page-title">Подбор программы</h1>
-    <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
-    
-    <form class="program-selection" method="post" action="#">
-<!---->
-      <p class="program-selection__field">
-        <label for="name">Имя:*</label>
-        <input type="text" id="name" name="username" placeholder="Барсик">
-      </p>
+    <div class="wrapper">
+      <h1 class="page-title">Подбор программы</h1>
+      <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
-      <p class="program-selection__field">
-        <label for="weight">Вес(кг):*</label>
-        <input type="text" id="weight" name="user-weight" placeholder="7">
-      </p>
+      <form class="program-selection" method="post" action="#">
 
-      <p class="program-selection__field">
-        <label for="age">Возраст(лет):*</label>
-        <input type="text" id="age" name="user-age" placeholder="7">
-      </p>
-<!--Выбор программы-->
-<fieldset></fieldset>
-      <p class="program-selection__field">
-        <input type="radio" id="slim" name="user-slim">
-        <label for="slim">Похудение</label>
-      </p>
-      <p class="program-selection__field">
-        <input type="radio" id="pro" name="user-pro">
-        <label for="pro">Набор массы</label>
+        <fieldset>
+          <p class="program-selection__field">
+            <label for="name">Имя:*</label>
+            <input type="text" id="name" name="username" placeholder="Барсик">
+          </p>
 
-      </p>
-      <p class="program-selection__field">
-        <input type="radio" id="dont-now" name="user-dont-now">
-        <label for="dont-now">Не знаю (Нужен ваш совет)</label>
-      </p>
-<!--Контактные данные-->
-<fieldset>
-      <h2 class="page-title">Контактные данные (владельца кота)</h2>
-      <ul>
-          <li class="program-selection__field">
-          <label for="email">E-mail:*</label>
-          <input type="text" id="email" name="user-email" placeholder="kuklachev@gmail.com">
-        </li>
-  
-        <li class="program-selection__field">
-          <label for="phone">Телефон:*</label>
-          <input type="text" id="phone" name="user-phone" placeholder="8 (960) 900-60-90">
-        </li>
-      </ul>
-</fieldset>
-<!--Комментарии-->
-<div>
-        <h2 class="page-title">Комментарий</h2>
-        <p class="field">
+          <p class="program-selection__field">
+            <label for="weight">Вес(кг):*</label>
+            <input type="text" id="weight" name="user-weight" placeholder="7">
+          </p>
+
+          <p class="program-selection__field">
+            <label for="age">Возраст(лет):*</label>
+            <input type="text" id="age" name="user-age" placeholder="7">
+          </p>
+        </fieldset>
+
+        <!--Выбор программы-->
+        <fieldset>
+          <p class="program-selection__radio">
+            <input type="radio" id="slim" name="user-slim" checked>
+            <label for="slim">Похудение</label>
+          </p>
+          <p class="program-selection__radio">
+            <input type="radio" id="pro" name="user-pro">
+            <label for="pro">Набор массы</label>
+
+          </p>
+          <p class="program-selection__radio">
+            <input type="radio" id="dont-now" name="user-dont-now">
+            <label for="dont-now">Не знаю (Нужен ваш совет)</label>
+          </p>
+        </fieldset>
+
+        <!--Контактные данные-->
+        <fieldset>
+          <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
+          <ul>
+            <li class="program-selection__field">
+              <label for="email">E-mail:*</label>
+              <input type="text" id="email" name="user-email" placeholder="kuklachev@gmail.com">
+            </li>
+
+            <li class="program-selection__field">
+              <label for="phone">Телефон:*</label>
+              <input type="text" id="phone" name="user-phone" placeholder="8 (960) 900-60-90">
+            </li>
+          </ul>
+        </fieldset>
+
+        <!--Комментарии-->
+        <fieldset>
+          <legend class="program-selection__legend">Комментарий</legend>
+          <p class="program-selection__comment-field">
             <label for="text-letter">Текст письма:</label>
-            <textarea class="letter" id="text-letter" name="letter" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </p>
-</div>
-<!--дополнительно-->
+            <textarea class="letter" id="text-letter" name="letter"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </p>
+        </fieldset>
 
-<fieldset>
-    <h2 class="page-title">Дополнительно</h2>
-    <ul>
-        <li class="program-selection__field">
-            <input type="checkbox" id="dont-now" name="user-dont-now">
-            <label for="dont-now">Сахарозаменитель</label>
-        </li>
+        <!--Дополнительно-->
+        <fieldset>
+          <legend class="program-selection__legend">Дополнительно</legend>
+          <ul>
+            <li class="program-selection__checkbox">
+              <input type="checkbox" id="sugar" name="sugar" checked>
+              <label for="sugar">Сахарозаменитель</label>
+            </li>
 
-        <li class="program-selection__field">
-            <input type="checkbox" id="dont-now" name="user-dont-now">
-            <label for="dont-now">Питьевая вода</label>
-          </li>
+            <li class="program-selection__checkbox">
+              <input type="checkbox" id="water" name="water">
+              <label for="water">Питьевая вода</label>
+            </li>
 
-        <li class="program-selection__field">
-            <input type="checkbox" id="dont-now" name="user-dont-now">
-            <label for="dont-now">Молоко</label>
-        </p>
+            <li class="program-selection__checkbox">
+              <input type="checkbox" id="milk" name="milk">
+              <label for="milk">Молоко</label>
+            </li>
 
-        <li class="program-selection__field">
-            <input type="checkbox" id="dont-now" name="user-dont-now">
-            <label for="dont-now">Витамины</label>
-          </li>
-      </ul>
-  </fieldset>
-        <button class="send-button" type="submit" aria-label="Отправить сообщение">Отправить</button>
-</form>
+            <li class="program-selection__checkbox">
+              <input type="checkbox" id="vitamins" name="vitamins">
+              <label for="vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить</button>
+        <p class="program-selection__small-text"> *—Обязательные поля</p>
+      </form>
+    </div>
+
+    <section class="collaboration">
+      <div class="wrapper">
+        <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <a class="collaboration__map" href="#">
+          <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Интернет-магазин на карте города">
+        </a>
+      </div>
+    </section>
 
   </main>
+
   <footer class="page-footer">
     <div class="wrapper">
       <a class="page-footer__logo" href="index.html">
