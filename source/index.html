@@ -109,9 +109,6 @@
         <p class="example-result__total">Затраты на питание: 15 000 руб.</p>
 
         <div class="comparisons">
-          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-
           <ul class="comparisons-slider-list">
             <li class="comparisons-slider-list__item">
               <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Борис до">
@@ -121,13 +118,15 @@
             </li>
           </ul>
 
-          <div class="slider-controls">
-            <label class="slider-controls__item" for="product-1" aria-label="Предыдущий слайд">Было</label>
-            <div class="slider-controls__progessbar"></div>
-            <label class="slider-controls__item" for="product-2" aria-label="Следующий слайд">Стало</label>
+          <div class="progressbar">
+            <span class="progressbar__label">Было</span>
+            <div class="progressbar__toggle">
+              <div class="progressbar__range"></div>
+            </div>
+            <span class="progressbar__label">Стало</span>
           </div>
-
         </div>
+
       </div>
     </section>
 
