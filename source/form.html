@@ -16,13 +16,13 @@
         <button type="button" class="main-navigation__toggle">Открыть меню</button>
         <ul class="site-list">
           <li class="site-list__item site-list__item-active">
-            <a>Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a>Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -38,37 +38,41 @@
       <form class="program-selection" method="post" action="#">
 
         <fieldset>
-          <p class="program-selection__field">
-            <label for="name">Имя:*</label>
-            <input type="text" id="name" name="username" placeholder="Барсик">
-          </p>
-
-          <p class="program-selection__field">
-            <label for="weight">Вес(кг):*</label>
-            <input type="text" id="weight" name="user-weight" placeholder="7">
-          </p>
-
-          <p class="program-selection__field">
-            <label for="age">Возраст(лет):*</label>
-            <input type="text" id="age" name="user-age" placeholder="7">
-          </p>
+          <ul>
+            <li>
+              <label class="program-selection__field" for="name">Имя:*
+                <input type="text" id="name" name="username" placeholder="Барсик">
+              </label>
+            </li>
+            <li>
+              <label class="program-selection__field" for="weight">Вес(кг):*
+                <input type="text" id="weight" name="user-weight" placeholder="7">
+              </label>
+            </li>
+            <li>
+              <label class="program-selection__field" for="age">Возраст(лет):*
+                <input type="text" id="age" name="user-age" placeholder="7">
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <!--Выбор программы-->
         <fieldset>
-          <p class="program-selection__radio">
-            <input type="radio" id="slim" name="user-slim" checked>
-            <label for="slim">Похудение</label>
-          </p>
-          <p class="program-selection__radio">
-            <input type="radio" id="pro" name="user-pro">
-            <label for="pro">Набор массы</label>
-
-          </p>
-          <p class="program-selection__radio">
-            <input type="radio" id="dont-now" name="user-dont-now">
-            <label for="dont-now">Не знаю (Нужен ваш совет)</label>
-          </p>
+          <ul>
+            <li class="program-selection__radio">
+              <input type="radio" id="slim" name="user-slim" checked>
+              <label for="slim">Похудение</label>
+            </li>
+            <li class="program-selection__radio">
+              <input type="radio" id="pro" name="user-pro">
+              <label for="pro">Набор массы</label>
+            </li>
+            <li class="program-selection__radio">
+              <input type="radio" id="dont-now" name="user-dont-now">
+              <label for="dont-now">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
         </fieldset>
 
         <!--Контактные данные-->
@@ -90,11 +94,10 @@
         <!--Комментарии-->
         <fieldset>
           <legend class="program-selection__legend">Комментарий</legend>
-          <p class="program-selection__comment-field">
-            <label for="text-letter">Текст письма:</label>
+          <label class="program-selection__comment-field" for="text-letter">
             <textarea class="letter" id="text-letter" name="letter"
               placeholder="Расскажите обо всех повадках кота"></textarea>
-          </p>
+          </label>
         </fieldset>
 
         <!--Дополнительно-->
@@ -123,7 +126,7 @@
           </ul>
         </fieldset>
         <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить</button>
-        <p class="program-selection__small-text"> *—Обязательные поля</p>
+        <small class="program-selection__small-text"> *—Обязательные поля</small>
       </form>
     </div>
 
@@ -132,7 +135,8 @@
         <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
         <a class="collaboration__map" href="#">
-          <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Интернет-магазин на карте города">
+          <img src="https://via.placeholder.com/150x150" width="150" height="150"
+            alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
