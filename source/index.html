@@ -4,15 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин фитнес еды для котиков</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип Cat Energy">
-    </a>
-    <nav class="main-navigation">
-      <div class="wrapper">
+    <div class="wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+      </a>
+      <nav class="main-navigation">
         <button type="button" class="main-navigation__toggle">Открыть меню</button>
         <ul class="site-list">
           <li class="site-list__item site-list__item-active">
@@ -25,23 +26,25 @@
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
-      </div>
     </nav>
+  </div>
   </header>
 
   <main class="page-main">
-
-    <div class="store">
-      <h1 class="store__title">Функциональное питание для котов</h1>
-      <p class="store__slogan">Занялся собой? Займись котом.</p>
-      <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Продукция Cat Energy">
-      <a href="form.html" class="store__button" aria-label="Перейти на страницу подбора программыы">Подобрать
-        программу</a>
+    <div class="wrapper">
+      <div class="store">
+        <h1 class="store__title">Функциональное питание для котов</h1>
+        <p class="store__slogan">Занялся собой? Займись котом.</p>
+        <img class="store__image" src="img/index-background-mobile@1x.jpg" width="320" height="305"
+          alt="Продукция Cat Energy">
+        <a href="form.html" class="store__button" aria-label="Перейти на страницу подбора программыы">Подобрать
+          программу</a>
+      </div>
     </div>
 
     <section>
       <div class="wrapper">
-        <h2 class="visualy-hidden">Наши программы</h2>
+        <h2 class="visually-hidden">Наши программы</h2>
         <ul class="program-list">
           <li class="program-list__item">
             <h3 class="program-list__title">Похудение</h3>
@@ -69,19 +72,20 @@
     <section class="advantages">
       <div class="wrapper">
 
-        <h2 class="visualy-hidden">Как это работает</h2>
+        <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
-            <p>Функциональное питание содержит только полезные питательные вещества.</p>
+            <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
           <li class="advantages__item">
-            <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </p>
           </li>
           <li class="advantages__item">
-            <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+            <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="advantages__item">
-            <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
       </div>
@@ -145,26 +149,25 @@
   <footer class="page-footer">
     <div class="wrapper">
       <a class="page-footer__logo" href="index.html">
-        <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип Cat Energy">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
       <ul class="social-list">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--vkontakte"
-            aria-label="Перейти на страницу Вконтакте">Вконтакте</a>
+            aria-label="Перейти на страницу Вконтакте"><span>Вконтакте</span></a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--instagram"
-            aria-label="Перейти на страницу Instagram">Instagram</a>
+            aria-label="Перейти на страницу Instagram"><span>Instagram</span></a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--facebook"
-            aria-label="Перейти на страницу Facebook">Facebook</a>
+            aria-label="Перейти на страницу Facebook"><span>Facebook</span></a>
         </li>
       </ul>
       <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
         title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
-        <img class="developer__icon" src="https://via.placeholder.com/150x150" width="150" height="150"
-          alt="Лого академии">
+        <img class="developer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Лого академии">
       </a>
     </div>
   </footer>

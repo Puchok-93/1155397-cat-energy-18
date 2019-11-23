@@ -4,42 +4,47 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин фитнес еды для котиков</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип Cat Energy">
-    </a>
-    <nav class="main-navigation">
-      <div class="wrapper">
+    <div class="wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39"
+          alt="Логотип Cat Energy">
+      </a>
+      <nav class="main-navigation">
         <button type="button" class="main-navigation__toggle">Открыть меню</button>
         <ul class="site-list">
-          <li class="site-list__item site-list__item-active">
+          <li class="site-list__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item-active">
             <a>Каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
-    <h1 class="page-title">Каталог продукции</h1>
-
+    <div class="wrapper">
+      <h1 class="page-title">Каталог продукции</h1>
+    </div>
     <section class="catalog">
       <div class="wrapper">
-        <h2 class="visualy-hidden">Основные товары</h2>
+        <h2 class="visually-hidden">Основные товары</h2>
 
         <ul class="catalog-list">
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Cat energy pro">
-            <h3>Cat energy PRO 500г</h3>
+            <a>
+              <img src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat energy pro">
+              <h3>Cat energy PRO 500г</h3>
+            </a>
             <table class="product-table">
               <tr class="product-table__item">
                 <td>Объем</td>
@@ -58,7 +63,7 @@
           </li>
 
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="cat energy pro">
+            <img src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="cat energy pro">
             <h3>Cat energy PRO 1000г</h3>
             <table class="product-table">
               <tr class="product-table__item">
@@ -78,7 +83,7 @@
           </li>
 
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="cat energy pro">
+            <img src="img/fish-small-mobile@1x.jpg" width="140" height="144" alt="cat energy pro">
             <h3>Cat energy PRO 500г</h3>
             <table class="product-table">
               <tr class="product-table__item">
@@ -98,7 +103,7 @@
           </li>
 
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="cat energy pro">
+            <img src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="cat energy pro">
             <h3>Cat energy PRO 1000г</h3>
             <table class="product-table">
               <tr class="product-table__item">
@@ -118,7 +123,7 @@
           </li>
 
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="cat energy pro">
+            <img src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="cat energy pro">
             <h3>Cat energy Slim 500г</h3>
             <table class="product-table">
               <tr class="product-table__item">
@@ -138,7 +143,7 @@
           </li>
 
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="cat energy pro">
+            <img src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="cat energy pro">
             <h3>Cat energy Slim 1000г</h3>
             <table class="product-table">
               <tr class="product-table__item">
@@ -158,7 +163,7 @@
           </li>
 
           <li class="catalog-list__item">
-            <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="cat energy pro">
+            <img src="img/rice-small-mobile@1x.jpg" width="140" height="144" alt="cat energy pro">
             <h3>Cat energy Slim 500г</h3>
             <table class="product-table">
               <tr class="product-table__item">
@@ -187,56 +192,58 @@
     </section>
 
     <section class="additional-products">
-      <h2 class="additional-products__title">Дополнительные товары</h2>
-      <ul class="additional-products__list">
+      <div class="wrapper">
+        <h2 class="additional-products__title">Дополнительные товары</h2>
+        <ul class="additional-products__list">
 
-        <li class="additional-products__item">
-          <h3>Сахаразаменитель</h3>
-          <table class="add-product-table">
-            <tr class="add-product-table__item">
-              <td>1 упаковка(100 г)</td>
-              <td>200 р.</td>
-            </tr>
-          </table>
-          <a class="additional-products__button" href="#">Заказать</a>
-        </li>
+          <li class="additional-products__item">
+            <h3>Сахаразаменитель</h3>
+            <table class="add-product-table">
+              <tr class="add-product-table__item">
+                <td>1 упаковка(100 г)</td>
+                <td>200 р.</td>
+              </tr>
+            </table>
+            <a class="additional-products__button" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-products__item">
-          <h3>Питьевая вода</h3>
-          <table class="add-product-table">
-            <tr class="add-product-table__item">
-              <td>5 литров</td>
-              <td>50 р.</td>
-            </tr>
-          </table>
-          <a class="additional-products__button" href="#">Заказать</a>
-        </li>
+          <li class="additional-products__item">
+            <h3>Питьевая вода</h3>
+            <table class="add-product-table">
+              <tr class="add-product-table__item">
+                <td>5 литров</td>
+                <td>50 р.</td>
+              </tr>
+            </table>
+            <a class="additional-products__button" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-products__item">
-          <h3>Молоко</h3>
-          <table class="add-product-table">
-            <tr class="add-product-table__item">
-              <td>1 литр</td>
-              <td>100 р.</td>
-            </tr>
-          </table>
-          <a class="additional-products__button" href="#">Заказать</a>
-        </li>
+          <li class="additional-products__item">
+            <h3>Молоко</h3>
+            <table class="add-product-table">
+              <tr class="add-product-table__item">
+                <td>1 литр</td>
+                <td>100 р.</td>
+              </tr>
+            </table>
+            <a class="additional-products__button" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-products__item">
-          <h3>Витамины</h3>
-          <table class="add-product-table">
-            <tr class="add-product-table__item">
-              <td>1 упаковка(30 г)</td>
-              <td>300 р.</td>
-            </tr>
-          </table>
-          <a class="additional-products__button" href="#">Заказать</a>
-        </li>
-      </ul>
+          <li class="additional-products__item">
+            <h3>Витамины</h3>
+            <table class="add-product-table">
+              <tr class="add-product-table__item">
+                <td>1 упаковка(30 г)</td>
+                <td>300 р.</td>
+              </tr>
+            </table>
+            <a class="additional-products__button" href="#">Заказать</a>
+          </li>
+        </ul>
 
-      <div class="additional-products__action">
-        <p class="add-products__condition">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="additional-products__action">
+          <p class="add-products__condition">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
 
@@ -245,7 +252,8 @@
         <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
         <a class="collaboration__map" href="#">
-          <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Интернет-магазин на карте города">
+          <img src="https://via.placeholder.com/150x150" width="150" height="150"
+            alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
@@ -254,26 +262,25 @@
   <footer class="page-footer">
     <div class="wrapper">
       <a class="page-footer__logo" href="index.html">
-        <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип Cat Energy">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
       <ul class="social-list">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--vkontakte"
-            aria-label="Перейти на страницу Вконтакте">Вконтакте</a>
+            aria-label="Перейти на страницу Вконтакте"><span>Вконтакте</span></a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--instagram"
-            aria-label="Перейти на страницу Instagram">Instagram</a>
+            aria-label="Перейти на страницу Instagram"><span>Instagram</span></a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--facebook"
-            aria-label="Перейти на страницу Facebook">Facebook</a>
+            aria-label="Перейти на страницу Facebook"><span>Facebook</span></a>
         </li>
       </ul>
       <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
         title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
-        <img class="developer__icon" src="https://via.placeholder.com/150x150" width="150" height="150"
-          alt="Лого академии">
+        <img class="developer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Лого академии">
       </a>
     </div>
   </footer>
