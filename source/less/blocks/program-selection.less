@@ -11,35 +11,32 @@ fieldset {
   border: none;
 }
 
-.program-selection__field input {
-  width: 170px;
-  height: 25px;
-  margin-bottom: 14px;
-  padding-top: 5px;
-  padding-left: 15px;/*
-  &::-webkit-input-placeholder {
-	font-family: @oswald;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.13;
-  letter-spacing: normal;
-  color: #444444;
-  text-transform: uppercase;
-  }*/
-}
-
 .program-selection__field {
   font-family: @oswald;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.13;
+  line-height: 18px;
   letter-spacing: normal;
   color: #222222;
+  text-transform: uppercase;
+}
+
+.program-selection__input {
+  width: 160px;
+  height: 25px;
   margin-bottom: 14px;
+  padding-left: 15px;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #444444;
 }
 
 .program-selection__radio {
@@ -48,11 +45,21 @@ fieldset {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.13;
+  line-height: 18px;
   letter-spacing: normal;
   color: #222222;
   text-transform: uppercase;
   margin-bottom: 26px;
+
+  &:first-child {
+    border-top: 1px solid #ededed;
+    padding-top: 30px;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 30px;
+  }
 }
 
 .program-selection__legend {
@@ -61,7 +68,7 @@ fieldset {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1;
+  line-height: 24px;
   letter-spacing: normal;
   text-align: left;
   color: #111111;
@@ -74,18 +81,16 @@ fieldset {
   height: 150px;
   border: 1px solid #cdcdcd;
   margin-bottom: 30px;
-  &::-webkit-input-placeholder {
-    font-family: @oswald;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.13;
-    letter-spacing: normal;
-    text-align: left;
-    text-transform: uppercase;
-    color: #444444;
-  }
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #444444;
+  padding-left: 15px;
 }
 
 .program-selection__checkbox {
@@ -109,7 +114,7 @@ fieldset {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.25;
+  line-height: 18px;
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
@@ -119,6 +124,8 @@ fieldset {
   background-color: #68b738;
   border: none;
   margin-left: 2px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .program-selection__small-text {
@@ -127,7 +134,7 @@ fieldset {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.14;
+  line-height: 16px;
   letter-spacing: normal;
   text-align: center;
   color: #444444;
