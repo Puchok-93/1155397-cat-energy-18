@@ -1,7 +1,5 @@
 .program-selection-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .list-reset();
   margin-top: 15px;
 }
 
@@ -14,13 +12,10 @@ fieldset {
 .program-selection__field {
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 18px;
-  letter-spacing: normal;
-  color: #222222;
+  color: @black2;
   text-transform: uppercase;
+  .text-style();
 }
 
 .program-selection__input {
@@ -30,26 +25,20 @@ fieldset {
   padding-left: 15px;
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 18px;
-  letter-spacing: normal;
   text-transform: uppercase;
-  color: #444444;
+  color: @brown;
+  .text-style();
 }
 
 .program-selection__radio {
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 18px;
-  letter-spacing: normal;
-  color: #222222;
+  color: @brown;
   text-transform: uppercase;
   margin-bottom: 26px;
+  .text-style();
 
   &:first-child {
     border-top: 1px solid #ededed;
@@ -65,77 +54,62 @@ fieldset {
 .program-selection__legend {
   font-family: @oswald;
   font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 24px;
-  letter-spacing: normal;
   text-align: left;
-  color: #111111;
+  color: @black1;
   margin-bottom: 30px;
   margin-top: 14px;
+  .text-style();
 }
 
 .letter {
   width: 260px;
   height: 150px;
   border: 1px solid #cdcdcd;
-  margin-bottom: 30px;
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 18px;
-  letter-spacing: normal;
   text-transform: uppercase;
-  color: #444444;
+  color: @brown;
   padding-left: 15px;
+  margin-bottom: 30px;
+  .text-style();
 }
 
 .program-selection__checkbox {
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.13;
-  letter-spacing: normal;
+  line-height: 18px;
   text-align: left;
-  color: #222222;
+  color: @black2;
   text-transform: uppercase;
   margin-bottom: 28px;
+  .text-style();
 }
 
 .program-selection__button {
   display: inline-block;
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 18px;
-  letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
-  padding: 10px 76px;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #68b738;
+  color: @white;
+  background-color: @green;
   border: none;
+  padding: 10px 76px;
   margin-left: 2px;
   margin-bottom: 20px;
+  .text-style();
   cursor: pointer;
 }
 
 .program-selection__small-text {
-  font-family: @arial;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 16px;
-  letter-spacing: normal;
   text-align: center;
-  color: #444444;
+  color: @brown;
+  .text-style();
 }

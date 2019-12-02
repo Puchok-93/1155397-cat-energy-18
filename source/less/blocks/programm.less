@@ -1,7 +1,5 @@
 .program-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .list-reset();
   margin-top: 22px;
 }
 
@@ -15,50 +13,41 @@
   display: inline-block;
   font-family: @oswald;
   font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 37px;
-  letter-spacing: normal;
   text-transform: uppercase;
   text-align: center;
-  color: #111111;
+  color: @black1;
   margin: 0;
   margin-top: 39px;
   margin-left: 92px;
+  .text-style();
 }
 
 .program-list__description {
-  font-family: @arial;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 18px;
-  letter-spacing: normal;
   text-align: left;
-  color: #444444;
+  color: @brown;
   margin-left: 21px;
   margin-right: 36px;
   margin-bottom: 22px;
+  .text-style();
 }
 
 .program-list__link {
   display: inline-block;
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 16px;
-  letter-spacing: normal;
   text-align: left;
-  color: #111111;
+  color: @black1;
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 22px;
+  .text-style();
 
   &:active {
     color: rgba(17, 17, 17, 0.3);

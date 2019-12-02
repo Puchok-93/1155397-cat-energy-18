@@ -1,7 +1,5 @@
 .catalog-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .list-reset();
 }
 
 .catalog-list__item {
@@ -16,49 +14,40 @@
 .catalog-list__item h3 {
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 20px;
-  letter-spacing: normal;
   text-align: left;
   text-transform: uppercase;
   text-decoration: none;
-  color: #111111;
+  color: @black1;
+  .text-style();
 }
 
 .product-table__item td {
-  font-family: @arial;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 16px;
-  letter-spacing: normal;
   text-align: left;
-  color: #444444;
+  color: @brown;
+  .text-style();
 }
 
 .catalog-list__button {
   display: inline-block;
   font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 20px;
-  letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
-  padding: 12px 105px;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #68b738;
+  color: @white;
+  background-color: @green;
   margin-bottom: 25px;
+  padding: 12px 105px;
+  .text-style();
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: @grass;
   }
 
   &:active {
