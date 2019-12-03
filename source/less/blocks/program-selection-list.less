@@ -41,12 +41,12 @@ fieldset {
   .text-style();
 
   &:first-child {
-    border-top: 1px solid #ededed;
+    border-top: 1px solid @border-grey;
     padding-top: 30px;
   }
 
   &:last-child {
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid @border-grey;
     padding-bottom: 30px;
   }
 }
@@ -65,7 +65,7 @@ fieldset {
 .letter {
   width: 260px;
   height: 150px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @border-dark-grey;
   font-family: @oswald;
   font-size: 16px;
   line-height: 18px;
@@ -106,7 +106,7 @@ fieldset {
 }
 
 .program-selection__small-text {
-  font-family: "Arial", sans-serif;
+  font-family: @arial;
   font-size: 14px;
   line-height: 16px;
   text-align: center;

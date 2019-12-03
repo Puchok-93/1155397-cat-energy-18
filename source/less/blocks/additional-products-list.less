@@ -1,3 +1,7 @@
+.additional-products__list {
+  .list-reset();
+}
+
 .additional-products__title {
   font-family: @oswald;
   font-size: 24px;
@@ -7,15 +11,11 @@
   .text-style();
 }
 
-.additional-products__list {
-  .list-reset();
-}
-
 .additional-products__item {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid @grey;
 
   &:last-child {
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid @grey;
   }
 }
 
@@ -34,7 +34,7 @@
 }
 
 .add-product-table__item {
-  font-family: "Arial", sans-serif;
+  font-family: @arial;
   font-size: 14px;
   line-height: 14px;
   text-align: left;
@@ -69,7 +69,7 @@
 .add-products__condition {
   display: inline-block;
   width: 159px;
-  font-family: "Arial", sans-serif;
+  font-family: @arial;
   font-size: 16px;
   line-height: 20px;
   color: @white;
