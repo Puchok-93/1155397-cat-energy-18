@@ -1,10 +1,9 @@
 .store {
   position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    background-image: url("../../img/index-can-mobile@1x.png");
-  }
+  /*background-image: url("../../img/index-background-mobile@1x.jpg");*/
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  outline: 1px solid blue;
 }
 
 .store__image {
@@ -13,20 +12,19 @@
 
 .store__title {
   width: 250px;
+  position: absolute;
+  top: 20px;
   font-family: @oswald;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: @white;
   margin: 0;
-  position: absolute;
-  top: 29px;
-  left: 20px;
+  margin-left: 13px;
   .text-style();
 }
 
 .store__slogan {
-  position: relative;
   font-family: @oswald;
   font-size: 14px;
   line-height: 14px;
@@ -41,6 +39,7 @@
 }
 
 .store__button {
+  position: relative;
   display: inline-block;
   font-family: @oswald;
   font-size: 14px;
@@ -50,12 +49,22 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: @green;
-  padding: 13px 70px;
-  margin-top: 135px;
+  padding: 13px 73px;
+  margin-top: 130px;
   .text-style();
 
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/index-can-mobile@1x.png");
+    width: 280px;
+    height: 270px;
+    top: -275px;
+    left: 0;
+  }
+
   &:hover {
-    background-color: #5eaa2f;
+    background-color: @grass;
   }
 
   &:active {
@@ -70,18 +79,21 @@
     line-height: 60px;
     color: @black1;
     text-align: left;
-    left: 0px;
+    left: 0;
   }
+
   .store__slogan {
     font-size: 20px;
     line-height: 20px;
     color: @black1;
-    left: 0px;
+    left: 0;
     margin-top: 50px;
   }
+
   .store__button {
     margin-top: 230px;
   }
+
   .store__image {
     display: none;
   }

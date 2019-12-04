@@ -1,11 +1,13 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
   .list-reset();
 }
 
 .site-list a {
-  display: block;
-  padding: 12px 21px;
-  padding-bottom: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: @oswald;
   font-size: 20px;
   line-height: 20px;
@@ -15,12 +17,13 @@
   text-align: center;
   border-top: 1px solid @border-grey;
   border-bottom: 1px solid @border-grey;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
-    display: flex;
-    width: 600px;
+    flex-direction: row;
+    width: 100px;
   }
 
   .site-list a {

@@ -1,7 +1,6 @@
 .program-list {
   .list-reset();
-  margin-top: 22px;
-  outline: 1px solid red;
+  margin-top: 50px;
 }
 
 .program-list__item {
@@ -15,8 +14,8 @@
     background-color: @green;
     width: 50px;
     height: 50px;
-    top: 24px;
-    left: 10px;
+    top: 22px;
+    left: 22px;
     border-radius: 50%;
   }
 }
@@ -30,21 +29,33 @@
   text-align: center;
   color: @black1;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-left: 92px;
   .text-style();
 }
 
 .program-list__description {
   font-family: @arial;
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   text-align: left;
   color: @brown;
-  margin-left: 21px;
-  margin-right: 36px;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 20px;
   margin-bottom: 22px;
   .text-style();
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 240px;
+    height: 1px;
+    top: 110px;
+    left: 0;
+    background-color: @grey;
+  }
 }
 
 .program-list__link {
@@ -69,9 +80,7 @@
 @media (min-width: @tablet-width) {
   .program-list__item {
     min-height: 372px;
-  }
 
-  .program-list__item {
     &::before {
       width: 200px;
       height: 200px;
@@ -93,6 +102,10 @@
     line-height: 24px;
     margin-left: 52px;
     margin-right: 280px;
+
+    &::before {
+      background-color: @light-grey;
+    }
   }
 
   .program-list__link {
