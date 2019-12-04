@@ -1,5 +1,10 @@
 .store {
   position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/index-can-mobile@1x.png");
+  }
 }
 
 .store__image {
@@ -21,6 +26,7 @@
 }
 
 .store__slogan {
+  position: relative;
   font-family: @oswald;
   font-size: 14px;
   line-height: 14px;
@@ -54,5 +60,29 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .store__title {
+    width: 450px;
+    font-size: 60px;
+    line-height: 60px;
+    color: @black1;
+    text-align: left;
+    left: 0px;
+  }
+  .store__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black1;
+    left: 0px;
+    margin-top: 50px;
+  }
+  .store__button {
+    margin-top: 230px;
+  }
+  .store__image {
+    display: none;
   }
 }

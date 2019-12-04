@@ -65,3 +65,40 @@
     color: rgba(17, 17, 17, 0.3);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .program-list__item {
+    min-height: 372px;
+  }
+
+  .program-list__item {
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 470px;
+    }
+  }
+
+  .program-list__title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 37px;
+    margin-top: 81px;
+    margin-left: 55px;
+  }
+
+  .program-list__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 52px;
+    margin-right: 280px;
+  }
+
+  .program-list__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 52px;
+    margin-top: 35px;
+  }
+}

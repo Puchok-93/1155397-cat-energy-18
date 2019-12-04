@@ -38,9 +38,9 @@
       <h1 class="page-title">Подбор программы</h1>
       <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
-      <form class="program-selection" method="post" action="#">
+      <form method="post" action="#">
 
-        <fieldset>
+        <fieldset class="form-fieldset">
           <ul class="program-selection-list">
             <li>
               <label class="program-selection__field" for="name">Имя:*
@@ -61,7 +61,7 @@
         </fieldset>
 
         <!--Выбор программы-->
-        <fieldset>
+        <fieldset class="form-fieldset">
           <ul class="program-selection-list">
             <li class="program-selection__radio">
               <input type="radio" id="slim" name="user-slim" checked>
@@ -79,7 +79,7 @@
         </fieldset>
 
         <!--Контактные данные-->
-        <fieldset>
+        <fieldset class="form-fieldset">
           <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
           <ul class="program-selection-list">
             <li>
@@ -99,7 +99,7 @@
         </fieldset>
 
         <!--Комментарии-->
-        <fieldset>
+        <fieldset class="form-fieldset">
           <legend class="program-selection__legend">Комментарий</legend>
           <label class="program-selection__comment-field" for="text-letter">
             <textarea class="letter" id="text-letter" name="letter"
@@ -108,7 +108,7 @@
         </fieldset>
 
         <!--Дополнительно-->
-        <fieldset>
+        <fieldset class="form-fieldset">
           <legend class="program-selection__legend">Дополнительно</legend>
           <ul class="program-selection-list">
             <li class="program-selection__checkbox">

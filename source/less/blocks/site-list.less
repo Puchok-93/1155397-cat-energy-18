@@ -1,16 +1,11 @@
 .site-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .list-reset();
 }
 
 .site-list a {
   display: block;
-  width: 320px;
-  padding: 24px 0;
+  padding: 12px 21px;
+  padding-bottom: 13px;
   font-family: @oswald;
   font-size: 20px;
   line-height: 20px;
@@ -18,5 +13,19 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  border-top: 1px solid @grey;
+  border-top: 1px solid @border-grey;
+  border-bottom: 1px solid @border-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    width: 600px;
+  }
+
+  .site-list a {
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+  }
 }
