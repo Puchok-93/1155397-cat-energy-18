@@ -19,7 +19,7 @@
   .text-style();
 }
 
-.example-result {
+.example__result-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -27,7 +27,7 @@
   padding: 0;
 }
 
-.example-result__quantity {
+.example__result-quantity {
   font-family: @oswald;
   font-size: 24px;
   line-height: 24px;
@@ -36,7 +36,7 @@
   .text-style();
 }
 
-.example-result__comment {
+.example__result-comment {
   font-family: @arial;
   font-size: 12px;
   line-height: 12px;
@@ -45,11 +45,46 @@
   .text-style();
 }
 
-.example-result__total {
+.eexample__result-total {
   font-family: @oswald;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   color: @black1;
   .text-style();
+}
+
+.example__slider-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.example__progressbar {
+  display: flex;
+}
+
+.example__progressbar-label {
+  font-family: @oswald;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  color: @black1;
+  .text-style();
+}
+
+.example__progressbar-toggle {
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  border: 1px solid @border-dark-grey;
+  background-color: @white;
+}
+
+.example__progressbar-range {
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: @green;
+  margin: 4px 6px 0;
 }

@@ -4,26 +4,29 @@
   .list-reset();
 }
 
-.site-list a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.site-list__item {
   font-family: @oswald;
   font-size: 20px;
   line-height: 20px;
   color: @black1;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
   border-top: 1px solid @border-grey;
   border-bottom: 1px solid @border-grey;
+  padding: 23px 0;
+  text-align: center;
+}
+
+.site-list__item a {
+  text-decoration: none;
   cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
-    width: 100px;
+    justify-content: space-between;
+    width: 400px;
   }
 
   .site-list a {

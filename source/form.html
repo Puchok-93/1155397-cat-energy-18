@@ -38,10 +38,10 @@
       <h1 class="page-title">Подбор программы</h1>
       <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
-      <form method="post" action="#">
+      <form class="program-selection" method="post" action="#">
 
-        <fieldset class="form-fieldset">
-          <ul class="program-selection-list">
+        <fieldset class="program-selection__fieldset">
+          <ul class="program-selection__list">
             <li>
               <label class="program-selection__field" for="name">Имя:*
                 <input class="program-selection__input" type="text" id="name" name="username" placeholder="Барсик">
@@ -61,8 +61,8 @@
         </fieldset>
 
         <!--Выбор программы-->
-        <fieldset class="form-fieldset">
-          <ul class="program-selection-list">
+        <fieldset class="program-selection__fieldset">
+          <ul class="program-selection__list">
             <li class="program-selection__radio">
               <input type="radio" id="slim" name="user-slim" checked>
               <label for="slim">Похудение</label>
@@ -79,9 +79,9 @@
         </fieldset>
 
         <!--Контактные данные-->
-        <fieldset class="form-fieldset">
+        <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
-          <ul class="program-selection-list">
+          <ul class="program-selection__list">
             <li>
               <label class="program-selection__field" for="email">E-mail:*
                 <input class="program-selection__input" type="text" id="email" name="user-email"
@@ -99,18 +99,18 @@
         </fieldset>
 
         <!--Комментарии-->
-        <fieldset class="form-fieldset">
+        <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Комментарий</legend>
-          <label class="program-selection__comment-field" for="text-letter">
-            <textarea class="letter" id="text-letter" name="letter"
+          <label for="text-letter">
+            <textarea class="program-selection__letter" id="text-letter" name="letter"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </fieldset>
 
         <!--Дополнительно-->
-        <fieldset class="form-fieldset">
+        <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Дополнительно</legend>
-          <ul class="program-selection-list">
+          <ul class="program-selection__list">
             <li class="program-selection__checkbox">
               <input type="checkbox" id="sugar" name="sugar" checked>
               <label for="sugar">Сахарозаменитель</label>
@@ -139,16 +139,14 @@
     </div>
 
     <section class="collaboration">
-        <div class="wrapper">
-          <div class="collaboration-description">
-            <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
-          <a class="collaboration__map" href="#">
-            <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
-          </a>
-        </div>
-      </section>
+      <div class="wrapper">
+        <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <a class="collaboration__map" href="#">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
+        </a>
+      </div>
+    </section>
 
   </main>
 
