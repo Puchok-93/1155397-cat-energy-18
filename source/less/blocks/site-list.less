@@ -19,19 +19,37 @@
 
 .site-list__item a {
   text-decoration: none;
-  cursor: pointer;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
-    justify-content: space-between;
-    width: 400px;
+    margin-left: 100px;
+    width: 500px;
+  }
+
+  .site-list__item {
+    border: none;
   }
 
   .site-list a {
     font-size: 18px;
     line-height: 25px;
     border: none;
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    margin-left: 650px;
+  }
+
+  .site-list a {
+    font-size: 20px;
+    line-height: 25px;
+    color: @white;
+    margin-right: 30px;
   }
 }

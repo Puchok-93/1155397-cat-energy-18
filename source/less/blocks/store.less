@@ -1,43 +1,46 @@
 .store {
   position: relative;
-  margin-top: 20px;
-}
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
 
-.store__image {
-  margin-left: -20px;
+  &::before {
+    background-image: url("/img/index-background-mobile@1x.jpg");
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 305px;
+    z-index: -1;
+    margin-left: -20px;
+  }
 }
 
 .store__title {
-  width: 250px;
-  position: absolute;
-  top: 20px;
+  display: inline-block;
   font-family: @oswald;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: @white;
-  margin: 0;
-  margin-left: 13px;
   .text-style();
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .store__slogan {
+  display: inline-block;
   font-family: @oswald;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
   color: @white;
-  margin: 0;
-  position: absolute;
-  top: 125px;
-  left: 40px;
   .text-style();
 }
 
 .store__button {
-  position: relative;
-  display: inline-block;
+  display: block;
+  width: 280px;
   font-family: @oswald;
   font-size: 14px;
   line-height: 18px;
@@ -46,52 +49,73 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: @green;
-  padding: 13px 73px;
-  margin-top: 130px;
   .text-style();
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../img/index-can-mobile@1x.png");
-    width: 280px;
-    height: 270px;
-    top: -275px;
-    left: 0;
-  }
-
-  &:hover {
-    background-color: @grass;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
+  padding: 11px 0;
+  margin-top: 230px;
 }
 
 @media (min-width: @tablet-width) {
+  .store {
+    &::before {
+      background-image: none;
+    }
+  }
+
   .store__title {
     width: 450px;
     font-size: 60px;
     line-height: 60px;
     color: @black1;
     text-align: left;
-    left: 0;
   }
 
   .store__slogan {
     font-size: 20px;
     line-height: 20px;
     color: @black1;
-    left: 0;
-    margin-top: 50px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
   }
 
   .store__button {
-    margin-top: 230px;
+    width: 245px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .store {
+    min-height: 696px;
+
+    &::before {
+      background-image: url("/img/index-background-desktop@1x.jpg");
+      position: absolute;
+      content: "";
+      width: 720px;
+      height: 696px;
+      z-index: -1;
+      margin-left: 700px;
+      margin-top: -74px;
+    }
   }
 
-  .store__image {
-    display: none;
+  .store__title {
+    margin-top: 150px;
+    margin-left: 80px;
+  }
+
+  .store__slogan {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+  .store__button {
+    margin-top: 30px;
+    margin-left: 80px;
   }
 }
