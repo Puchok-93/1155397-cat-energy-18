@@ -78,7 +78,6 @@
   .catalog__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .catalog__list-item {
@@ -86,6 +85,11 @@
     min-height: 410px;
     background-color: @light-grey;
     margin-bottom: 50px;
+    margin-right: 60px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
 
     &:last-child {
       background-color: @white;
@@ -94,7 +98,7 @@
 
   .catalog__title-item {
     font-size: 20px;
-    max-width: 169px;
+    width: 169px;
     text-align: center;
     margin-right: 0;
   }
@@ -116,7 +120,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__list {
+    margin-left: 50px;
+  }
+
   .catalog__list-item {
     min-width: 245px;
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 80px;
+    }
+  }
+
+  .catalog__button {
+    padding: 12px 55px;
   }
 }

@@ -6,7 +6,7 @@
 }
 
 .more-goods__title {
-  display: inline-block;
+  display: block;
   font-family: @oswald;
   font-size: 16px;
   line-height: 20px;
@@ -19,7 +19,7 @@
 }
 
 .more-goods__subtitle {
-  display: inline-block;
+  display: block;
   font-family: @arial;
   font-size: 12px;
   line-height: 16px;
@@ -56,12 +56,37 @@
   }
 
   .more-goods__title {
+    width: 140px;
     font-size: 20px;
+    margin-left: 90px;
     margin-bottom: 28px;
   }
 
   .more-goods__subtitle {
+    width: 170px;
     font-size: 16px;
+    margin-left: 80px;
     margin-bottom: 85px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more__goods {
+    min-width: 245px;
+    box-sizing: border-box;
+  }
+
+  .more-goods__title {
+    width: 140px;
+    margin-left: 50px;
+  }
+
+  .more-goods__subtitle {
+    margin-left: 40px;
+  }
+
+  .more-goods__button {
+    width: 169px;
+    margin-left: 40px;
   }
 }
