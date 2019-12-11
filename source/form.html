@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -10,24 +11,28 @@
 <body>
   <header class="page-header">
     <div class="wrapper">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39"
-          alt="Логотип Cat Energy">
-      </a>
-      <nav class="main-navigation">
-        <button type="button" class="main-navigation__toggle">Открыть меню</button>
-        <ul class="site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a>Каталог продукции</a>
-          </li>
-          <li class="site-list__item site-list__item-active">
-            <a>Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="top-header">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+        </a>
+        <nav class="main-navigation main-navigation--closed">
+          <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
+              меню</span></button>
+          <div>
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a>Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -39,29 +44,32 @@
 
       <form class="program-selection" method="post" action="#">
 
-        <fieldset>
-          <ul>
+        <fieldset class="program-selection__fieldset">
+          <ul class="program-selection__list">
             <li>
               <label class="program-selection__field" for="name">Имя:*
-                <input type="text" id="name" name="username" placeholder="Барсик">
+                <input class="program-selection__input program-selection__input--first-input" type="text" id="name"
+                  name="username" placeholder="Барсик">
               </label>
             </li>
             <li>
               <label class="program-selection__field" for="weight">Вес(кг):*
-                <input type="text" id="weight" name="user-weight" placeholder="7">
+                <input class="program-selection__input program-selection__input--second-input" type="text" id="weight"
+                  name="user-weight" placeholder="7">
               </label>
             </li>
             <li>
               <label class="program-selection__field" for="age">Возраст(лет):*
-                <input type="text" id="age" name="user-age" placeholder="7">
+                <input class="program-selection__input program-selection__input--third-input" type="text" id="age"
+                  name="user-age" placeholder="7">
               </label>
             </li>
           </ul>
         </fieldset>
 
         <!--Выбор программы-->
-        <fieldset>
-          <ul>
+        <fieldset class="program-selection__fieldset">
+          <ul class="program-selection__list">
             <li class="program-selection__radio">
               <input type="radio" id="slim" name="user-slim" checked>
               <label for="slim">Похудение</label>
@@ -78,34 +86,38 @@
         </fieldset>
 
         <!--Контактные данные-->
-        <fieldset>
+        <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
-          <ul>
-            <li class="program-selection__field">
-              <label for="email">E-mail:*</label>
-              <input type="text" id="email" name="user-email" placeholder="kuklachev@gmail.com">
+          <ul class="program-selection__list">
+            <li>
+              <label class="program-selection__field" for="email">E-mail:*
+                <input class="program-selection__input program-selection__input--fourth-input" type="text" id="email"
+                  name="user-email" placeholder="kuklachev@gmail.com">
+              </label>
             </li>
 
-            <li class="program-selection__field">
-              <label for="phone">Телефон:*</label>
-              <input type="text" id="phone" name="user-phone" placeholder="8 (960) 900-60-90">
+            <li>
+              <label class="program-selection__field" for="phone">Телефон:*
+                <input class="program-selection__input program-selection__input--fifth-input" type="text" id="phone"
+                  name="user-phone" placeholder="8 (960) 900-60-90">
+              </label>
             </li>
           </ul>
         </fieldset>
 
         <!--Комментарии-->
-        <fieldset>
+        <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Комментарий</legend>
-          <label class="program-selection__comment-field" for="text-letter">
-            <textarea class="letter" id="text-letter" name="letter"
+          <label for="text-letter">
+            <textarea class="program-selection__letter" id="text-letter" name="letter"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </fieldset>
 
         <!--Дополнительно-->
-        <fieldset>
+        <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Дополнительно</legend>
-          <ul>
+          <ul class="program-selection__list">
             <li class="program-selection__checkbox">
               <input type="checkbox" id="sugar" name="sugar" checked>
               <label for="sugar">Сахарозаменитель</label>
@@ -127,18 +139,20 @@
             </li>
           </ul>
         </fieldset>
-        <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить</button>
+        <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить
+          заявку</button>
         <small class="program-selection__small-text"> *—Обязательные поля</small>
       </form>
     </div>
 
     <section class="collaboration">
       <div class="wrapper">
-        <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="collaboration__info">
+          <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <a class="collaboration__map" href="#">
-          <img src="https://via.placeholder.com/150x150" width="150" height="150"
-            alt="Интернет-магазин на карте города">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>

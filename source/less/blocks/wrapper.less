@@ -2,4 +2,44 @@
   width: 280px;
   margin: 0 auto;
   padding: 0 20px;
+  outline: 1px solid hotpink;
+}
+
+.wrapper-catalog {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  outline: 1px solid hotpink;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .wrapper-catalog {
+    width: 708px;
+    padding: 0 30px;
+    outline: 1px solid hotpink;
+  }
+
+  .wrapper-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    width: 1400px;
+    padding: 0 20px;
+  }
+
+  .wrapper-catalog {
+    width: 1400px;
+    padding: 0 20px;
+    outline: 1px solid hotpink;
+  }
 }

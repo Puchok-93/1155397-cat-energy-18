@@ -1,11 +1,25 @@
 .page-title {
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-size: 36px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.67;
-  letter-spacing: normal;
+  line-height: 60px;
   text-align: left;
-  color: #111111;
+  color: @black1;
+  .text-style();
+}
+
+.page-title__subtitle {
+  display: inline-block;
+  width: 226px;
+  font-family: @oswald;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: @black1;
+  .text-style();
+}
+
+@media (min-width: @tablet-width) {
+  .page-title {
+    font-size: 60px;
+  }
 }

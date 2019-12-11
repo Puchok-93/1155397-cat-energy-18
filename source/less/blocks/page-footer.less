@@ -1,8 +1,15 @@
 .page-footer {
-  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  background-color: @light-grey;
 }
 
 .page-footer__logo {
+  display: block;
+  padding-top: 39px;
+  padding-bottom: 30px;
+  margin-left: 80px;
+
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -10,5 +17,11 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__logo {
+    margin-left: 0;
   }
 }

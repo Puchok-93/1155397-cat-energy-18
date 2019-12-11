@@ -1,50 +1,92 @@
 .more-goods {
-  margin-top: 80px;
-  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid @light-grey;
 }
 
 .more-goods__title {
-  font-family: "Oswald", sans-serif;
+  display: block;
+  font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
+  line-height: 20px;
   text-align: center;
-  color: #111111;
+  color: @black1;
   text-transform: uppercase;
+  .text-style();
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .more-goods__subtitle {
-  font-family: "Arial", sans-serif;
+  display: block;
+  font-family: @arial;
   font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
+  line-height: 16px;
   text-align: center;
-  color: #444444;
+  color: @brown;
+  .text-style();
+  margin: 0;
+  margin-bottom: 20px;
 }
 
-.more-goods__link {
+.more-goods__button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 280px;
   height: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
+  line-height: 20px;
   text-align: center;
-  color: #444444;
+  color: @brown;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #f2f2f2;
+  background-color: @light-grey;
+  margin-left: 20px;
   margin-bottom: 25px;
+  .text-style();
+}
+
+@media (min-width: @tablet-width) {
+  .more-goods {
+    min-height: 410px;
+    border: 1px solid @border-grey;
+  }
+
+  .more-goods__title {
+    width: 140px;
+    font-size: 20px;
+    margin-left: 90px;
+    margin-bottom: 28px;
+  }
+
+  .more-goods__subtitle {
+    width: 170px;
+    font-size: 16px;
+    margin-left: 80px;
+    margin-bottom: 85px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more__goods {
+    min-width: 245px;
+    box-sizing: border-box;
+  }
+
+  .more-goods__title {
+    width: 140px;
+    margin-left: 50px;
+  }
+
+  .more-goods__subtitle {
+    margin-left: 40px;
+  }
+
+  .more-goods__button {
+    width: 169px;
+    margin-left: 40px;
+  }
 }

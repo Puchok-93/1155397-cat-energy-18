@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -10,60 +11,62 @@
 <body>
   <header class="page-header">
     <div class="wrapper">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
-      </a>
-      <nav class="main-navigation">
-        <button type="button" class="main-navigation__toggle">Открыть меню</button>
-        <ul class="site-list">
-          <li class="site-list__item site-list__item-active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-    </nav>
-  </div>
+      <div class="top-header">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+        </a>
+        <nav class="main-navigation main-navigation--closed">
+          <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
+              меню</span></button>
+          <div>
+            <ul class="site-list">
+              <li class="site-list__item site-list__item--active">
+                <a>Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="page-main">
+  <main>
+
     <div class="wrapper">
       <div class="store">
         <h1 class="store__title">Функциональное питание для котов</h1>
         <p class="store__slogan">Занялся собой? Займись котом.</p>
-        <img class="store__image" src="img/index-background-mobile@1x.jpg" width="320" height="305"
-          alt="Продукция Cat Energy">
         <a href="form.html" class="store__button" aria-label="Перейти на страницу подбора программыы">Подобрать
           программу</a>
       </div>
     </div>
 
-    <section>
+    <section class="program">
       <div class="wrapper">
         <h2 class="visually-hidden">Наши программы</h2>
-        <ul class="program-list">
-          <li class="program-list__item">
-            <h3 class="program-list__title">Похудение</h3>
-            <p class="program-list__description">
+        <ul class="program__list">
+          <li class="program__list-item">
+            <h3 class="program__list-title">Похудение</h3>
+            <p class="program__list-description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
               поможет вашему питомцу сбросить лишний вес.
             </p>
-            <hr>
-            <a href="#" class="program-list__link" aria-label="Перейти на страницу каталог slim">Каталог Slim</a>
+            <a href="#" class="program__list-link" aria-label="Перейти на страницу каталог slim">Каталог Slim</a>
           </li>
 
-          <li class="program-list__item">
-            <h3 class="program-list__title">Набор массы</h3>
-            <p class="program-list__description">
+          <li class="program__list-item">
+            <h3 class="program__list-title">Набор массы</h3>
+            <p class="program__list-description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
               необходимые мышцы!
             </p>
-            <hr>
-            <a href="#" class="program-list__link" aria-label="Перейти на страницу каталог pro">Каталог Pro</a>
+            <a href="#" class="program__list-link" aria-label="Перейти на страницу каталог pro">Каталог Pro</a>
           </li>
         </ul>
       </div>
@@ -71,22 +74,17 @@
 
     <section class="advantages">
       <div class="wrapper">
-
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
-          <li class="advantages__item">
-            <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-            </p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-          </li>
+          <li class="advantages__list-item advantages__list-item--bio">Функциональное питание содержит только полезные
+            питательные вещества.</li>
+          <li class="advantages__list-item advantages__list-item--format">Выпускается в виде порошка, который нужно лишь
+            залить кипятком и готово.</li>
+          <li class="advantages__list-item advantages__list-item--food">Замените один-два приема обычной еды на наше
+            функциональное питание.</li>
+          <li class="advantages__list-item advantages__list-item--time">Уже через месяц наслаждайтесь изменениями к
+            лучшему
+            вашего питомца!</li>
         </ul>
       </div>
     </section>
@@ -99,36 +97,35 @@
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
           часов в день. </p>
 
-        <ul class="example-result">
-          <li class="example-result__item">
-            <strong class="example-result__quantity">5 кг</strong>
-            <p class="example-result__comment">Снижение веса</p>
+        <ul class="example__result-list">
+          <li class="example__result-item">
+            <strong class="example__result-quantity">5 кг</strong>
+            <small class="example__result-comment">Снижение веса</small>
           </li>
-          <li class="example-result__item">
-            <strong class="example-result__quantity">60 дней</strong>
-            <p class="example-result__comment">Снижение веса</p>
+          <li class="example__result-item">
+            <strong class="example__result-quantity">60 дней</strong>
+            <small class="example__result-comment">Затрачено времени</small>
           </li>
         </ul>
 
-        <p class="example-result__total">Затраты на питание: 15 000 руб.</p>
+        <p class="example__result-total">Затраты на питание: 15 000 руб.</p>
+        <input class="visually-hidden test1" type="radio" name="toggle" checked>
+        <input class="visually-hidden test2" type="radio" name="toggle">
+        <ul class="example__slider-list">
+          <li class="example__slider-item example__slide slide1">
+            <img src="img/before-mobile@1x.png" width="311" height="232" alt="Борис до">
+          </li>
+          <li class="example__slider-item example__slide slide2">
+            <img src="img/after-mobile@1x.png" width="311" height="232" alt="Борис после">
+          </li>
+        </ul>
 
-        <div class="comparisons">
-          <ul class="comparisons-slider-list">
-            <li class="comparisons-slider-list__item">
-              <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Борис до">
-            </li>
-            <li class="comparisons-slider-list__item">
-              <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="Борис после">
-            </li>
-          </ul>
-
-          <div class="progressbar">
-            <span class="progressbar__label">Было</span>
-            <div class="progressbar__toggle">
-              <div class="progressbar__range"></div>
-            </div>
-            <span class="progressbar__label">Стало</span>
+        <div class="example__progressbar">
+          <label for="product-1" class="example__progressbar-label">Было</span></label>
+          <div class="example__progressbar-toggle">
+            <div class="example__progressbar-range"></div>
           </div>
+          <label for="product-2" class="example__progressbar-label">Стало</span></label>
         </div>
 
       </div>
@@ -136,21 +133,23 @@
 
     <section class="collaboration">
       <div class="wrapper">
-        <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="collaboration__info">
+          <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <a class="collaboration__map" href="#">
-          <img src="https://via.placeholder.com/150x150" width="150" height="150"
-            alt="Интернет-магазин на карте города">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper">
+    <div class="wrapper wrapper-footer">
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
+
       <ul class="social-list">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--vkontakte"
@@ -165,6 +164,7 @@
             aria-label="Перейти на страницу Facebook"><span>Facebook</span></a>
         </li>
       </ul>
+
       <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
         title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
         <img class="developer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Лого академии">

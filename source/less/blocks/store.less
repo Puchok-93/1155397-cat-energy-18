@@ -1,67 +1,121 @@
 .store {
   position: relative;
-}
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
 
-.store__image {
-  margin-left: -20px;
+  &::before {
+    background-image: url("/img/index-background-mobile@1x.jpg");
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 305px;
+    z-index: -1;
+    margin-left: -20px;
+  }
 }
 
 .store__title {
-  width: 250px;
-  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  font-family: @oswald;
   font-size: 36px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
+  line-height: 36px;
   text-align: center;
-  color: #ffffff;
-  margin: 0;
-  position: absolute;
-  top: 29px;
-  left: 20px;
+  color: @white;
+  .text-style();
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .store__slogan {
-  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  font-family: @oswald;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
+  line-height: 14px;
   text-transform: uppercase;
-  color: #ffffff;
   text-align: center;
-  margin: 0;
-  position: absolute;
-  top: 125px;
-  left: 40px;
+  color: @white;
+  .text-style();
 }
 
 .store__button {
-  display: inline-block;
-  font-family: "Oswald", sans-serif;
+  display: block;
+  width: 280px;
+  font-family: @oswald;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.29;
-  letter-spacing: normal;
+  line-height: 18px;
   text-align: center;
-  color: #ffffff;
+  color: @white;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #68b738;
-  padding: 13px 70px;
-  margin-top: 135px;
+  background-color: @green;
+  .text-style();
+  padding: 11px 0;
+  margin-top: 230px;
+}
 
-  &:hover {
-    background-color: #5eaa2f;
+@media (min-width: @tablet-width) {
+  .store {
+    &::before {
+      background-image: none;
+    }
   }
 
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
+  .store__title {
+    width: 450px;
+    font-size: 60px;
+    line-height: 60px;
+    color: @black1;
+    text-align: left;
+  }
+
+  .store__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black1;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .store__button {
+    width: 245px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .store {
+    min-height: 696px;
+
+    &::before {
+      background-image: url("/img/index-background-desktop@1x.jpg");
+      position: absolute;
+      content: "";
+      width: 720px;
+      height: 696px;
+      z-index: -1;
+      margin-left: 700px;
+      margin-top: -74px;
+    }
+  }
+
+  .store__title {
+    margin-top: 150px;
+    margin-left: 80px;
+  }
+
+  .store__slogan {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+  .store__button {
+    margin-top: 30px;
+    margin-left: 80px;
   }
 }
