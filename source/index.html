@@ -100,31 +100,32 @@
         <ul class="example__result-list">
           <li class="example__result-item">
             <strong class="example__result-quantity">5 кг</strong>
-            <p class="example__result-comment">Снижение веса</p>
+            <small class="example__result-comment">Снижение веса</small>
           </li>
           <li class="example__result-item">
             <strong class="example__result-quantity">60 дней</strong>
-            <p class="example__result-comment">Снижение веса</p>
+            <small class="example__result-comment">Затрачено времени</small>
           </li>
         </ul>
 
         <p class="example__result-total">Затраты на питание: 15 000 руб.</p>
-
+        <input class="visually-hidden test1" type="radio" name="toggle" checked>
+        <input class="visually-hidden test2" type="radio" name="toggle">
         <ul class="example__slider-list">
-          <li class="example__slider-item">
+          <li class="example__slider-item example__slide slide1">
             <img src="img/before-mobile@1x.png" width="311" height="232" alt="Борис до">
           </li>
-          <li class="example__slider-item">
+          <li class="example__slider-item example__slide slide2">
             <img src="img/after-mobile@1x.png" width="311" height="232" alt="Борис после">
           </li>
         </ul>
 
         <div class="example__progressbar">
-          <span class="example__progressbar-label">Было</span>
+          <label for="product-1" class="example__progressbar-label">Было</span></label>
           <div class="example__progressbar-toggle">
             <div class="example__progressbar-range"></div>
           </div>
-          <span class="example__progressbar-label">Стало</span>
+          <label for="product-2" class="example__progressbar-label">Стало</span></label>
         </div>
 
       </div>
@@ -132,8 +133,10 @@
 
     <section class="collaboration">
       <div class="wrapper">
-        <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="collaboration__address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="collaboration__info">
+          <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <a class="collaboration__map" href="#">
           <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
         </a>
@@ -142,7 +145,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper footer-tablet">
+    <div class="wrapper wrapper-footer">
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
