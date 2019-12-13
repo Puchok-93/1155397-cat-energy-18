@@ -22,6 +22,11 @@
   margin-right: 20px;
 }
 
+.example__result {
+  display: flex;
+  flex-direction: column;
+}
+
 .example__result-list {
   display: flex;
   list-style: none;
@@ -46,7 +51,7 @@
   color: @black1;
   .text-style();
   border: 1px solid @border-dark-grey;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 124px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -136,8 +141,47 @@
 }
 
 @media (min-width: @tablet-width) {
+  .example__title {
+    font-size: 60px;
+  }
+
+  .example__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__result {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__result-quantity {
+    font-size: 30px;
+    line-height: 37px;
+    width: 162px;
+  }
+
+  .example__result-comment {
+    font-size: 14px;
+    line-height: 14px;
+    width: 130px;
+    top: 60px;
+    left: 20px;
+  }
+
+  .example__result-total {
+    width: 174px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  .example__progressbar {
+    margin-left: 60px;
+  }
+
   .example__progressbar-toggle {
     width: 428px;
+    height: 6px;
     background-color: @toggle;
     position: relative;
   }
@@ -146,9 +190,55 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: @white;
+    background-color: @grass;
     position: absolute;
-    top: -15px;
+    top: -20px;
     left: 190px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .example__info {
+    margin-left: 111px;
+  }
+
+  .example__slider {
+    margin-top: 120px;
+    margin-right: 111px;
+  }
+
+  .example__title {
+    margin-top: -120px;
+  }
+
+  .example__subtitle {
+    width: 430px;
+    padding-top: 76px;
+    margin-bottom: 70px;
+  }
+
+  .example__result {
+    flex-direction: column;
+  }
+
+  .example__result-total {
+    width: 300px;
+    margin-top: 65px;
+    padding-bottom: 75px;
+  }
+
+  .example__progressbar-label {
+    font-size: 20px;
+  }
+
+  .example__progressbar {
+    margin-left: 0;
   }
 }
