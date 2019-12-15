@@ -11,10 +11,11 @@
   color: @black1;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   border-top: 1px solid @border-grey;
   border-bottom: 1px solid @border-grey;
+
   padding: 23px 0;
-  text-align: center;
 }
 
 .site-list__item a {
@@ -25,8 +26,10 @@
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
-    margin-left: 100px;
+
     width: 500px;
+
+    margin-left: 100px;
   }
 
   .site-list__item {
@@ -37,6 +40,7 @@
     font-size: 18px;
     line-height: 25px;
     border: none;
+
     margin-right: 25px;
   }
 }
@@ -50,6 +54,7 @@
     font-size: 20px;
     line-height: 25px;
     color: @white;
+
     margin-right: 30px;
   }
 }
