@@ -1,3 +1,8 @@
+.program-selection__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .program-selection__list {
   .list-reset();
   margin-top: 15px;
@@ -59,7 +64,8 @@
   line-height: 18px;
   color: @brown;
   text-transform: uppercase;
-
+  margin: 0;
+  padding: 0;
   margin-bottom: 26px;
 
   &:first-child {
@@ -71,6 +77,11 @@
     border-bottom: 1px solid @border-grey;
     padding-bottom: 30px;
   }
+}
+
+.program-selection__contacts {
+  display: flex;
+  flex-direction: column;
 }
 
 .program-selection__legend {
@@ -99,6 +110,11 @@
   margin-bottom: 30px;
 }
 
+.program-selection__checkbox-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .program-selection__checkbox {
   font-family: @oswald;
   font-size: 16px;
@@ -110,20 +126,27 @@
   margin-bottom: 28px;
 }
 
+.program-selection__button-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .program-selection__button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
 
   font-family: @oswald;
   font-size: 16px;
   line-height: 18px;
-  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: @white;
   background-color: @green;
   border: none;
 
-  padding: 10px 76px;
   margin-left: 2px;
   margin-bottom: 20px;
 
@@ -136,4 +159,199 @@
   line-height: 16px;
   text-align: center;
   color: @brown;
+}
+
+@media (min-width: @tablet-width) {
+  .program-selection__container {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .program-selection__field {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-selection__input {
+    height: 40px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-bottom: 20px;
+
+    &--first-input {
+      width: 567px;
+    }
+
+    &--second-input {
+      width: 543px;
+    }
+
+    &--third-input {
+      width: 493px;
+    }
+
+    &--fourth-input {
+      width: 551px;
+    }
+
+    &--fifth-input {
+      width: 535px;
+    }
+  }
+
+  .program-selection__legend {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-bottom: 60px;
+  }
+
+  .program-selection__list-programm {
+    width: 630px;
+    border: 1px solid @border-dark-grey;
+    margin-left: 17px;
+  }
+
+  .program-selection__radio {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-bottom: 30px;
+
+    &:first-child {
+      border: none;
+    }
+
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+    }
+  }
+
+  .program-selection__comment {
+    margin-top: 30px;
+  }
+
+  .program-selection__letter {
+    width: 631px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    padding-top: 17px;
+  }
+
+  .program-selection__checkbox-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .program-selection__checkbox {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-right: 100px;
+
+    &:last-child {
+      margin-left: 93px;
+    }
+  }
+
+  .program-selection__button-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .program-selection__button {
+    width: 283px;
+    height: 52px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-selection__small-text {
+    font-size: 16px;
+    line-height: 16px;
+
+    margin-top: -15px;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-selection__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .program-selection__cat-info {
+    margin-top: 0;
+  }
+
+  .program-selection__list-programm {
+    width: 570px;
+
+    margin-top: 0;
+  }
+
+  .program-selection__input {
+    &--first-input {
+      width: 506px;
+    }
+
+    &--second-input {
+      width: 483px;
+    }
+
+    &--third-input {
+      width: 433px;
+    }
+
+    &--fourth-input {
+      width: 486px;
+    }
+
+    &--fifth-input {
+      width: 472px;
+    }
+  }
+
+  .program-selection__radio {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .program-selection__contacts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .program-selection__contacts li {
+    &:last-child {
+      margin-left: 50px;
+    }
+  }
+
+  .program-selection__letter {
+    width: 1220px;
+  }
+
+  .program-selection__checkbox-list {
+    justify-content: space-between;
+  }
+
+  .program-selection__checkbox {
+    margin-right: 150px;
+  }
+
+  .program-selection__button {
+    width: 568px;
+  }
 }

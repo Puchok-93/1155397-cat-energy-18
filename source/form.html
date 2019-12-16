@@ -41,54 +41,55 @@
     <div class="wrapper">
       <h1 class="page-title">Подбор программы</h1>
       <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="program-selection" method="post" action="#">
+          <div class="program-selection__container">
+          <fieldset class="program-selection__fieldset">
+            <ul class="program-selection__list program-selection__cat-info">
+              <li>
+                <label class="program-selection__field" for="name">Имя:*
+                  <input class="program-selection__input program-selection__input--first-input" type="text" id="name"
+                    name="username" placeholder="Барсик">
+                </label>
+              </li>
+              <li>
+                <label class="program-selection__field" for="weight">Вес(кг):*
+                  <input class="program-selection__input program-selection__input--second-input" type="text" id="weight"
+                    name="user-weight" placeholder="7">
+                </label>
+              </li>
+              <li>
+                <label class="program-selection__field" for="age">Возраст(лет):*
+                  <input class="program-selection__input program-selection__input--third-input" type="text" id="age"
+                    name="user-age" placeholder="7">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-      <form class="program-selection" method="post" action="#">
+          <!--Выбор программы-->
+          <fieldset class="program-selection__fieldset">
+            <ul class="program-selection__list program-selection__list-programm">
+              <li class="program-selection__radio">
+                <input type="radio" id="slim" name="user-slim" checked>
+                <label for="slim">Похудение</label>
+              </li>
+              <li class="program-selection__radio">
+                <input type="radio" id="pro" name="user-pro">
+                <label for="pro">Набор массы</label>
+              </li>
+              <li class="program-selection__radio">
+                <input type="radio" id="dont-now" name="user-dont-now">
+                <label for="dont-now">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+      </div>
 
-        <fieldset class="program-selection__fieldset">
-          <ul class="program-selection__list">
-            <li>
-              <label class="program-selection__field" for="name">Имя:*
-                <input class="program-selection__input program-selection__input--first-input" type="text" id="name"
-                  name="username" placeholder="Барсик">
-              </label>
-            </li>
-            <li>
-              <label class="program-selection__field" for="weight">Вес(кг):*
-                <input class="program-selection__input program-selection__input--second-input" type="text" id="weight"
-                  name="user-weight" placeholder="7">
-              </label>
-            </li>
-            <li>
-              <label class="program-selection__field" for="age">Возраст(лет):*
-                <input class="program-selection__input program-selection__input--third-input" type="text" id="age"
-                  name="user-age" placeholder="7">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <!--Выбор программы-->
-        <fieldset class="program-selection__fieldset">
-          <ul class="program-selection__list">
-            <li class="program-selection__radio">
-              <input type="radio" id="slim" name="user-slim" checked>
-              <label for="slim">Похудение</label>
-            </li>
-            <li class="program-selection__radio">
-              <input type="radio" id="pro" name="user-pro">
-              <label for="pro">Набор массы</label>
-            </li>
-            <li class="program-selection__radio">
-              <input type="radio" id="dont-now" name="user-dont-now">
-              <label for="dont-now">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <!--Контактные данные-->
+      <!--Контактные данные-->
+      <div class="program-selection__contacts">
         <fieldset class="program-selection__fieldset">
           <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
-          <ul class="program-selection__list">
+          <ul class="program-selection__list program-selection__contacts">
             <li>
               <label class="program-selection__field" for="email">E-mail:*
                 <input class="program-selection__input program-selection__input--fourth-input" type="text" id="email"
@@ -104,44 +105,47 @@
             </li>
           </ul>
         </fieldset>
+      </div>
 
-        <!--Комментарии-->
-        <fieldset class="program-selection__fieldset">
-          <legend class="program-selection__legend">Комментарий</legend>
-          <label for="text-letter">
-            <textarea class="program-selection__letter" id="text-letter" name="letter"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
-          </label>
-        </fieldset>
+      <!--Комментарии-->
+      <fieldset class="program-selection__fieldset program-selection__comment">
+        <legend class="program-selection__legend">Комментарий</legend>
+        <label for="text-letter">
+          <textarea class="program-selection__letter" id="text-letter" name="letter"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
+        </label>
+      </fieldset>
 
-        <!--Дополнительно-->
-        <fieldset class="program-selection__fieldset">
-          <legend class="program-selection__legend">Дополнительно</legend>
-          <ul class="program-selection__list">
-            <li class="program-selection__checkbox">
-              <input type="checkbox" id="sugar" name="sugar" checked>
-              <label for="sugar">Сахарозаменитель</label>
-            </li>
+      <!--Дополнительно-->
+      <fieldset class="program-selection__fieldset">
+        <legend class="program-selection__legend">Дополнительно</legend>
+        <ul class="program-selection__list program-selection__checkbox-list">
+          <li class="program-selection__checkbox">
+            <input type="checkbox" id="sugar" name="sugar" checked>
+            <label for="sugar">Сахарозаменитель</label>
+          </li>
 
-            <li class="program-selection__checkbox">
-              <input type="checkbox" id="water" name="water">
-              <label for="water">Питьевая вода</label>
-            </li>
+          <li class="program-selection__checkbox">
+            <input type="checkbox" id="water" name="water">
+            <label for="water">Питьевая вода</label>
+          </li>
 
-            <li class="program-selection__checkbox">
-              <input type="checkbox" id="milk" name="milk">
-              <label for="milk">Молоко</label>
-            </li>
+          <li class="program-selection__checkbox">
+            <input type="checkbox" id="milk" name="milk">
+            <label for="milk">Молоко</label>
+          </li>
 
-            <li class="program-selection__checkbox">
-              <input type="checkbox" id="vitamins" name="vitamins">
-              <label for="vitamins">Витамины</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить
-          заявку</button>
-        <small class="program-selection__small-text"> *—Обязательные поля</small>
+          <li class="program-selection__checkbox">
+            <input type="checkbox" id="vitamins" name="vitamins">
+            <label for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+    <div class="program-selection__button-container">
+      <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить
+        заявку</button>
+      <small class="program-selection__small-text"> *—Обязательные поля</small>
+      </div>
       </form>
     </div>
 
