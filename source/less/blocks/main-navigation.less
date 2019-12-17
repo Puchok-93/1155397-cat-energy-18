@@ -28,6 +28,38 @@
   box-shadow: 0 8px 0 0 @black2, 0 16px 0 0 @black2;
 }
 
+.main-navigation--opened .main-navigation__toggle {
+  top: -23px;
+  right: 10px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 19px;
+    height: 2px;
+
+    background-color: @black2;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-navigation__toggle {
     display: none;
