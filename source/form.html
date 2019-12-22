@@ -11,8 +11,6 @@
 <body>
   <header class="page-header">
     <div class="header-wrapper">
-      <!--Шапка-->
-
       <div class="header-top">
         <a class="page-header__logo" href="index.html">
           <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
@@ -22,9 +20,6 @@
               меню</span></button>
         </div>
       </div>
-
-      <!--Меню-->
-
       <div class="header-nav">
         <ul class="site-list">
           <li class="site-list__item">
@@ -51,23 +46,21 @@
           <div class="program-selection__container">
           <fieldset class="program-selection__fieldset">
             <ul class="program-selection__list program-selection__cat-info">
-              <li>
-                <label class="program-selection__field" for="name">Имя:*
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="name">Имя:*</label>
                   <input class="program-selection__input program-selection__input--first-input" type="text" id="name"
                     name="username" placeholder="Барсик">
-                </label>
+
               </li>
-              <li>
-                <label class="program-selection__field" for="weight">Вес(кг):*
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="weight">Вес(кг):*</label>
                   <input class="program-selection__input program-selection__input--second-input" type="text" id="weight"
                     name="user-weight" placeholder="7">
-                </label>
               </li>
-              <li>
-                <label class="program-selection__field" for="age">Возраст(лет):*
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="age">Возраст(лет):*</label>
                   <input class="program-selection__input program-selection__input--third-input" type="text" id="age"
                     name="user-age" placeholder="7">
-                </label>
               </li>
             </ul>
           </fieldset>
@@ -96,28 +89,29 @@
       <!--Контактные данные-->
       <div class="program-selection__contacts">
         <fieldset class="program-selection__fieldset">
-          <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
+          <legend class="program-selection__legend program-selection__legend--contacts">Контактные данные (владельца кота)</legend>
           <ul class="program-selection__list program-selection__contacts">
-            <li>
-              <label class="program-selection__field" for="email">E-mail:*
+            <li class="program-selection__list-item">
+              <label class="program-selection__field" for="email">E-mail:*</label>
                 <input class="program-selection__input program-selection__input--fourth-input" type="text" id="email"
                   name="user-email" placeholder="kuklachev@gmail.com">
-              </label>
+                  <span class="program-selection__email-icon"></span>
+
             </li>
 
-            <li>
-              <label class="program-selection__field" for="phone">Телефон:*
+            <li class="program-selection__list-item">
+              <label class="program-selection__field" for="phone">Телефон:*</label>
                 <input class="program-selection__input program-selection__input--fifth-input" type="text" id="phone"
                   name="user-phone" placeholder="8 (960) 900-60-90">
-              </label>
+
             </li>
           </ul>
         </fieldset>
       </div>
 
       <!--Комментарии-->
-      <fieldset class="program-selection__fieldset program-selection__comment">
-        <legend class="program-selection__legend">Комментарий</legend>
+      <fieldset class="program-selection__fieldset program-selection__fieldset--comment">
+        <legend class="program-selection__legend program-selection__legend--comment">Комментарий</legend>
         <label for="text-letter">
           <textarea class="program-selection__letter" id="text-letter" name="letter"
             placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -125,8 +119,8 @@
       </fieldset>
 
       <!--Дополнительно-->
-      <fieldset class="program-selection__fieldset">
-        <legend class="program-selection__legend">Дополнительно</legend>
+      <fieldset class="program-selection__fieldset program-selection__fieldset--additionally">
+        <legend class="program-selection__legend program-selection__legend--additionally">Дополнительно</legend>
         <ul class="program-selection__list program-selection__checkbox-list">
           <li class="program-selection__checkbox">
             <input class="visually-hidden program-selection__checkbox-input" type="checkbox" id="sugar" name="sugar" checked>
@@ -158,13 +152,13 @@
     </div>
 
     <section class="collaboration">
-      <div class="wrapper">
+      <div class="wrapper-collaboration">
         <div class="collaboration__info">
           <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <a class="collaboration__map" href="#">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
+        <a class="collaboration__map-link" href="#">
+          <img class="collaboration__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
