@@ -365,11 +365,21 @@
   }
 
   .program-selection__legend--comment {
-    &::after {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 3px;
+      top: 22px;
+      left: -30px;
+      background-color: @green;
+    }
+
+    &::after{
       width: 500px;
       height: 3px;
-      top: 12px;
-      right: -20px;
+      top: 20px;
+      left: 240px;
       background-color: @green;
     }
   }
@@ -442,6 +452,26 @@
       height: 3px;
       top: 22px;
       right: -223px;
+    }
+  }
+
+  .program-selection__legend--additionally {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 3px;
+      top: 22px;
+      left: -30px;
+      background-color: @green;
+    }
+
+    &::after {
+      width: 500px;
+      height: 3px;
+      top: 20px;
+      left: 240px;
+      background-color: @green;
     }
   }
 }
