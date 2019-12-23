@@ -3,6 +3,22 @@
   outline: 1px solid red;
 }
 
+.header-top__logo {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .header-top {
     display: flex;
@@ -10,7 +26,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__logo {
+  .header-top__logo {
     margin-top: 16px;
   }
 }
