@@ -10,30 +10,28 @@
 
 <body>
   <header class="page-header">
-    <div class="wrapper">
-      <div class="top-header">
-        <a class="page-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+    <div class="header-wrapper">
+      <div class="header-top">
+        <a href="index.html">
+          <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
         </a>
+      </div>
+      <div class="header-nav">
         <nav class="main-navigation main-navigation--closed">
           <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
               меню</span></button>
-          <div>
-            <ul class="site-list">
-              <li class="site-list__item">
-                <a href="index.html">Главная</a>
-              </li>
-              <li class="site-list__item site-list__item--active">
-                <a>Каталог продукции</a>
-              </li>
-              <li class="site-list__item">
-                <a href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+              <ul class="site-list">
+                <li class="site-list__item">
+                  <a href="index.html">Главная</a>
+                </li>
+                <li class="site-list__item site-list__item--active">
+                  <a>Каталог продукции</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="form.html">Подбор программы</a>
+                </li>
+              </ul>
         </nav>
-      </div>
-    </div>
   </header>
 
   <main class="page-main">
@@ -256,74 +254,88 @@
     <section class="additional-products">
       <div class="wrapper">
         <h2 class="additional-products__title">Дополнительные товары</h2>
-        <ul class="additional-products__list">
+        <div class="additional-products__container">
+          <ul class="additional-products__list">
 
-          <li class="additional-products__list-item">
-            <h3 class="additional-products__title-item">Сахаразаменитель</h3>
-            <table class="additional-products__table">
-              <tr class="additional-products__table-item">
-                <td>1 упаковка(100 г)</td>
-                <td>200 р.</td>
-              </tr>
-            </table>
-            <a class="additional-products__button" href="#">Заказать</a>
-          </li>
+            <li class="additional-products__list-item">
+              <div class="additional-products__info">
+                <h3 class="additional-products__title-item">Сахаразаменитель</h3>
+                <table class="additional-products__table">
+                  <tr class="additional-products__table-item">
+                    <td>1 упаковка(100 г)</td>
+                    <td>200 р.</td>
+                  </tr>
+                </table>
+                <a class="additional-products__button" href="#">Заказать</a>
+              </div>
+            </li>
 
-          <li class="additional-products__item">
-            <h3 class="additional-products__title-item">Питьевая вода</h3>
-            <table class="additional-products__table">
-              <tr class="additional-products__table-item">
-                <td>5 литров</td>
-                <td>50 р.</td>
-              </tr>
-            </table>
-            <a class="additional-products__button" href="#">Заказать</a>
-          </li>
+            <li class="additional-products__list-item">
+              <div class="additional-products__info">
+                <h3 class="additional-products__title-item">Питьевая вода</h3>
+                <table class="additional-products__table">
+                  <tr class="additional-products__table-item">
+                    <td>5 литров</td>
+                    <td>50 р.</td>
+                  </tr>
+                </table>
 
-          <li class="additional-products__item">
-            <h3 class="additional-products__title-item">Молоко</h3>
-            <table class="additional-products__table">
-              <tr class="additional-products__table-item">
-                <td>1 литр</td>
-                <td>100 р.</td>
-              </tr>
-            </table>
-            <a class="additional-products__button" href="#">Заказать</a>
-          </li>
+                <a class="additional-products__button" href="#">Заказать</a>
+              </div>
+            </li>
 
-          <li class="additional-products__item">
-            <h3 class="additional-products__title-item">Витамины</h3>
-            <table class="additional-products__table">
-              <tr class="additional-products__table-item">
-                <td>1 упаковка(30 г)</td>
-                <td>300 р.</td>
-              </tr>
-            </table>
-            <a class="additional-products__button" href="#">Заказать</a>
-          </li>
-        </ul>
+            <li class="additional-products__list-item">
+              <div class="additional-products__info">
+                <h3 class="additional-products__title-item">Молоко</h3>
+                <table class="additional-products__table">
+                  <tr class="additional-products__table-item">
+                    <td>1 литр</td>
+                    <td>100 р.</td>
+                  </tr>
+                </table>
 
-        <div class="additional-products__action">
-          <p class="additional-products__condition">Закажите все и получите чехол для кота в подарок!</p>
+                <a class="additional-products__button" href="#">Заказать</a>
+              </div>
+            </li>
+
+            <li class="additional-products__list-item">
+              <div class="additional-products__info">
+                <h3 class="additional-products__title-item">Витамины</h3>
+                <table class="additional-products__table">
+                  <tr class="additional-products__table-item">
+                    <td>1 упаковка(30 г)</td>
+                    <td>300 р.</td>
+                  </tr>
+                </table>
+
+                <a class="additional-products__button" href="#">Заказать</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="additional-products__action">
+            <p class="additional-products__condition">Закажите все и получите чехол для кота в подарок!</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="collaboration">
-      <div class="wrapper">
+      <div class="wrapper-collaboration">
         <div class="collaboration__info">
           <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <a class="collaboration__map" href="#">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
+        <a class="collaboration__map-link" href="#">
+          <img class="collaboration__map" src="img/bg-map-mobile@1x.png" width="320" height="400"
+            alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper footer-tablet">
+    <div class="wrapper wrapper-footer">
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
@@ -350,5 +362,20 @@
     </div>
   </footer>
 </body>
+<script>
+  var navMain = document.querySelector('.main-navigation');
+  var navToggle = document.querySelector('.main-navigation__toggle');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-navigation--closed')) {
+      navMain.classList.remove('main-navigation--closed');
+      navMain.classList.add('main-navigation--opened');
+    } else {
+      navMain.classList.add('main-navigation--closed');
+      navMain.classList.remove('main-navigation--opened');
+    }
+  });
+
+</script>
 
 </html>

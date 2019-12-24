@@ -2,30 +2,46 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid @light-grey;
+
+  border-bottom: 2px solid @light-grey;
 }
 
 .more-goods__title {
   display: block;
+  position: relative;
+
   font-family: @oswald;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: @black1;
   text-transform: uppercase;
-  .text-style();
+
   margin: 0;
+  margin-top: 80px;
   margin-bottom: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-plus-mobile.svg");
+    width: 31px;
+    height: 31px;
+    top: -60px;
+    left: 140px;
+    opacity: 0.2;
+  }
 }
 
 .more-goods__subtitle {
   display: block;
+
   font-family: @arial;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
   color: @brown;
-  .text-style();
+
   margin: 0;
   margin-bottom: 20px;
 }
@@ -36,6 +52,7 @@
   align-items: center;
   width: 280px;
   height: 40px;
+
   font-family: @oswald;
   font-size: 16px;
   line-height: 20px;
@@ -44,9 +61,17 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: @light-grey;
+
   margin-left: 20px;
-  margin-bottom: 25px;
-  .text-style();
+
+  &:hover,
+  &:focus {
+    background-color: @border-grey;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -57,27 +82,48 @@
 
   .more-goods__title {
     width: 140px;
+
     font-size: 20px;
+
     margin-left: 90px;
     margin-bottom: 28px;
+
+    &::before {
+      background-image: url("/img/icon-plus.svg");
+      width: 61px;
+      height: 61px;
+      top: -100px;
+      left: 35px;
+      opacity: 0.2;
+    }
   }
 
   .more-goods__subtitle {
     width: 170px;
+
     font-size: 16px;
+
     margin-left: 80px;
-    margin-bottom: 85px;
+    margin-bottom: 155px;
+  }
+
+  .more-goods__button {
+    width: 249px;
+    height: 40px;
+
+    margin-left: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .more__goods {
-    min-width: 245px;
+    min-width: 235px;
     box-sizing: border-box;
   }
 
   .more-goods__title {
     width: 140px;
+
     margin-left: 50px;
   }
 
@@ -87,6 +133,7 @@
 
   .more-goods__button {
     width: 169px;
+
     margin-left: 40px;
   }
 }

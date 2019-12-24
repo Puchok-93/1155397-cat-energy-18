@@ -10,30 +10,28 @@
 
 <body>
   <header class="page-header">
-    <div class="wrapper">
-      <div class="top-header">
-        <a class="page-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+    <div class="header-wrapper">
+      <div class="header-top">
+        <a href="index.html">
+          <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
         </a>
+      </div>
+      <div class="header-nav">
         <nav class="main-navigation main-navigation--closed">
           <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
               меню</span></button>
-          <div>
-            <ul class="site-list">
-              <li class="site-list__item">
-                <a href="index.html">Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="site-list__item site-list__item--active">
-                <a>Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+              <ul class="site-list">
+                <li class="site-list__item">
+                  <a href="index.html">Главная</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="site-list__item site-list__item--active">
+                  <a>Подбор программы</a>
+                </li>
+              </ul>
         </nav>
-      </div>
-    </div>
   </header>
 
 
@@ -41,73 +39,78 @@
     <div class="wrapper">
       <h1 class="page-title">Подбор программы</h1>
       <p class="page-title__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
-
       <form class="program-selection" method="post" action="#">
-
-        <fieldset class="program-selection__fieldset">
-          <ul class="program-selection__list">
-            <li>
-              <label class="program-selection__field" for="name">Имя:*
+        <div class="program-selection__container">
+          <fieldset class="program-selection__fieldset">
+            <ul class="program-selection__list program-selection__cat-info">
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="name">Имя:*</label>
                 <input class="program-selection__input program-selection__input--first-input" type="text" id="name"
                   name="username" placeholder="Барсик">
-              </label>
-            </li>
-            <li>
-              <label class="program-selection__field" for="weight">Вес(кг):*
+
+              </li>
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="weight">Вес(кг):*</label>
                 <input class="program-selection__input program-selection__input--second-input" type="text" id="weight"
                   name="user-weight" placeholder="7">
-              </label>
-            </li>
-            <li>
-              <label class="program-selection__field" for="age">Возраст(лет):*
+              </li>
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="age">Возраст(лет):*</label>
                 <input class="program-selection__input program-selection__input--third-input" type="text" id="age"
                   name="user-age" placeholder="7">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+              </li>
+            </ul>
+          </fieldset>
 
-        <!--Выбор программы-->
-        <fieldset class="program-selection__fieldset">
-          <ul class="program-selection__list">
-            <li class="program-selection__radio">
-              <input type="radio" id="slim" name="user-slim" checked>
-              <label for="slim">Похудение</label>
-            </li>
-            <li class="program-selection__radio">
-              <input type="radio" id="pro" name="user-pro">
-              <label for="pro">Набор массы</label>
-            </li>
-            <li class="program-selection__radio">
-              <input type="radio" id="dont-now" name="user-dont-now">
-              <label for="dont-now">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          <!--Выбор программы-->
+          <fieldset class="program-selection__fieldset">
+            <ul class="program-selection__list program-selection__list-programm">
+              <li class="program-selection__radio">
+                <input class="visually-hidden program-selection__radio-input" type="radio" id="slim" name="program"
+                  checked>
+                <label class="program-selection__radio-label" for="slim">Похудение</label>
+              </li>
+              <li class="program-selection__radio">
+                <input class="visually-hidden program-selection__radio-input" type="radio" id="pro" name="program">
+                <label class="program-selection__radio-label" for="pro">Набор массы</label>
+              </li>
+
+              <li class="program-selection__radio">
+                <input class="visually-hidden program-selection__radio-input" type="radio" id="dont-now" name="program">
+                <label class="program-selection__radio-label" for="dont-now">Не знаю (Нужен ваш совет)</label>
+              </li>
+
+            </ul>
+          </fieldset>
+        </div>
 
         <!--Контактные данные-->
-        <fieldset class="program-selection__fieldset">
-          <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
-          <ul class="program-selection__list">
-            <li>
-              <label class="program-selection__field" for="email">E-mail:*
+        <div class="program-selection__contacts">
+          <fieldset class="program-selection__fieldset">
+            <legend class="program-selection__legend program-selection__legend--contacts">Контактные данные (владельца
+              кота)</legend>
+            <ul class="program-selection__list program-selection__contacts">
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="email">E-mail:*</label>
                 <input class="program-selection__input program-selection__input--fourth-input" type="text" id="email"
                   name="user-email" placeholder="kuklachev@gmail.com">
-              </label>
-            </li>
+                <span class="program-selection__email-icon"></span>
 
-            <li>
-              <label class="program-selection__field" for="phone">Телефон:*
+              </li>
+
+              <li class="program-selection__list-item">
+                <label class="program-selection__field" for="phone">Телефон:*</label>
                 <input class="program-selection__input program-selection__input--fifth-input" type="text" id="phone"
                   name="user-phone" placeholder="8 (960) 900-60-90">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
         <!--Комментарии-->
-        <fieldset class="program-selection__fieldset">
-          <legend class="program-selection__legend">Комментарий</legend>
+        <fieldset class="program-selection__fieldset program-selection__fieldset--comment">
+          <legend class="program-selection__legend program-selection__legend--comment">Комментарий</legend>
           <label for="text-letter">
             <textarea class="program-selection__letter" id="text-letter" name="letter"
               placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -115,44 +118,49 @@
         </fieldset>
 
         <!--Дополнительно-->
-        <fieldset class="program-selection__fieldset">
-          <legend class="program-selection__legend">Дополнительно</legend>
-          <ul class="program-selection__list">
+        <fieldset class="program-selection__fieldset program-selection__fieldset--additionally">
+          <legend class="program-selection__legend program-selection__legend--additionally">Дополнительно</legend>
+          <ul class="program-selection__list program-selection__checkbox-list">
             <li class="program-selection__checkbox">
-              <input type="checkbox" id="sugar" name="sugar" checked>
-              <label for="sugar">Сахарозаменитель</label>
+              <input class="visually-hidden program-selection__checkbox-input" type="checkbox" id="sugar" name="sugar"
+                checked>
+              <label class="program-selection__checkbox-label" for="sugar">Сахарозаменитель</label>
             </li>
 
             <li class="program-selection__checkbox">
-              <input type="checkbox" id="water" name="water">
-              <label for="water">Питьевая вода</label>
+              <input class="visually-hidden program-selection__checkbox-input" type="checkbox" id="water" name="water">
+              <label class="program-selection__checkbox-label" for="water">Питьевая вода</label>
             </li>
 
             <li class="program-selection__checkbox">
-              <input type="checkbox" id="milk" name="milk">
-              <label for="milk">Молоко</label>
+              <input class="visually-hidden program-selection__checkbox-input" type="checkbox" id="milk" name="milk">
+              <label class="program-selection__checkbox-label" for="milk">Молоко</label>
             </li>
 
             <li class="program-selection__checkbox">
-              <input type="checkbox" id="vitamins" name="vitamins">
-              <label for="vitamins">Витамины</label>
+              <input class="visually-hidden program-selection__checkbox-input" type="checkbox" id="vitamins"
+                name="vitamins">
+              <label class="program-selection__checkbox-label" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
-        <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить
-          заявку</button>
-        <small class="program-selection__small-text"> *—Обязательные поля</small>
+        <div class="program-selection__button-container">
+          <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить
+            заявку</button>
+          <small class="program-selection__small-text"> *—Обязательные поля</small>
+        </div>
       </form>
     </div>
 
     <section class="collaboration">
-      <div class="wrapper">
+      <div class="wrapper-collaboration">
         <div class="collaboration__info">
           <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <a class="collaboration__map" href="#">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
+        <a class="collaboration__map-link" href="#">
+          <img class="collaboration__map" src="img/bg-map-mobile@1x.png" width="320" height="400"
+            alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
@@ -160,10 +168,11 @@
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper">
+    <div class="wrapper wrapper-footer">
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
+
       <ul class="social-list">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--vkontakte"
@@ -178,6 +187,7 @@
             aria-label="Перейти на страницу Facebook"><span>Facebook</span></a>
         </li>
       </ul>
+
       <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
         title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
         <img class="developer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Лого академии">
@@ -185,5 +195,20 @@
     </div>
   </footer>
 </body>
+<script>
+  var navMain = document.querySelector('.main-navigation');
+  var navToggle = document.querySelector('.main-navigation__toggle');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-navigation--closed')) {
+      navMain.classList.remove('main-navigation--closed');
+      navMain.classList.add('main-navigation--opened');
+    } else {
+      navMain.classList.add('main-navigation--closed');
+      navMain.classList.remove('main-navigation--opened');
+    }
+  });
+
+</script>
 
 </html>

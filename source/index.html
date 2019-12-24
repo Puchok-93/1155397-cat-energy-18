@@ -10,30 +10,28 @@
 
 <body>
   <header class="page-header">
-    <div class="wrapper">
-      <div class="top-header">
-        <a class="page-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+    <div class="header-wrapper">
+      <div class="header-top">
+        <a href="index.html">
+          <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
         </a>
+      </div>
+      <div class="header-nav">
         <nav class="main-navigation main-navigation--closed">
           <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
               меню</span></button>
-          <div>
-            <ul class="site-list">
-              <li class="site-list__item site-list__item--active">
-                <a>Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="site-list__item">
-                <a href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+              <ul class="site-list site-list--index">
+                <li class="site-list__item site-list__item--active-index">
+                  <a>Главная</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="form.html">Подбор программы</a>
+                </li>
+              </ul>
         </nav>
-      </div>
-    </div>
   </header>
 
   <main>
@@ -51,7 +49,7 @@
       <div class="wrapper">
         <h2 class="visually-hidden">Наши программы</h2>
         <ul class="program__list">
-          <li class="program__list-item">
+          <li class="program__list-item program__list-item--slim">
             <h3 class="program__list-title">Похудение</h3>
             <p class="program__list-description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
@@ -60,7 +58,7 @@
             <a href="#" class="program__list-link" aria-label="Перейти на страницу каталог slim">Каталог Slim</a>
           </li>
 
-          <li class="program__list-item">
+          <li class="program__list-item program__list-item--pro">
             <h3 class="program__list-title">Набор массы</h3>
             <p class="program__list-description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
@@ -71,6 +69,7 @@
         </ul>
       </div>
     </section>
+
 
     <section class="advantages">
       <div class="wrapper">
@@ -91,54 +90,63 @@
 
     <section class="example">
       <div class="wrapper">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-          Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-          часов в день. </p>
+        <div class="example__content">
+          <div class="example__info">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+              Energy Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+              часов в день. </p>
 
-        <ul class="example__result-list">
-          <li class="example__result-item">
-            <strong class="example__result-quantity">5 кг</strong>
-            <small class="example__result-comment">Снижение веса</small>
-          </li>
-          <li class="example__result-item">
-            <strong class="example__result-quantity">60 дней</strong>
-            <small class="example__result-comment">Затрачено времени</small>
-          </li>
-        </ul>
+            <div class="example__result">
 
-        <p class="example__result-total">Затраты на питание: 15 000 руб.</p>
-        <input class="visually-hidden test1" type="radio" name="toggle" checked>
-        <input class="visually-hidden test2" type="radio" name="toggle">
-        <ul class="example__slider-list">
-          <li class="example__slider-item example__slide slide1">
-            <img src="img/before-mobile@1x.png" width="311" height="232" alt="Борис до">
-          </li>
-          <li class="example__slider-item example__slide slide2">
-            <img src="img/after-mobile@1x.png" width="311" height="232" alt="Борис после">
-          </li>
-        </ul>
+              <ul class="example__result-list">
+                <li class="example__result-item">
+                  <strong class="example__result-quantity">5 кг</strong>
+                  <small class="example__result-comment">снижение веса</small>
+                </li>
+                <li class="example__result-item">
+                  <strong class="example__result-quantity">60 дней</strong>
+                  <small class="example__result-comment">затрачено времени</small>
+                </li>
+              </ul>
 
-        <div class="example__progressbar">
-          <label for="product-1" class="example__progressbar-label">Было</span></label>
-          <div class="example__progressbar-toggle">
-            <div class="example__progressbar-range"></div>
+              <p class="example__result-total">Затраты на питание: 15 000 руб.</p>
+            </div>
           </div>
-          <label for="product-2" class="example__progressbar-label">Стало</span></label>
-        </div>
+          <div class="example__slider">
+            <input class="visually-hidden test1" type="radio" name="toggle" checked>
+            <input class="visually-hidden test2" type="radio" name="toggle">
+            <ul class="example__slider-list">
+              <li class="example__slider-item example__slide slide1">
+                <img class="example__fat-cat" src="img/before-mobile@1x.png" width="311" height="232" alt="Борис до">
+              </li>
+              <li class="example__slider-item example__slide slide2">
+                <img class="example__slim-cat" src="img/after-mobile@1x.png" width="311" height="232" alt="Борис после">
+              </li>
+            </ul>
 
+            <div class="example__progressbar">
+              <label for="product-1" class="example__progressbar-label">Было</span></label>
+              <div class="example__progressbar-toggle">
+                <div class="example__progressbar-range"></div>
+              </div>
+              <label for="product-2" class="example__progressbar-label">Стало</span></label>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="collaboration">
-      <div class="wrapper">
+      <div class="wrapper-collaboration">
         <div class="collaboration__info">
           <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <a class="collaboration__map" href="#">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Интернет-магазин на карте города">
+        <a class="collaboration__map-link" href="#">
+          <img class="collaboration__map" src="img/bg-map-mobile@1x.png" width="320" height="400"
+            alt="Интернет-магазин на карте города">
         </a>
       </div>
     </section>
@@ -171,7 +179,22 @@
       </a>
     </div>
   </footer>
-
 </body>
+
+<script>
+  var navMain = document.querySelector('.main-navigation');
+  var navToggle = document.querySelector('.main-navigation__toggle');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-navigation--closed')) {
+      navMain.classList.remove('main-navigation--closed');
+      navMain.classList.add('main-navigation--opened');
+    } else {
+      navMain.classList.add('main-navigation--closed');
+      navMain.classList.remove('main-navigation--opened');
+    }
+  });
+
+</script>
 
 </html>

@@ -4,59 +4,103 @@
 
 .program__list {
   .list-reset();
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .program__list-item {
-  background-color: @light-grey;
-  margin-bottom: 20px;
   position: relative;
 
-  &::before {
+  background-color: @light-grey;
+
+  margin-bottom: 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--slim::before {
     position: absolute;
     content: "";
-    background-color: @green;
     width: 50px;
     height: 50px;
-    top: 22px;
+    top: 27px;
     left: 22px;
     border-radius: 50%;
+    background-color: @green;
+  }
+
+  &--slim::after {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 49px;
+    top: 25px;
+    left: 30px;
+  }
+
+  &--pro::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: 25px;
+    left: 22px;
+    border-radius: 50%;
+    background-color: @green;
+  }
+
+  &--pro::after {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 28px;
+    top: 36px;
+    left: 12px;
   }
 }
 
+
 .program__list-title {
   display: inline-block;
+
   font-family: @oswald;
   font-size: 24px;
+  font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
   text-align: center;
   color: @black1;
+
   margin: 0;
-  margin-top: 27px;
-  margin-left: 92px;
-  .text-style();
+  margin-top: 32px;
+  margin-left: 91px;
 }
 
 .program__list-description {
-  font-family: @arial;
   position: relative;
+
+  font-family: @arial;
   font-size: 14px;
+  font-weight: 400;
   line-height: 18px;
   text-align: left;
   color: @brown;
-  margin-top: 25px;
-  margin-left: 25px;
+
+  margin-top: 29px;
+  margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 22px;
-  .text-style();
 
   &::before {
     position: absolute;
     content: "";
     width: 240px;
     height: 1px;
-    top: 110px;
+    top: 113px;
     left: 0;
     background-color: @grey;
   }
@@ -64,20 +108,33 @@
 
 .program__list-link {
   display: inline-block;
+  position: relative;
+
   font-family: @oswald;
   font-size: 16px;
+  font-weight: 400;
   line-height: 16px;
   text-align: left;
   color: @black1;
   text-decoration: none;
   text-transform: uppercase;
+
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 22px;
-  .text-style();
 
   &:active {
     color: rgba(17, 17, 17, 0.3);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("/img/icon-right-arrow-long.svg");
+    width: 25px;
+    height: 12px;
+    top: 2px;
+    left: 95px;
   }
 }
 
@@ -91,12 +148,27 @@
       top: 92px;
       left: 470px;
     }
+
+    &--slim::after {
+      width: 141px;
+      height: 194px;
+      top: 80px;
+      left: 490px;
+    }
+
+    &--pro::after {
+      width: 268px;
+      height: 113px;
+      top: 130px;
+      left: 410px;
+    }
   }
 
   .program__list-title {
     text-align: left;
     font-size: 36px;
     line-height: 37px;
+
     margin-top: 81px;
     margin-left: 55px;
   }
@@ -104,6 +176,7 @@
   .program__list-description {
     font-size: 16px;
     line-height: 24px;
+
     margin-left: 52px;
     margin-right: 280px;
 
@@ -115,8 +188,13 @@
   .program__list-link {
     font-size: 20px;
     line-height: 20px;
+
     margin-left: 52px;
     margin-top: 35px;
+
+    &::after {
+      left: 120px;
+    }
   }
 }
 
@@ -124,6 +202,7 @@
   .program__list {
     display: flex;
     justify-content: space-around;
+
     margin-left: auto;
     margin-right: auto;
   }
@@ -136,12 +215,27 @@
   .program__list-item {
     width: 570px;
     background-color: @light-grey;
+    position: relative;
 
     &::before {
       width: 100px;
       height: 100px;
       top: 20px;
       left: 52px;
+    }
+
+    &--slim::after {
+      width: 71px;
+      height: 97px;
+      top: 15px;
+      left: 70px;
+    }
+
+    &--pro::after {
+      width: 134px;
+      height: 57px;
+      top: 40px;
+      left: 30px;
     }
   }
 
