@@ -69,7 +69,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    margin-bottom: 113px;
+    margin-bottom: 146px;
   }
 
   .advantages__title {
@@ -91,8 +91,8 @@
     font-size: 16px;
     line-height: 24px;
 
-    padding: 110px 0 0;
-    margin-bottom: 150px;
+    padding: 111px 0 0;
+
     margin-left: 50px;
 
     &::before {
@@ -101,10 +101,85 @@
       top: -0;
       left: 0;
     }
+
+    &--bio::after {
+      position: absolute;
+      content: "1";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 120px;
+    }
+
+    &--format::after {
+      position: absolute;
+      content: "2";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 110px;
+    }
+
+    &--food::after {
+      position: absolute;
+      content: "3";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 110px;
+    }
+
+    &--time::after {
+      position: absolute;
+      content: "4";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 110px;
+
+      opacity: 0.1;
+    }
   }
 
-  .advantages__list-item--food,
+  .advantages__list-item--bio {
+    margin-bottom: 135px;
+  }
+
+  .advantages__list-item--format {
+    margin-left: 153px;
+  }
+
+  .advantages__list-item--food {
+    margin-bottom: 0;
+  }
+
+
   .advantages__list-item--time {
+    margin-left: 154px;
     margin-bottom: 0;
   }
 }
