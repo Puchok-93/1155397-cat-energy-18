@@ -142,25 +142,27 @@
   .program__list-item {
     min-height: 372px;
 
+    margin-bottom: 29px;
+
     &::before {
       width: 200px;
       height: 200px;
       top: 92px;
-      left: 470px;
+      left: 445px;
     }
 
     &--slim::after {
       width: 141px;
       height: 194px;
       top: 80px;
-      left: 490px;
+      left: 475px;
     }
 
     &--pro::after {
       width: 268px;
       height: 113px;
-      top: 130px;
-      left: 410px;
+      top: 135px;
+      left: 412px;
     }
   }
 
@@ -169,7 +171,7 @@
     font-size: 36px;
     line-height: 37px;
 
-    margin-top: 81px;
+    margin-top: 76px;
     margin-left: 55px;
   }
 
@@ -177,6 +179,8 @@
     font-size: 16px;
     line-height: 24px;
 
+
+    margin-top: 24px;
     margin-left: 52px;
     margin-right: 280px;
 
@@ -189,8 +193,8 @@
     font-size: 20px;
     line-height: 20px;
 
+    margin: 0;
     margin-left: 52px;
-    margin-top: 35px;
 
     &::after {
       left: 120px;
@@ -201,51 +205,59 @@
 @media (min-width: @desktop-width) {
   .program__list {
     display: flex;
-    justify-content: space-around;
 
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 80px;
   }
 
   .program__list-title {
-    margin-left: 200px;
-    margin-top: 50px;
+    margin-left: 215px;
+    margin-top: 77px;
   }
 
   .program__list-item {
     width: 570px;
-    background-color: @light-grey;
     position: relative;
+
+    background-color: @white;
 
     &::before {
       width: 100px;
       height: 100px;
-      top: 20px;
-      left: 52px;
+      top: 48px;
+      left: 53px;
     }
 
     &--slim::after {
       width: 71px;
       height: 97px;
-      top: 15px;
-      left: 70px;
+      top: 42px;
+      left: 67px;
     }
 
     &--pro::after {
       width: 134px;
       height: 57px;
-      top: 40px;
-      left: 30px;
+      top: 70px;
+      left: 35px;
     }
   }
 
+  .program__list-item--pro {
+    margin-left: 80px;
+  }
+
   .program__list-description {
-    margin-left: 52px;
+    margin-left: 53px;
     margin-right: 50px;
-    margin-top: 50px;
+    margin-top: 73px;
   }
 
   .program__list-link {
-    margin-top: 50px;
+    margin-top: 9px;
+    margin-left: 53px;
+
+    &::after {
+      left: 125px;
+    }
   }
 }
