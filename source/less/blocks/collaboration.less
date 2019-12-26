@@ -40,9 +40,42 @@
 .collaboration__map {
   display: block;
   width: 100%;
+  background-color: @grey;
 }
 
 @media (min-width: @tablet-width) {
+  .collaboration__title {
+    width: 150px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .collaboration__address {
+    width: 160px;
+
+    text-align: right;
+    font-size: 16px;
+
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .collaboration {
+    position: relative;
+  }
+
+  .collaboration__info {
+    background-color: @white;
+    width: 570px;
+    position: absolute;
+    top: 110px;
+    left: 150px;
+
+    padding: 40px 0;
+  }
+
   .collaboration__title {
     width: 150px;
 

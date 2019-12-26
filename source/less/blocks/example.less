@@ -230,7 +230,24 @@
     left: 190px;
 
     border-radius: 50%;
-    background-color: @grass;
+    background-color: @white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      top: 13px;
+      left: 13px;
+      border-radius: 50%;
+      background-color: @grass;
+    }
+  }
+
+  .example__progressbar-label {
+    border-bottom: 1px dotted @black1;
+
+    padding-bottom: 6px;
   }
 }
 
