@@ -3,6 +3,7 @@
 }
 
 .additional-products__title {
+  position: relative;
   font-family: @oswald;
   font-size: 24px;
   font-weight: 400;
@@ -11,7 +12,18 @@
   color: @black1;
 
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 34px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 53px;
+    height: 3px;
+    top: 14px;
+    right: -20px;
+    background-color: @green;
+  }
 }
 
 .additional-products__list {
@@ -19,6 +31,7 @@
 }
 
 .additional-products__list-item {
+  box-sizing: border-box;
   border-top: 1px solid @grey;
 
   &:last-child {
@@ -42,7 +55,8 @@
 }
 
 .additional-products__table {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-left: -5px;
 }
 
 .additional-products__table-item {
@@ -72,8 +86,8 @@
   color: @white;
   background-color: @green;
 
-  margin-top: 14px;
-  margin-bottom: 15px;
+  margin-top: 12px;
+  margin-bottom: 16px;
 }
 
 .additional-products__action {
@@ -83,11 +97,13 @@
   height: 289px;
 
   margin-top: 39px;
+  margin-bottom: 35px;
 }
 
 .additional-products__condition {
   display: inline-block;
-  width: 159px;
+  width: 170px;
+  position: relative;
 
   font-family: @arial;
   font-size: 16px;
@@ -96,8 +112,18 @@
   color: @white;
   text-align: center;
 
-  margin-left: 60px;
-  margin-top: 170px;
+  margin-left: 55px;
+  margin-top: 187px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 61px;
+    top: -123px;
+    left: 58px;
+    background-image: url("/img/icon-gift.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
