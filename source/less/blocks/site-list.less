@@ -43,18 +43,22 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
-    width: 500px;
     flex-direction: row;
     margin-top: 20px;
-    margin-left: 45px;
+    margin-left: 80px;
   }
 
   .site-list__item {
     border: none;
-    margin-right: 10px;
 
     &:first-child {
       border-top: none;
+      margin-right: 35px;
+    }
+
+    &:last-child {
+      border-top: none;
+      margin-left: 35px;
     }
   }
 
@@ -78,8 +82,10 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    margin-left: 550px;
+    margin-left: 5px;
     width: 500px;
+
+    margin-top: 50px;
   }
 
   .site-list a {

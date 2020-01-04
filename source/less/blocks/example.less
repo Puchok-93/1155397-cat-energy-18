@@ -103,8 +103,7 @@
   margin-top: 20px;
 }
 
-.example__fat-cat,
-.example__slim-cat {
+.example__cat {
   display: block;
   width: 100%;
 }
@@ -153,16 +152,20 @@
   margin: 4px 5px 0;
 }
 
-.example__slide {
+.example__slider-item {
   display: none;
 }
 
-.test1:checked ~ .example__slider-list .slide1,
-.test2:checked ~ .example__slider-list .slide2 {
+.fat-cat:checked ~ .example__slider-list .example__slider-item--fat-cat,
+.slim-cat:checked ~ .example__slider-list .example__slider-item--slim-cat {
   display: block;
 }
 
 @media (min-width: @tablet-width) {
+  .example {
+    background-color: @white;
+  }
+
   .example__title {
     font-size: 60px;
   }
@@ -209,9 +212,38 @@
     text-align: right;
 
     margin-top: 11px;
+    margin-bottom: 300px;
+  }
+  /*--------------------------------------------------Слайдер--------------------------------------------------*/
+  .example__slider {
+    position: relative;
+    background: linear-gradient(to right, @grey 50%, #eaeaea 50%);
   }
 
+  .example__slider-list {
+    display: flex;
+  }
+
+  .example__slider-item {
+    display: block;
+  }
+
+  .example__cat {
+    position: absolute;
+    top: -240px;
+    left: 10px;
+  }
+
+  .example__cat--fat-cat {
+    clip: rect(auto, 345px, auto, auto);
+  }
+
+  .example__cat--slim-cat {
+    clip: rect(auto, auto, auto, 345px);
+  }
+  /*--------------------------------------------------Прогрессбар--------------------------------------------------*/
   .example__progressbar {
+    margin-top: 300px;
     margin-left: 60px;
   }
 
@@ -252,6 +284,31 @@
 }
 
 @media (min-width: @desktop-width) {
+  .example {
+    background: linear-gradient(to right, @grey 85%, #eaeaea 50%);
+  }
+
+  .example__slider {
+    position: relative;
+    background: none;
+    margin-top: 120px;
+    outline: 1px solid hotpink;
+  }
+
+  .example__cat {
+    position: absolute;
+    top: -270px;
+    left: 10px;
+  }
+
+  .example__cat--fat-cat {
+    clip: rect(auto, 300px, auto, auto);
+  }
+
+  .example__cat--slim-cat {
+    clip: rect(auto, auto, auto, 290px);
+  }
+
   .example__content {
     display: flex;
     flex-direction: row;
@@ -260,11 +317,6 @@
   }
 
   .example__info {
-    outline: 1px solid hotpink;
-  }
-
-  .example__slider {
-    margin-top: 120px;
     outline: 1px solid hotpink;
   }
 
@@ -287,15 +339,16 @@
   .example__result-total {
     width: 300px;
 
-    margin-top: 60px;
-    padding-bottom: 75px;
+    margin: 0;
+    margin-top: 50px;
+  }
+
+  .example__progressbar {
+    margin-top: 170px;
+    margin-left: 60px;
   }
 
   .example__progressbar-label {
     font-size: 20px;
-  }
-
-  .example__progressbar {
-    margin-left: 0;
   }
 }
