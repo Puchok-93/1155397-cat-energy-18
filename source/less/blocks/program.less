@@ -1,5 +1,6 @@
 .program {
   margin-top: 20px;
+  outline: 1px solid red;
 }
 
 .program__list {
@@ -137,27 +138,38 @@
     left: 95px;
   }
 }
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
+  .program {
+    margin-top: -13px;
+  }
+
   .program__list-item {
-    /*min-height: 372px;*/
+    min-height: 372px;
 
     margin-bottom: 29px;
 
-    background-color: red;
+    background-color: lightblue;
 
-    &::before {
+    &--slim::before {
       width: 200px;
       height: 200px;
-      top: 68px;
+      top: 91px;
       left: 446px;
     }
 
     &--slim::after {
       width: 141px;
       height: 194px;
-      top: 56px;
+      top: 79px;
       left: 476px;
+    }
+
+    &--pro::before {
+      width: 200px;
+      height: 200px;
+      top: 91px;
+      left: 448px;
     }
 
     &--pro::after {
@@ -173,7 +185,7 @@
     font-size: 36px;
     line-height: 37px;
 
-    margin-top: 52px;
+    margin-top: 75px;
     margin-left: 53px;
   }
 
@@ -184,11 +196,18 @@
 
     margin-top: 24px;
     margin-left: 52px;
-    margin-right: 280px;
 
     &::before {
       background-color: @light-grey;
     }
+  }
+
+  .program__list-description--slim {
+    width: 380px;
+  }
+
+  .program__list-description--pro {
+    width: 340px;
   }
 
   .program__list-link {
@@ -197,23 +216,29 @@
 
     margin: 0;
     margin-left: 52px;
+    margin-top: 34px;
 
-    &::after {
-      left: 120px;
+    &--slim::after {
+      top: 3px;
+      left: 131px;
     }
 
-    &--slim {
-      margin-top: 33px;
-      padding-bottom: 62px;
+    &--pro::after {
+      top: 4px;
+      left: 126px;
     }
   }
 }
-
+/*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
+  .program {
+    margin-top: 40px;
+  }
+
   .program__list {
     display: flex;
 
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
   .program__list-title {
@@ -223,11 +248,13 @@
 
   .program__list-item {
     width: 570px;
+    min-height: 372px;
     position: relative;
 
-    background-color: @white;
+    background-color: lightblue;
+    outline: 1px solid red;
 
-    &::before {
+    &--slim::before {
       width: 100px;
       height: 100px;
       top: 48px;
@@ -241,6 +268,13 @@
       left: 67px;
     }
 
+    &--pro::before {
+      width: 100px;
+      height: 100px;
+      top: 48px;
+      left: 53px;
+    }
+
     &--pro::after {
       width: 134px;
       height: 57px;
@@ -248,7 +282,7 @@
       left: 35px;
     }
   }
-
+  /*
   .program__list-item--pro {
     margin-left: 80px;
   }
@@ -266,5 +300,5 @@
     &::after {
       left: 125px;
     }
-  }
+  }*/
 }
