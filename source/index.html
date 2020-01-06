@@ -66,8 +66,7 @@
             </p>
             <a href="#" class="program__list-link program__list-link--slim" aria-label="Перейти на страницу каталог slim">Каталог Slim</a>
           </li>
-
-          <li class="program__list-item program__list-item--pro">
+        <li class="program__list-item program__list-item--pro">
             <h3 class="program__list-title">Набор массы</h3>
             <p class="program__list-description program__list-description--pro">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
@@ -161,11 +160,15 @@
     <section class="collaboration">
       <div class="wrapper-collaboration">
         <div class="collaboration__info">
-          <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="collaboration__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
           <p class="collaboration__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <a class="collaboration__map-link" href="#">
-          <img class="collaboration__map" src="#" width="320" height="360" alt="Интернет-магазин на карте города">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="img/bg-map-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+          <img class="collaboration__map" src="img/bg-map-mobile@1x.png" alt="Интернет-магазин на карте города">
+        </picture>
         </a>
       </div>
     </section>
@@ -181,7 +184,7 @@
         <li class="social-list__item">
           <a href="#" class="social-list__icon social-list__icon--vkontakte" aria-label="Перейти на страницу Вконтакте">
             <span class="visually-hidden">Вконтакте</span>
-            <svg version="1.1" id="Layer_1" width="22" height="18" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social-list__vkontakte" version="1.1" id="Layer_1" width="22" height="18" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12"
               style="enable-background:new 0 0 22 12;" xml:space="preserve">
               <path
@@ -190,9 +193,9 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#" class="social-list__icon social-list__icon--instagram" aria-label="Перейти на страницу Instagram">
+          <a href="#" class="social-list__icon" aria-label="Перейти на страницу Instagram">
             <span class="visually-hidden">Instagram</span>
-            <svg version="1.1" id="Layer_1" width="17" height="17" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social-list__instagram"version="1.1" id="Layer_1" width="17" height="17" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16"
               style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
               <style type="text/css"></style>
@@ -206,7 +209,7 @@
         <li class="social-list__item">
           <a href="#" class="social-list__icon social-list__icon--facebook" aria-label="Перейти на страницу Facebook">
             <span class="visually-hidden">Facebook</span>
-            <svg version="1.1" id="Layer_1" width="10" height="19" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social-list__facebook" version="1.1" id="Layer_1" width="10" height="19" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19"
               style="enable-background:new 0 0 10 19;" xml:space="preserve">
               <path

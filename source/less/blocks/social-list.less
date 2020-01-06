@@ -32,3 +32,31 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    border: none;
+  }
+
+  .social-list__item {
+    &:first-child {
+      margin-left: 64px;
+      margin-right: 0;
+    }
+  }
+
+  .social-list__vkontakte {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social-list__instagram {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social-list__facebook {
+    width: 14px;
+    height: 28px;
+  }
+}

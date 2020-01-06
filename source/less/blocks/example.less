@@ -10,7 +10,7 @@
   color: @black1;
 
   margin: 0;
-  margin-top: 39px;
+  margin-top: 37px;
 }
 
 .example__subtitle {
@@ -93,7 +93,7 @@
 
   margin-top: 35px;
 }
-
+/* Слайдер*/
 .example__slider-list {
   list-style: none;
 
@@ -105,9 +105,19 @@
 
 .example__cat {
   display: block;
-  width: 100%;
+  margin-left: -20px;
 }
 
+.example__slider-item {
+  display: none;
+}
+
+.fat-cat:checked ~ .example__slider-list .example__slider-item--fat-cat,
+.slim-cat:checked ~ .example__slider-list .example__slider-item--slim-cat {
+  display: block;
+}
+
+/*Прогрессбар*/
 .example__progressbar {
   display: flex;
   align-items: center;
@@ -152,17 +162,10 @@
   margin: 4px 5px 0;
 }
 
-.example__slider-item {
-  display: none;
-}
-
-.fat-cat:checked ~ .example__slider-list .example__slider-item--fat-cat,
-.slim-cat:checked ~ .example__slider-list .example__slider-item--slim-cat {
-  display: block;
-}
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .example {
+    margin-top: 91px;
     background-color: @white;
   }
 
@@ -203,6 +206,8 @@
 
     font-size: 14px;
     line-height: 14px;
+
+    background-color: @white;
   }
 
   .example__result-total {
@@ -210,14 +215,16 @@
 
     font-size: 20px;
     text-align: right;
+    line-height: 29px; /* В макете межстрочный интервал 20px, можно ли его увеличить для соответствия, чтобы не разбивать в рахметке элемент на два p */
 
-    margin-top: 11px;
+    margin-top: 8px;
     margin-bottom: 300px;
   }
   /*--------------------------------------------------Слайдер--------------------------------------------------*/
   .example__slider {
     position: relative;
-    background: linear-gradient(to right, @grey 50%, #eaeaea 50%);
+    background: linear-gradient(to right, @light-grey 45%, #eaeaea 50%);
+    margin-left: 20px;
   }
 
   .example__slider-list {
@@ -230,21 +237,23 @@
 
   .example__cat {
     position: absolute;
-    top: -240px;
-    left: 10px;
+    top: -228px;
+    left: 18px;
   }
 
   .example__cat--fat-cat {
-    clip: rect(auto, 345px, auto, auto);
+    clip: rect(auto, 336px, auto, auto);
   }
 
   .example__cat--slim-cat {
-    clip: rect(auto, auto, auto, 345px);
+    clip: rect(auto, auto, auto, 336px);
   }
   /*--------------------------------------------------Прогрессбар--------------------------------------------------*/
   .example__progressbar {
-    margin-top: 300px;
-    margin-left: 60px;
+    margin-top: 305px;
+    margin-left: 64px;
+
+    padding-bottom: 67px;
   }
 
   .example__progressbar-toggle {
@@ -252,16 +261,22 @@
     width: 428px;
     height: 6px;
     background-color: @toggle;
+
+    border: none;
+    border-radius: 2.5px;
+
+    margin-top: -2px;
   }
 
   .example__progressbar-range {
     position: absolute;
     width: 34px;
     height: 34px;
-    top: -20px;
-    left: 190px;
+    top: -19px;
+    left: 193px;
 
     border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     background-color: @white;
 
     &::after {
@@ -277,15 +292,67 @@
   }
 
   .example__progressbar-label {
+    font-size: 20px;
     border-bottom: 1px dotted @black1;
 
     padding-bottom: 6px;
+
+    &:first-child {
+      margin-top: 4px;
+      margin-left: -16px;
+      margin-right: 24px;
+    }
+
+    &:last-child {
+      margin-top: 2px;
+      margin-left: 22px;
+    }
   }
 }
-
+/*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .example {
-    background: linear-gradient(to right, @grey 85%, #eaeaea 50%);
+    background: linear-gradient(to right, @light-grey 67.1%, #eaeaea 29.5%);
+  }
+
+  .example__title {
+    margin-top: -134px;
+  }
+
+  .example__subtitle {
+    width: 435px;
+
+    padding-top: 82px;
+    margin-bottom: 68px;
+  }
+
+  .example__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    /*padding-bottom: 32px;*/
+  }
+
+  .example__info {
+    outline: 1px solid hotpink;
+  }
+
+  .example__result {
+    flex-direction: column;
+  }
+
+  .example__result-total {
+    width: 300px;
+
+    margin: 0;
+    margin-top: 55px;
+    margin-left: -31px;
+  }
+
+  .example__result-comment {
+    background-color: @light-grey;
   }
 
   .example__slider {
@@ -297,55 +364,23 @@
 
   .example__cat {
     position: absolute;
-    top: -270px;
-    left: 10px;
+    top: -310px;
+    left: -14px;
   }
 
   .example__cat--fat-cat {
-    clip: rect(auto, 300px, auto, auto);
+    clip: rect(auto, 365px, auto, auto);
   }
 
   .example__cat--slim-cat {
-    clip: rect(auto, auto, auto, 290px);
-  }
-
-  .example__content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .example__info {
-    outline: 1px solid hotpink;
-  }
-
-  .example__title {
-    margin-top: -136px;
-    margin-left: 1px;
-  }
-
-  .example__subtitle {
-    width: 430px;
-
-    padding-top: 82px;
-    margin-bottom: 68px;
-  }
-
-  .example__result {
-    flex-direction: column;
-  }
-
-  .example__result-total {
-    width: 300px;
-
-    margin: 0;
-    margin-top: 50px;
+    clip: rect(auto, auto, auto, 365px);
   }
 
   .example__progressbar {
-    margin-top: 170px;
+    margin-top: 225px;
     margin-left: 60px;
+
+    padding-bottom: 66px;
   }
 
   .example__progressbar-label {

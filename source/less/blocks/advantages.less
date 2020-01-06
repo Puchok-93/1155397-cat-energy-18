@@ -9,6 +9,7 @@
   line-height: 60px;
   color: @black1;
   margin: 0;
+  margin-top: -3px;
 }
 
 .advantages__list {
@@ -16,7 +17,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   .list-reset();
-  margin-top: 28px;
+  margin-top: 30px;
   margin-left: 80px;
 }
 
@@ -38,6 +39,7 @@
 
     width: 60px;
     height: 60px;
+    top: -2px;
     left: -80px;
     background-color: @green;
   }
@@ -66,15 +68,15 @@
     background-position: center;
   }
 }
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .advantages {
-    margin-bottom: 146px;
+    padding-bottom: 30px;
   }
 
   .advantages__title {
     font-size: 60px;
-    margin-top: 46px;
+    margin-top: 45px;
     margin-bottom: 72px;
   }
 
@@ -86,7 +88,7 @@
   }
 
   .advantages__list-item {
-    width: 230px;
+    width: 245px;
 
     font-size: 16px;
     line-height: 24px;
@@ -98,7 +100,7 @@
     &::before {
       width: 80px;
       height: 80px;
-      top: -0;
+      top: 0;
       left: 0;
     }
 
@@ -114,7 +116,7 @@
       line-height: 281px;
 
       top: -40px;
-      left: 120px;
+      left: 118px;
 
       opacity: 0.1;
     }
@@ -131,7 +133,7 @@
       line-height: 281px;
 
       top: -40px;
-      left: 110px;
+      left: 112px;
 
       opacity: 0.1;
     }
@@ -147,8 +149,8 @@
       font-style: normal;
       line-height: 281px;
 
-      top: -40px;
-      left: 110px;
+      top: -39px;
+      left: 114px;
 
       opacity: 0.1;
     }
@@ -165,7 +167,7 @@
       line-height: 281px;
 
       top: -40px;
-      left: 110px;
+      left: 114px;
 
       opacity: 0.1;
     }
@@ -176,28 +178,39 @@
   }
 
   .advantages__list-item--format {
-    margin-left: 153px;
+    margin-left: 139px;
   }
 
   .advantages__list-item--food {
+    margin-top: -1px;
     margin-bottom: 0;
   }
 
   .advantages__list-item--time {
-    margin-left: 154px;
+    margin-top: -1px;
+    margin-left: 139px;
   }
 }
-
+/*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
+  .advantages {
+    padding-bottom: 35px;
+  }
+
+  .advantages__list-item--bio {
+    margin-top: -1px;
+  }
+
   .advantages__list-item--format {
-    margin-left: 96px;
+    margin-top: -1px;
+    margin-left: 80px;
   }
 
   .advantages__list-item--food {
-    margin-left: 95px;
+    margin-left: 80px;
   }
 
   .advantages__list-item--time {
-    margin-left: 95px;
+    margin-left: 80px;
   }
 }
