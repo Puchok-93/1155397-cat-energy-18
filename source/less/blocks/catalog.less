@@ -7,7 +7,7 @@
 }
 
 .catalog__list-item {
-  border: 1px solid black;
+  border: 1px solid @border-grey;
   box-sizing: border-box;
   min-height: 210px;
 
@@ -24,6 +24,7 @@
 }
 */
 .catalog__image {
+  margin-top: 2px;
   margin-left: 20px;
 }
 
@@ -82,7 +83,6 @@
   background-color: @green;
 
   margin-left: 19px;
-  margin-top: 2px;
 
   &:hover,
   &:focus {
@@ -108,7 +108,7 @@
   }
 
   .catalog__list-item {
-    min-width: 324px;
+    width: 324px;
     min-height: 410px;
     /*background-color: @light-grey;*/
     background-color: red;
@@ -133,6 +133,18 @@
 
     margin-right: 0;
     margin-left: 50px;
+  }
+
+  .catalog__image {
+    &:nth-child(odd) {
+      margin-top: -45px;
+      margin-left: 0;
+    }
+
+    &:nth-child(even) {
+      margin-top: 105px;
+      margin-left: 0;
+    }
   }
 
   .catalog__table-item td {
