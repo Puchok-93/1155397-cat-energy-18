@@ -1,19 +1,16 @@
+
 .store {
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 305px;
+  background-position: 50% 0;
+}
+
+.store__info {
   display: flex;
   flex-direction: column;
   position: relative;
   min-height: 420px;
-
-  &::before {
-    background-image: url("/img/index-background-mobile@1x.jpg");
-    position: absolute;
-    content: "";
-    width: 320px;
-    height: 305px;
-    z-index: -1;
-    margin-top: -10px;
-    margin-left: -20px;
-  }
 }
 
 .store__title {
@@ -26,7 +23,7 @@
   text-align: center;
   color: @white;
 
-  margin-top: 18px;
+  margin-top: 27px;
   margin-bottom: 10px;
 }
 
@@ -41,6 +38,7 @@
   text-align: center;
   color: @white;
 
+  margin-left: 40px;
   margin-bottom: 28px;
 }
 
@@ -59,7 +57,7 @@
   background-color: @green;
 
   padding: 11px 0;
-  margin-top: -1px;
+  margin-top: 0;
 
   cursor: pointer;
 
@@ -75,9 +73,8 @@
 
 @media (min-width: @tablet-width) {
   .store {
-    &::before {
-      background-image: none;
-    }
+    background-image: none;
+    padding-bottom: 510px;
   }
 
   .store__title {
@@ -90,25 +87,26 @@
 
     margin-top: 46px;
     margin-left: 88px;
-    order: -1;
   }
 
   .store__slogan {
     font-size: 20px;
     line-height: 20px;
     color: @black1;
-    text-align: left;
 
     margin: 0;
     margin-top: 31px;
     margin-left: 89px;
-    order: -1;
   }
 
   .store__image-item {
+    position: absolute;
+    content: "";
     width: 709;
     height: 609;
-    margin-top: -80px;
+    top: 341px;
+    left: 282px;
+    z-index: -1;
   }
 
   .store__button {
@@ -118,47 +116,41 @@
     line-height: 20px;
 
     padding: 16px 0;
-    margin-top: 48px;
+    margin-top: 45px;
     margin-left: 89px;
-    order: -1;
-    z-index: 10;
+    z-index: 2;
   }
 }
 
 @media (min-width: @desktop-width) {
   .store {
-    min-height: 610px;
-    margin: 0;
+    margin-top: -125px;
+    background: linear-gradient(to right, red 50%, @grass 50%);
+    background-image: url("/img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
 
-    &::before {
-      background-image: url("/img/index-background-desktop@1x.jpg");
-      position: absolute;
-      content: "";
-      width: 720px;
-      height: 696px;
-      z-index: -1;
-
-      margin-left: 610px;
-      margin-top: -125px;
-    }
-  }
+    padding-bottom: 278px;
+    z-index: 1;
+}
 
   .store__title {
-    margin-top: 98px;
+    margin-top: 223px;
     margin-left: 80px;
   }
 
   .store__slogan {
     margin: 0;
-    margin-top: 32px;
-    margin-left: 80px;
   }
 
   .store__image-item {
     width: 522;
     height: 499;
-    margin-top: -367px;
-    margin-left: 450px;
+    top: 200px;
+    left: 510px;
+
+    z-index: 2;
   }
 
   .store__button {
