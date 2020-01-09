@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 420px;
 }
 
 .store__title {
@@ -24,7 +23,7 @@
   color: @white;
 
   margin-top: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .store__slogan {
@@ -38,8 +37,12 @@
   text-align: center;
   color: @white;
 
-  margin-left: 40px;
+  margin: 0;
   margin-bottom: 28px;
+}
+
+.store__image-item {
+  margin-top: 1px;
 }
 
 .store__button {
@@ -57,7 +60,7 @@
   background-color: @green;
 
   padding: 11px 0;
-  margin-top: 0;
+  margin-top: -1px;
 
   cursor: pointer;
 
@@ -75,6 +78,10 @@
   .store {
     background-image: none;
     padding-bottom: 510px;
+  }
+
+  .store__info {
+    align-items: flex-start;
   }
 
   .store__title {
@@ -95,7 +102,7 @@
     color: @black1;
 
     margin: 0;
-    margin-top: 31px;
+    margin-top: 16px;
     margin-left: 89px;
   }
 
@@ -104,8 +111,8 @@
     content: "";
     width: 709;
     height: 609;
-    top: 341px;
-    left: 282px;
+    top: 246px;
+    left: -1px;
     z-index: -1;
   }
 
@@ -116,7 +123,7 @@
     line-height: 20px;
 
     padding: 16px 0;
-    margin-top: 45px;
+    margin-top: 48px;
     margin-left: 89px;
     z-index: 2;
   }
@@ -125,36 +132,38 @@
 @media (min-width: @desktop-width) {
   .store {
     margin-top: -125px;
-    background: linear-gradient(to right, red 50%, @grass 50%);
+    /*background: linear-gradient(to right, @white 50%, @grass 50%);*/
     background-image: url("/img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
     background-size: contain;
+    background-repeat: no-repeat;
     background-position-x: right;
 
     padding-bottom: 278px;
     z-index: 1;
-}
+  }
 
   .store__title {
+    margin: 0;
     margin-top: 223px;
     margin-left: 80px;
   }
 
   .store__slogan {
-    margin: 0;
+    margin-top: 40px;
+    margin-left: 80px;
   }
 
   .store__image-item {
     width: 522;
     height: 499;
-    top: 200px;
-    left: 510px;
+    top: 143px;
+    left: 450px;
 
     z-index: 2;
   }
 
   .store__button {
-    margin-top: 52px;
+    margin-top: 53px;
     margin-left: 80px;
   }
 }

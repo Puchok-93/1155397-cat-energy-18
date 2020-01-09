@@ -40,10 +40,23 @@
 
 .collaboration__map {
   display: block;
+  position: relative;
   background-color: @grey;
   width: 320px;
   height: 360px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 53px;
+    top: 0;
+    left: 0;
+
+    background-image: url("../img/map-pin.png");
+  }
 }
+
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .collaboration__info {
