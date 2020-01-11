@@ -23,7 +23,7 @@
 
   margin-top: 24px;
   margin-right: 10px;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
 }
 
 .example__result {
@@ -83,6 +83,9 @@
 }
 
 .example__result-total {
+  display: flex;
+  justify-content: center;
+
   font-family: @oswald;
   font-size: 14px;
   font-weight: 400;
@@ -91,8 +94,13 @@
   color: @black1;
   text-transform: uppercase;
 
-  margin-top: 35px;
+  margin-top: 19px;
 }
+
+.example__amount {
+  margin-left: 2px;
+}
+
 /* Слайдер*/
 .example__slider-list {
   list-style: none;
@@ -122,7 +130,7 @@
   display: flex;
   align-items: center;
 
-  margin-top: 31px;
+  margin-top: 32px;
   margin-left: 44px;
   padding-bottom: 35px;
 }
@@ -165,7 +173,7 @@
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .example {
-    margin-top: 91px;
+    margin-top: 42px;
     background: linear-gradient(to right, @light-grey 45%, #eaeaea 50%);
   }
 
@@ -211,14 +219,22 @@
   }
 
   .example__result-total {
-    width: 174px;
-
+    flex-direction: column;
     font-size: 20px;
     text-align: right;
-    line-height: 29px; /* В макете межстрочный интервал 20px, можно ли его увеличить для соответствия, чтобы не разбивать в рахметке элемент на два p */
+    line-height: 20px;
 
-    margin-top: 8px;
+    margin-top: 12px;
     margin-bottom: 300px;
+  }
+
+  .example__cost {
+    margin: 0;
+  }
+
+  .example__amount {
+    margin: 0;
+    margin-top: 10px;
   }
   /*--------------------------------------------------Слайдер--------------------------------------------------*/
   .example__slider {
@@ -237,20 +253,20 @@
 
   .example__cat {
     position: absolute;
-    top: -228px;
-    left: 18px;
+    top: -222px;
+    left: 16px;
   }
 
   .example__cat--fat-cat {
-    clip: rect(auto, 336px, auto, auto);
+    clip: rect(auto, 338px, auto, auto);
   }
 
   .example__cat--slim-cat {
-    clip: rect(auto, auto, auto, 336px);
+    clip: rect(auto, auto, auto, 338px);
   }
   /*--------------------------------------------------Прогрессбар--------------------------------------------------*/
   .example__progressbar {
-    margin-top: 305px;
+    margin-top: 310px;
     margin-left: 64px;
 
     padding-bottom: 67px;
@@ -312,11 +328,11 @@
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .example {
-    background: linear-gradient(to right, @light-grey 67.1%, #eaeaea 29.5%);
+    background: linear-gradient(to right, @light-grey 72.5%, #eaeaea 27%);
   }
 
   .example__title {
-    margin-top: -134px;
+    margin-top: -136px;
   }
 
   .example__subtitle {
@@ -331,12 +347,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    /*padding-bottom: 32px;*/
-  }
-
-  .example__info {
-    outline: 1px solid hotpink;
   }
 
   .example__result {
@@ -344,11 +354,16 @@
   }
 
   .example__result-total {
-    width: 300px;
-
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0;
-    margin-top: 55px;
-    margin-left: -31px;
+    margin-top: 60px;
+  }
+
+  .example__amount {
+    margin: 0;
+    margin-left: 65px;
   }
 
   .example__result-comment {
@@ -359,7 +374,6 @@
     position: relative;
     background: none;
     margin-top: 120px;
-    outline: 1px solid hotpink;
   }
 
   .example__cat {
@@ -377,7 +391,7 @@
   }
 
   .example__progressbar {
-    margin-top: 225px;
+    margin-top: 223px;
     margin-left: 60px;
 
     padding-bottom: 66px;

@@ -2,7 +2,7 @@
 .store {
   background-image: url("/img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 320px 305px;
+  background-size: 320px 306px;
   background-position: 50% 0;
 }
 
@@ -132,14 +132,9 @@
 @media (min-width: @desktop-width) {
   .store {
     margin-top: -125px;
-    /*background: linear-gradient(to right, @white 50%, @grass 50%);*/
-    background-image: url("/img/index-background-mobile@1x.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: right;
+    background: url("../img/index-background-desktop@1x.jpg") no-repeat right, linear-gradient(to right, @white 50%, @grass 50%);
 
-    padding-bottom: 278px;
-    z-index: 1;
+    padding-bottom: 189px;
   }
 
   .store__title {

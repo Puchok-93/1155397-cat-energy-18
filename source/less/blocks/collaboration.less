@@ -25,7 +25,8 @@
 }
 
 .collaboration__address {
-  width: 150px;
+  display: flex;
+  flex-direction: column;
 
   font-family: @arial;
   font-size: 14px;
@@ -36,6 +37,16 @@
 
   margin: 0;
   margin-right: 10px;
+}
+
+.collaboration__street {
+  width: 150px;
+
+  margin: 0;
+}
+
+.collaboration__city {
+  margin: 0;
 }
 
 .collaboration__map {
@@ -79,7 +90,18 @@
     text-align: right;
     font-size: 16px;
 
-    margin-right: 70px;
+    margin-right: 82px;
+  }
+
+  .collaboration__street {
+    width: 170px;
+
+    margin-top: -1px;
+  }
+
+  .collaboration__city {
+    margin-top: 18px;
+    margin-right: -10px;
   }
 
   .collaboration__map {
@@ -98,7 +120,9 @@
     width: 570px;
     position: absolute;
     top: 95px;
-    left: 342px;
+    left: 110px;
+
+    z-index: 10;
   }
 
   .collaboration__title {

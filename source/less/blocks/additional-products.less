@@ -29,14 +29,19 @@
 
 .additional-products__list {
   .list-reset();
-  border-top: 1px solid @grey;
 }
 
 .additional-products__list-item {
-  padding-top: 13px;
-  padding-bottom: 19px;
-  border-bottom: 1px solid @grey;
+  /*padding-top: 13px;
+  padding-bottom: 19px;*/
+
   box-sizing: border-box;
+  border-bottom: 1px solid @grey;
+
+  &:first-child {
+    box-sizing: border-box;
+    border-top: 1px solid @grey;
+  }
 }
 
 .additional-products__title-item {
@@ -48,13 +53,14 @@
   color: @black2;
 
   margin: 0;
+  margin-top: 13px;
   margin-bottom: 11px;
 }
 
 .additional-products__table {
   border-spacing: 0;
   width: 282px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .additional-products__cell {
@@ -86,6 +92,8 @@
   text-transform: uppercase;
   color: @white;
   background-color: @green;
+
+  margin-bottom: 17px;
 }
 
 .additional-products__action {
@@ -116,49 +124,87 @@
   &::before {
     position: absolute;
     content: "";
-    width: 56px;
-    height: 61px;
-    top: -123px;
+    width: 55px;
+    height: 60px;
+    top: -122px;
     left: 58px;
     background-image: url("/img/icon-gift.svg");
   }
 }
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
+  .additional-products {
+    margin-top: -105px;
+  }
+
   .additional-products__title {
     font-size: 36px;
     line-height: 36px;
+
+    margin-left: 37px;
+    margin-bottom: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 28px;
+      height: 3px;
+      top: 24px;
+      left: -67px;
+      background-color: @green;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 326px;
+      height: 3px;
+      top: 24px;
+      right: -29px;
+      background-color: @green;
+    }
+  }
+
+  .additional-products__list {
+    margin-top: 83px;
+  }
+
+  .additional-products__list-item {
+    box-sizing: inherit;
+    border: 1px solid @grey;
+
+    margin-top: -1px;
+    padding-top: 26px;
+    padding-bottom: 27px;
   }
 
   .additional-products__info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    margin-left: 38px;
-    margin-right: 38px;
-  }
-
-  .additional-products__list-item {
-    border: 1px solid @grey;
+    margin-left: 37px;
+    margin-right: 37px;
   }
 
   .additional-products__title-item {
     font-size: 20px;
-  }
-
-  .additional-products__table {
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 11px;
   }
 
   .additional-products__table-item {
     font-size: 16px;
     line-height: 20px;
+    border-spacing: 0;
   }
 
   .additional-products__button {
     width: 633px;
+
+    margin: 0;
+    margin-top: 14px;
   }
 
   .additional-products__action {
@@ -166,15 +212,54 @@
     background-repeat: no-repeat;
     width: 708px;
     height: 200px;
+
+    margin-top: 69px;
+    margin-bottom: 75px;
   }
 
   .additional-products__condition {
     margin-top: 70px;
-    margin-left: 430px;
+    margin-left: 423px;
+
+    text-align: left;
+
+    &::before {
+      width: 55px;
+      height: 60px;
+      top: -5px;
+      left: -332px;
+      background-image: url("/img/icon-gift.svg");
+    }
   }
 }
-
+/*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
+  .additional-products {
+    margin-top: -95px;
+    margin-bottom: 10px;
+  }
+
+  .additional-products__title {
+    margin-left: 0;
+
+    &::before {
+      width: 69px;
+      height: 3px;
+      top: 22px;
+      left: -109px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 956px;
+      height: 3px;
+      top: 22px;
+      right: -109px;
+      background-color: @green;
+    }
+  }
+
   .additional-products__container {
     display: flex;
     flex-wrap: wrap;
@@ -187,6 +272,9 @@
   }
 
   .additional-products__list-item {
+    padding-top: 18px;
+    padding-bottom: 13px;
+
     border: none;
     border-bottom: 1px solid @grey;
 
@@ -197,6 +285,16 @@
 
   .additional-products__button {
     width: 245px;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      background-color: @grass;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .additional-products__action {
@@ -205,12 +303,22 @@
     width: 245px;
     height: 289px;
 
-    margin: 0;
+    margin-top: 80px;
     margin-left: 80px;
   }
 
   .additional-products__condition {
-    margin-top: 175px;
-    margin-left: 50px;
+    text-align: center;
+
+    margin-top: 185px;
+    margin-left: 37px;
+
+    &::before {
+      width: 55px;
+      height: 60px;
+      top: -120px;
+      left: 59px;
+      background-image: url("/img/icon-gift.svg");
+    }
   }
 }
