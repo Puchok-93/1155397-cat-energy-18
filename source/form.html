@@ -13,7 +13,11 @@
     <div class="header-wrapper">
       <div class="header-top">
         <a href="index.html">
-          <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="45" alt="Логотип Cat Energy">
+          </picture>
         </a>
       </div>
       <div class="header-nav">
@@ -64,7 +68,7 @@
 
           <!--Выбор программы-->
           <fieldset class="program-selection__fieldset program-selection__fieldset--program">
-            <ul class="program-selection__list program-selection__list-programm">
+            <ul class="program-selection__list program-selection__list-program">
               <li class="program-selection__radio">
                 <input class="visually-hidden program-selection__radio-input" type="radio" id="slim" name="program"
                   checked>
@@ -92,17 +96,29 @@
             <ul class="program-selection__list program-selection__contacts">
               <li class="program-selection__list-item">
                 <label class="program-selection__field" for="email">E-mail:*</label>
-                <input class="program-selection__input program-selection__input--fourth-input" type="text" id="email"
+                <input class="program-selection__input program-selection__input--email" type="text" id="email"
                   name="user-email" placeholder="kuklachev@gmail.com">
-                <span class="program-selection__email-icon"></span>
+                <span class="program-selection__email-icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                  <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                </svg></span>
 
               </li>
 
               <li class="program-selection__list-item">
                 <label class="program-selection__field" for="phone">Телефон:*</label>
-                <input class="program-selection__input program-selection__input--fifth-input" type="text" id="phone"
+                <input class="program-selection__input program-selection__input--phone" type="text" id="phone"
                   name="user-phone" placeholder="8 (960) 900-60-90">
-
+                  <span class="program-selection__phone-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                    <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                    <path
+                      d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                    c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                    C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                    C7.8,20,8.1,19.7,8.1,19.4z"/>
+                  </svg>
+                </span>
               </li>
             </ul>
           </fieldset>
@@ -147,7 +163,7 @@
         <div class="program-selection__button-container">
           <button class="program-selection__button" type="submit" aria-label="Отправить сообщение">Отправить
             заявку</button>
-          <small class="program-selection__small-text"> *—Обязательные поля</small>
+          <small class="program-selection__small-text"> * — Обязательные поля</small>
         </div>
       </form>
     </div>
