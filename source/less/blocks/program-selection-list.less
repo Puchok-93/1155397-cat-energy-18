@@ -1,5 +1,5 @@
 .program-selection {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
 }
 
@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin-top: 10px;
+  margin-bottom: 28px;
 }
 
 .program-selection__list {
@@ -18,6 +18,10 @@
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.program-selection__fieldset--info {
+  margin-bottom: 24px;
 }
 
 .program-selection__list-item {
@@ -42,8 +46,63 @@
   white-space: nowrap;
 }
 
+/*Заголовки*/
+
+.program-selection__legend {
+  font-family: @oswald;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  color: @black1;
+
+  margin-left: -2px;
+}
+
+.program-selection__legend--contacts {
+  margin-bottom: 35px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 99px;
+    height: 3px;
+    top: 42px;
+    right: -20px;
+    background-color: @green;
+  }
+}
+
+.program-selection__legend--comment {
+  margin-bottom: 34px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 158px;
+    height: 3px;
+    top: -44px;
+    right: -20px;
+    background-color: @green;
+  }
+}
+
+.program-selection__legend--additionally {
+  margin-bottom: 34px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 136px;
+    height: 3px;
+    top: -45px;
+    right: -20px;
+    background-color: @green;
+  }
+}
+
 /*Инпуты*/
 .program-selection__input {
+  height: 40px;
   font-family: @oswald;
   font-size: 16px;
   line-height: 18px;
@@ -53,8 +112,8 @@
 
   margin-left: 13px;
 
-  padding-top: 12px;
-  padding-bottom: 12px;
+  /*padding-top: 12px;
+  padding-bottom: 12px;*/
   padding-left: 15px;
 
   &--name {
@@ -91,21 +150,8 @@
     border: 2px solid @brown;
   }
 }
-
-/*Заголовки форм*/
-.program-selection__legend {
-  font-family: @oswald;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: left;
-  color: @black1;
-
-  margin-bottom: 30px;
-  margin-top: 14px;
-}
 /*Радиокнопки*/
 .program-selection__fieldset--program {
-  margin-top: 24px;
   margin-left: -20px;
   margin-right: -20px;
   padding-left: 20px;
@@ -125,6 +171,7 @@
   padding-top: 25px;
 
   &:last-child {
+    padding-top: 24px;
     padding-bottom: 27px;
   }
 }
@@ -156,7 +203,7 @@
   content: "";
   width: 12px;
   height: 12px;
-  top: 7px;
+  top: 6px;
   left: 8px;
   background-color: @green;
   border-radius: 50%;
@@ -167,28 +214,17 @@
 .program-selection__contacts {
   display: flex;
   flex-direction: column;
-
   position: relative;
 }
 
-.program-selection__legend--contacts {
-  margin-top: 28px;
-  margin-bottom: 35px;
-  margin-left: -2px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 99px;
-    height: 3px;
-    top: 42px;
-    right: -20px;
-    background-color: @green;
-  }
+.program-selection__fieldset--contacts {
+  margin-bottom: 28px;
 }
+
 /*Блок комментариев*/
 .program-selection__fieldset--comment {
   position: relative;
+  margin-bottom: 26px;
 }
 
 .program-selection__email-icon {
@@ -206,25 +242,10 @@
   right: 12px;
 }
 
-.program-selection__legend--comment {
-  margin-top: 28px;
-  margin-bottom: 34px;
-  margin-left: -3px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 158px;
-    height: 3px;
-    top: -44px;
-    right: -20px;
-    background-color: @green;
-  }
-}
-
 .program-selection__letter {
-  width: 262px;
-  min-height: 136px;
+  width: 280px;
+  min-height: 150px;
+  box-sizing: border-box;
   border: 1px solid @border-dark-grey;
 
   font-family: @oswald;
@@ -233,9 +254,9 @@
   text-transform: uppercase;
   color: @brown;
 
+  margin: 0;
   padding-top: 12px;
   padding-left: 15px;
-  margin-bottom: 30px;
 
   &:hover {
     border: 1px solid @border-dark-grey;
@@ -250,23 +271,7 @@
 /* Чекбоксы */
 
 .program-selection__fieldset--additionally {
-  position: relative;
-}
-
-.program-selection__legend--additionally {
-  margin-top: -3px;
-  margin-left: -3px;
-  margin-bottom: 35px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 136px;
-    height: 3px;
-    top: -45px;
-    right: -20px;
-    background-color: @green;
-  }
+  margin-bottom: 21px;
 }
 
 .program-selection__checkbox-list {
@@ -309,6 +314,7 @@
   display: block;
   width: 30px;
   height: 30px;
+  box-sizing: border-box;
   border: 1px solid @border-grey;
 }
 
@@ -341,8 +347,6 @@
   background-color: @green;
   border: none;
 
-  margin-top: 23px;
-
   cursor: pointer;
 
   &:hover,
@@ -367,9 +371,13 @@
 
 /*------------------------------------------Планшетная версия-----------------------------------------------------*/
 @media (min-width: @tablet-width) {
+  .program-selection {
+    margin-bottom: 72px;
+  }
+
   .program-selection__container {
     flex-direction: column;
-    margin-bottom: 46px;
+    margin-bottom: 75px;
   }
 
   .program-selection__cat-info {
@@ -383,21 +391,25 @@
   }
 
   .program-selection__list-item {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
 
+  .program-selection__fieldset--info {
+    margin-bottom: 72px;
+  }
+
   .program-selection__input {
+    height: 52px;
     font-size: 20px;
     line-height: 20px;
 
     margin-left: 13px;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 0;
     padding-left: 18px;
 
     &--name {
@@ -417,15 +429,37 @@
 
     &--email {
       position: relative;
-      width: 199px;
+      width: 531px;
+      margin-left: 20px;
+      padding-left: 19px;
     }
 
     &--phone {
       position: relative;
-      width: 185px;
-      margin-left: 10px;
+      width: 515px;
+      margin-left: 14px;
     }
   }
+
+  .program-selection__contacts {
+    margin-top: 46px;
+    margin-left: 20px;
+    margin-bottom: 18px;
+  }
+
+  .program-selection__email-icon {
+    width: 18px;
+    height: 14px;
+    top: 21px;
+    right: 55px;
+  }
+
+  .program-selection__phone-icon {
+    width: 21px;
+    height: 21px;
+    right: 52px;
+  }
+
 
   .program-selection__legend {
     position: relative;
@@ -443,8 +477,6 @@
 
   /*Радиокнопки*/
   .program-selection__fieldset--program {
-    margin-top: 72px;
-    padding-top: 24px;
     margin-left: 40px;
     margin-right: 38px;
     padding-left: 0;
@@ -457,10 +489,10 @@
 
     margin-left: 28px;
 
-    padding-top: 10px;
-    padding-bottom: 23px;
+    padding-top: 33px;
 
     &:last-child {
+      padding-top: 33px;
       padding-bottom: 34px;
     }
   }
@@ -479,61 +511,82 @@
   .program-selection__radio-input:checked + .program-selection__radio-label::after {
     width: 18px;
     height: 18px;
-    top: 6px;
+    top: 7px;
     left: 11px;
   }
 
-  .program-selection__contacts {
-    margin-top: 45px;
-  }
-
   .program-selection__fieldset--comment {
-    margin-top: 30px;
+    margin-bottom: 62px;
   }
 
   .program-selection__legend--comment {
+    margin-left: 36px;
+
     &::before {
       position: absolute;
       content: "";
-      width: 25px;
+      width: 29px;
       height: 3px;
-      top: 22px;
-      left: -30px;
+      top: 23px;
+      left: -65px;
       background-color: @green;
     }
 
     &::after {
-      width: 500px;
+      position: absolute;
+      content: "";
+      width: 479px;
       height: 3px;
-      top: 20px;
-      left: 240px;
+      top: 23px;
+      left: 223px;
       background-color: @green;
     }
   }
 
   .program-selection__letter {
     width: 631px;
+    min-height: 174px;
 
     font-size: 20px;
     line-height: 30px;
 
-    padding-top: 17px;
+    padding-top: 10px;
+    padding-left: 17px;
+    margin-left: 40px;
+    margin-top: 46px;
   }
 
   /* Чекбоксы*/
   .program-selection__checkbox-list {
     flex-direction: row;
     flex-wrap: wrap;
+
+    margin-top: 28px;
+    margin-left: 39px;
   }
 
   .program-selection__checkbox {
     font-size: 20px;
     line-height: 20px;
 
-    margin-right: 100px;
+    margin-right: 125px;
+    margin-bottom: 40px;
 
     &:last-child {
-      margin-left: 75px;
+      margin-left: 95px;
+    }
+  }
+
+  .program-selection__checkbox-label {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding-left: 60px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+
+    &:last-child {
+      padding-left: 57px;
     }
   }
 
@@ -545,6 +598,8 @@
   .program-selection__button-container {
     flex-direction: row;
     align-items: center;
+
+    margin-left: 41px;
   }
 
   .program-selection__button {
@@ -559,12 +614,12 @@
     font-size: 16px;
     line-height: 16px;
 
-    margin-top: -15px;
-    margin-left: 50px;
+    margin-top: 0;
+    margin-left: 61px;
   }
 
   .program-selection__legend--contacts {
-    margin-left: 37px;
+    margin-left: 17px;
 
     &::before {
       position: absolute;
@@ -577,43 +632,58 @@
     }
 
     &::after {
+      position: absolute;
+      content: "";
       width: 145px;
       height: 3px;
       top: 23px;
-      right: -186px;
+      right: -185px;
+      background-color: @green;
     }
   }
 
   .program-selection__legend--additionally {
+    margin-left: 37px;
+
     &::before {
       position: absolute;
       content: "";
-      width: 25px;
+      width: 30px;
       height: 3px;
       top: 22px;
-      left: -30px;
+      left: -67px;
       background-color: @green;
     }
 
     &::after {
-      width: 500px;
+      position: absolute;
+      content: "";
+      width: 445px;
       height: 3px;
-      top: 20px;
-      left: 240px;
+      top: 22px;
+      left: 255px;
       background-color: @green;
     }
   }
 }
-
 /*------------------------------------------Десктопная версия-----------------------------------------------------*/
 @media (min-width: @desktop-width) {
+  .program-selection {
+    margin-top: 63px;
+  }
+
   .program-selection__container {
     flex-direction: row;
-    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
+  .program-selection__fieldset--info {
+    margin: 0;
   }
 
   .program-selection__cat-info {
     margin-top: 0;
+    margin-left: 0;
   }
 
   .program-selection__list-programm {
@@ -623,34 +693,50 @@
   }
 
   .program-selection__input {
-    &--first-input {
-      width: 506px;
+    &--name {
+      width: 485px;
     }
 
-    &--second-input {
-      width: 483px;
+    &--weight {
+      width: 455px;
     }
 
-    &--third-input {
-      width: 433px;
+    &--age {
+      width: 415px;
     }
 
-    &--fourth-input {
+    &--email {
       width: 470px;
     }
 
-    &--fifth-input {
+    &--phone {
       width: 472px;
     }
   }
 
+  .program-selection__fieldset--program {
+    margin-left: 80px;
+    margin-right: 0;
+    padding-left: 26px;
+    padding-right: 252px;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+
   .program-selection__radio {
-    margin-bottom: 30px;
-    margin-left: 28px;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    padding-top: 34px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  .program-selection__radio-input:checked + .program-selection__radio-label::after {
+    top: 7px;
+    left: 11px;
   }
 
   .program-selection__contacts {
