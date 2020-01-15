@@ -302,6 +302,18 @@
     margin-top: 8px;
     margin-left: 53px;
 
+    &:hover::after,
+    &:focus::after {
+      background-image: url("/img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+      width: 34px;
+      height: 12px;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+
     &--slim::after {
       top: 3px;
       left: 131px;
