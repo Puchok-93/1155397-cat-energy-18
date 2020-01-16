@@ -21,38 +21,23 @@
 .main-navigation--closed .main-navigation__toggle::before {
   position: absolute;
   content: "";
-  width: 24px;
-  height: 2px;
+  background-image: url("../img/icon-mobile-menu.svg");
   top: 1px;
   right: 0;
-  background-color: @black2;
-  box-shadow: 0 8px 0 0 @black2, 0 16px 0 0 @black2;
+  width: 25px;
+  height: 19px;
 }
 
 .main-navigation--opened .main-navigation__toggle {
-  top: -20px;
-  right: 20px;
-
   &::before,
   &::after {
-    content: "";
-
     position: absolute;
-    top: -15px;
-    left: 0;
-
-    width: 25px;
-    height: 2px;
-
-    background-color: @black2;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
+    content: "";
+    background-image: url("../img/icon-close.svg");
+    top: 0;
+    right: 5px;
+    width: 19px;
+    height: 19px;
   }
 
   &:active::before,

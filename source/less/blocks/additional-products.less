@@ -137,12 +137,28 @@
     margin-top: -105px;
   }
 
+  .additional-products__table {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .additional-products__cell {
+    font-size: 16px;
+    line-height: 20px;
+
+    padding: 2px 0;
+
+    &--price {
+      width: 95px;
+    }
+  }
+
   .additional-products__title {
     font-size: 36px;
     line-height: 36px;
 
     margin-left: 37px;
-    margin-bottom: 0;
+    margin-bottom: 81px;
 
     &::before {
       position: absolute;
@@ -165,10 +181,6 @@
     }
   }
 
-  .additional-products__list {
-    margin-top: 83px;
-  }
-
   .additional-products__list-item {
     box-sizing: inherit;
     border: 1px solid @grey;
@@ -182,8 +194,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-
     margin-left: 37px;
     margin-right: 37px;
   }
@@ -191,20 +201,22 @@
   .additional-products__title-item {
     font-size: 20px;
     margin: 0;
-    margin-bottom: 11px;
+    /*margin-bottom: 11px;*/
+    margin-bottom: 29px;
   }
 
   .additional-products__table-item {
     font-size: 16px;
     line-height: 20px;
     border-spacing: 0;
+    margin-top: 2px;
+    text-align: right;
   }
 
   .additional-products__button {
     width: 633px;
 
     margin: 0;
-    margin-top: 14px;
   }
 
   .additional-products__action {
@@ -236,7 +248,7 @@
 @media (min-width: @desktop-width) {
   .additional-products {
     margin-top: -95px;
-    margin-bottom: 10px;
+    margin-bottom: 82px;
   }
 
   .additional-products__title {
@@ -263,7 +275,8 @@
   .additional-products__container {
     display: flex;
     flex-wrap: wrap;
-    outline: 1px solid blueviolet;
+
+    outline: 1px solid red;
   }
 
   .additional-products__info {
@@ -272,14 +285,34 @@
   }
 
   .additional-products__list-item {
-    padding-top: 18px;
-    padding-bottom: 13px;
-
     border: none;
     border-bottom: 1px solid @grey;
+    box-sizing: border-box;
+
+    padding-top: 14px;
+    padding-bottom: 18px;
 
     &:first-child {
       border-top: 1px solid @grey;
+    }
+  }
+
+  .additional-products__title-item {
+    margin: 0;
+  }
+
+  .additional-products__table {
+    width: 283px;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: 40px;
+    outline: 1px solid red;
+  }
+
+  .additional-products__cell {
+    &--quantity {
+      text-align: left;
     }
   }
 
@@ -303,8 +336,11 @@
     width: 245px;
     height: 289px;
 
-    margin-top: 80px;
+    margin: 0;
+    margin-top: -1px;
     margin-left: 80px;
+
+    outline: 1px solid red;
   }
 
   .additional-products__condition {

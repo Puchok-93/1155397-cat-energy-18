@@ -27,6 +27,7 @@
 .collaboration__address {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   font-family: @arial;
   font-size: 14px;
@@ -37,6 +38,19 @@
 
   margin: 0;
   margin-right: 10px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 53px;
+    top: 224px;
+    left: -27px;
+
+    background-image: url("/img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 55px 53px;
+  }
 }
 
 .collaboration__street {
@@ -51,21 +65,12 @@
 
 .collaboration__map {
   display: block;
-  position: relative;
   background-color: @grey;
-  width: 320px;
+  width: 100%;
   height: 360px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 55px;
-    height: 53px;
-    top: 0;
-    left: 0;
-
-    background-image: url("../img/map-pin.png");
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*-----------------------------Планшетная версия--------------------------------------------*/
@@ -91,6 +96,18 @@
     font-size: 16px;
 
     margin-right: 82px;
+
+    &::after {
+
+      width: 113px;
+      height: 106px;
+      top: 282px;
+      left: -199px;
+
+      background-image: url("/img/map-pin.png");
+      background-repeat: no-repeat;
+      background-size: 113px 106px;
+    }
   }
 
   .collaboration__street {
@@ -105,21 +122,19 @@
   }
 
   .collaboration__map {
-    width: 767px;
+    width: 100%;
     height: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
-  .collaboration {
-    position: relative;
-  }
-
   .collaboration__info {
     background-color: @white;
     width: 570px;
     position: absolute;
-    top: 95px;
+    top: 96px;
     left: 110px;
 
     z-index: 10;
@@ -138,9 +153,23 @@
     font-size: 16px;
 
     margin-right: 85px;
+
+    &::after {
+
+      width: 113px;
+      height: 106px;
+      top: -9px;
+      left: 566px;
+
+      background-image: url("/img/map-pin.png");
+      background-repeat: no-repeat;
+      background-size: 113px 106px;
+    }
   }
 
   .collaboration__map {
-    width: 1440px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
