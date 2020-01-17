@@ -173,8 +173,8 @@
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .example {
-    margin-top: 42px;
-    background: linear-gradient(to right, @light-grey 45%, #eaeaea 50%);
+    display: flex;
+    background: linear-gradient(to right, @light-grey 50%, #eaeaea 50%);
   }
 
   .example__title {
@@ -239,7 +239,6 @@
   /*--------------------------------------------------Слайдер--------------------------------------------------*/
   .example__slider {
     position: relative;
-    background: linear-gradient(to right, @light-grey 45%, #eaeaea 50%);
     margin-left: 20px;
   }
 
@@ -294,6 +293,7 @@
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     background-color: @white;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -309,6 +309,7 @@
 
   .example__progressbar-label {
     font-size: 20px;
+    box-sizing: border-box;
     border-bottom: 1px dotted @black1;
 
     padding-bottom: 6px;
@@ -323,12 +324,17 @@
       margin-top: 2px;
       margin-left: 22px;
     }
+
+    &:active {
+      border-color: transparent;
+    }
   }
 }
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .example {
     background: linear-gradient(to right, @light-grey 72.5%, #eaeaea 27%);
+    /*background: linear-gradient calc(red 50% + 150px yellow);*/
   }
 
   .example__title {
@@ -397,7 +403,27 @@
     padding-bottom: 66px;
   }
 
+  .example__progressbar-range:hover,
+  .example__progressbar-range:focus {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .example__progressbar-range:active {
+    border: 2px solid @green;
+  }
+
   .example__progressbar-label {
     font-size: 20px;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @black1;
+    }
+
+    &:active {
+      border-color: transparent;
+    }
   }
 }
