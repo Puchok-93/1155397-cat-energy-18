@@ -21,7 +21,7 @@
         </a>
       </div>
       <div class="header-nav">
-        <nav class="main-navigation main-navigation--closed">
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
               меню</span></button>
               <ul class="site-list">
@@ -52,7 +52,7 @@
               <li class="program-selection__list-item">
                 <label class="program-selection__field" for="name">Имя:*</label>
                 <input class="program-selection__input program-selection__input--name" type="text" id="name"
-                  name="username" placeholder="Барсик">
+                  name="username" placeholder="Барсик" required>
 
               </li>
               <li class="program-selection__list-item">
@@ -246,6 +246,8 @@
   var navMain = document.querySelector('.main-navigation');
   var navToggle = document.querySelector('.main-navigation__toggle');
 
+  navMain.classList.remove('main-navigation--nojs');
+
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-navigation--closed')) {
       navMain.classList.remove('main-navigation--closed');
@@ -255,7 +257,5 @@
       navMain.classList.remove('main-navigation--opened');
     }
   });
-
 </script>
-
 </html>
