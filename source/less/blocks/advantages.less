@@ -9,6 +9,7 @@
   line-height: 60px;
   color: @black1;
   margin: 0;
+  margin-top: 0;
 }
 
 .advantages__list {
@@ -32,12 +33,26 @@
 
   margin-bottom: 26px;
 
+  &--bio {
+    margin-top: 1px;
+    margin-bottom: 26px;
+  }
+
+  &--format {
+    margin-bottom: 26px;
+  }
+
+  &--food {
+    margin-bottom: 26px;
+  }
+
   &::before {
     position: absolute;
     content: "";
 
     width: 60px;
     height: 60px;
+    top: -2px;
     left: -80px;
     background-color: @green;
   }
@@ -66,32 +81,159 @@
     background-position: center;
   }
 }
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
+  .advantages {
+    /*padding-bottom: 30px;*/
+    border-bottom: 1px solid @border-grey;
+    margin-bottom: 620px;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+    margin-top: 45px;
+    margin-bottom: 72px;
+  }
+
   .advantages__list {
     display: flex;
     flex-direction: row;
+    margin-bottom: 77px;
+    margin-left: -50px;
   }
 
   .advantages__list-item {
-    width: 250px;
+    width: 245px;
 
-    padding: 110px 0 0;
-    margin-bottom: 150px;
+    font-size: 16px;
+    line-height: 24px;
+
+    padding: 111px 0 0;
+
     margin-left: 50px;
 
     &::before {
-      width: 100px;
-      height: 100px;
-      top: -0;
+      width: 80px;
+      height: 80px;
+      top: 0;
       left: 0;
     }
+
+    &--bio::after {
+      position: absolute;
+      content: "1";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 118px;
+
+      opacity: 0.1;
+    }
+
+    &--format::after {
+      position: absolute;
+      content: "2";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 112px;
+
+      opacity: 0.1;
+    }
+
+    &--food::after {
+      position: absolute;
+      content: "3";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -39px;
+      left: 114px;
+
+      opacity: 0.1;
+    }
+
+    &--time::after {
+      position: absolute;
+      content: "4";
+      display: block;
+      font-family: @oswald;
+      font-size: 281px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 281px;
+
+      top: -40px;
+      left: 114px;
+
+      opacity: 0.1;
+    }
+  }
+
+  .advantages__list-item--bio {
+    margin-bottom: 135px;
+  }
+
+  .advantages__list-item--format {
+    margin-top: 1px;
+    margin-left: 139px;
+  }
+
+  .advantages__list-item--food {
+    margin-top: -1px;
+    margin-bottom: 26px;
+  }
+
+  .advantages__list-item--time {
+    margin-top: -1px;
+    margin-left: 139px;
   }
 }
-
+/*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
-  .wrapper {
-    width: 1400px;
-    padding: 0 20px;
+  .advantages {
+    padding-bottom: 0;
+    border: none;
+    margin-bottom: 127px;
+  }
+
+  .advantages__title {
+    margin-top: 43px;
+    margin-bottom: 74px;
+  }
+
+  .advantages__list-item--bio {
+    margin-top: -1px;
+  }
+
+  .advantages__list-item--format {
+    margin-top: -1px;
+    margin-left: 80px;
+  }
+
+  .advantages__list-item--food {
+    margin-left: 80px;
+  }
+
+  .advantages__list-item--time {
+    margin-left: 80px;
   }
 }

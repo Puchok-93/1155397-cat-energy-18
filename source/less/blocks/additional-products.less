@@ -3,6 +3,7 @@
 }
 
 .additional-products__title {
+  position: relative;
   font-family: @oswald;
   font-size: 24px;
   font-weight: 400;
@@ -11,7 +12,19 @@
   color: @black1;
 
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 34px;
+  margin-left: -1px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 53px;
+    height: 3px;
+    top: 14px;
+    right: -20px;
+    background-color: @green;
+  }
 }
 
 .additional-products__list {
@@ -19,15 +32,16 @@
 }
 
 .additional-products__list-item {
-  border-top: 1px solid @grey;
+  /*padding-top: 13px;
+  padding-bottom: 19px;*/
 
-  &:last-child {
-    border-bottom: 1px solid @grey;
+  box-sizing: border-box;
+  border-bottom: 1px solid @grey;
+
+  &:first-child {
+    box-sizing: border-box;
+    border-top: 1px solid @grey;
   }
-}
-
-.additional-products__info {
-  margin-top: 14px;
 }
 
 .additional-products__title-item {
@@ -39,20 +53,27 @@
   color: @black2;
 
   margin: 0;
+  margin-top: 13px;
+  margin-bottom: 11px;
 }
 
 .additional-products__table {
-  margin-top: 15px;
+  border-spacing: 0;
+  width: 282px;
+  margin-bottom: 15px;
 }
 
-.additional-products__table-item {
+.additional-products__cell {
   font-family: @arial;
   font-size: 14px;
   line-height: 14px;
-  text-align: left;
   color: @brown;
 
   margin: 0;
+
+  &--price {
+    text-align: right;
+  }
 }
 
 .additional-products__button {
@@ -72,8 +93,7 @@
   color: @white;
   background-color: @green;
 
-  margin-top: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .additional-products__action {
@@ -83,11 +103,13 @@
   height: 289px;
 
   margin-top: 39px;
+  margin-bottom: 35px;
 }
 
 .additional-products__condition {
   display: inline-block;
-  width: 159px;
+  width: 170px;
+  position: relative;
 
   font-family: @arial;
   font-size: 16px;
@@ -96,45 +118,105 @@
   color: @white;
   text-align: center;
 
-  margin-left: 60px;
-  margin-top: 170px;
-}
+  margin-left: 55px;
+  margin-top: 187px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 60px;
+    top: -122px;
+    left: 58px;
+    background-image: url("/img/icon-gift.svg");
+  }
+}
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
+  .additional-products {
+    margin-top: -105px;
+  }
+
+  .additional-products__table {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .additional-products__cell {
+    font-size: 16px;
+    line-height: 20px;
+
+    padding: 2px 0;
+
+    &--price {
+      width: 95px;
+    }
+  }
+
   .additional-products__title {
     font-size: 36px;
     line-height: 36px;
+
+    margin-left: 37px;
+    margin-bottom: 81px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 28px;
+      height: 3px;
+      top: 24px;
+      left: -67px;
+      background-color: @green;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 326px;
+      height: 3px;
+      top: 24px;
+      right: -29px;
+      background-color: @green;
+    }
+  }
+
+  .additional-products__list-item {
+    box-sizing: inherit;
+    border: 1px solid @grey;
+
+    margin-top: -1px;
+    padding-top: 26px;
+    padding-bottom: 27px;
   }
 
   .additional-products__info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-
-    margin-left: 38px;
-    margin-right: 38px;
-  }
-
-  .additional-products__list-item {
-    border: 1px solid @grey;
+    margin-left: 37px;
+    margin-right: 37px;
   }
 
   .additional-products__title-item {
     font-size: 20px;
-  }
-
-  .additional-products__table {
-    margin-top: 0;
+    margin: 0;
+    /*margin-bottom: 11px;*/
+    margin-bottom: 29px;
   }
 
   .additional-products__table-item {
     font-size: 16px;
     line-height: 20px;
+    border-spacing: 0;
+    margin-top: 2px;
+    text-align: right;
   }
 
   .additional-products__button {
     width: 633px;
+
+    margin: 0;
   }
 
   .additional-products__action {
@@ -142,19 +224,57 @@
     background-repeat: no-repeat;
     width: 708px;
     height: 200px;
+
+    margin-top: 69px;
+    margin-bottom: 75px;
   }
 
   .additional-products__condition {
     margin-top: 70px;
-    margin-left: 430px;
+    margin-left: 423px;
+
+    text-align: left;
+
+    &::before {
+      width: 55px;
+      height: 60px;
+      top: -5px;
+      left: -332px;
+      background-image: url("/img/icon-gift.svg");
+    }
   }
 }
-
+/*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
+  .additional-products {
+    margin-top: -95px;
+    margin-bottom: 82px;
+  }
+
+  .additional-products__title {
+    margin-left: 0;
+
+    &::before {
+      width: 69px;
+      height: 3px;
+      top: 22px;
+      left: -109px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 956px;
+      height: 3px;
+      top: 22px;
+      right: -109px;
+      background-color: @green;
+    }
+  }
+
   .additional-products__container {
     display: flex;
     flex-wrap: wrap;
-    outline: 1px solid blueviolet;
   }
 
   .additional-products__info {
@@ -165,14 +285,46 @@
   .additional-products__list-item {
     border: none;
     border-bottom: 1px solid @grey;
+    box-sizing: border-box;
+
+    padding-top: 14px;
+    padding-bottom: 18px;
 
     &:first-child {
       border-top: 1px solid @grey;
     }
   }
 
+  .additional-products__title-item {
+    margin: 0;
+  }
+
+  .additional-products__table {
+    width: 283px;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+
+  .additional-products__cell {
+    &--quantity {
+      text-align: left;
+    }
+  }
+
   .additional-products__button {
     width: 245px;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      background-color: @grass;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .additional-products__action {
@@ -182,11 +334,22 @@
     height: 289px;
 
     margin: 0;
+    margin-top: -1px;
     margin-left: 80px;
   }
 
   .additional-products__condition {
-    margin-top: 175px;
-    margin-left: 50px;
+    text-align: center;
+
+    margin-top: 185px;
+    margin-left: 37px;
+
+    &::before {
+      width: 55px;
+      height: 60px;
+      top: -120px;
+      left: 59px;
+      background-image: url("/img/icon-gift.svg");
+    }
   }
 }

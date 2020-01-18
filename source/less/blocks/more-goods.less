@@ -1,9 +1,12 @@
 .more-goods {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
-  border-bottom: 2px solid @light-grey;
+  border-bottom: 1px solid  @border-grey;
+  box-sizing: border-box;
+
+  margin-top: -1px;
 }
 
 .more-goods__title {
@@ -18,8 +21,8 @@
   text-transform: uppercase;
 
   margin: 0;
-  margin-top: 80px;
-  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-top: 82px;
 
   &::before {
     position: absolute;
@@ -27,8 +30,8 @@
     background-image: url("/img/icon-plus-mobile.svg");
     width: 31px;
     height: 31px;
-    top: -60px;
-    left: 140px;
+    top: -55px;
+    left: 142px;
     opacity: 0.2;
   }
 }
@@ -43,7 +46,8 @@
   color: @brown;
 
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 7px;
+  margin-left: 2px;
 }
 
 .more-goods__button {
@@ -63,6 +67,7 @@
   background-color: @light-grey;
 
   margin-left: 20px;
+  margin-top: 21px;
 
   &:hover,
   &:focus {
@@ -73,10 +78,13 @@
     color: rgba(68, 68, 68, 0.3);
   }
 }
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .more-goods {
     min-height: 410px;
+    align-items: center;
+
+    box-sizing: border-box;
     border: 1px solid @border-grey;
   }
 
@@ -84,16 +92,14 @@
     width: 140px;
 
     font-size: 20px;
-
-    margin-left: 90px;
-    margin-bottom: 28px;
+    margin-top: 165px;
 
     &::before {
       background-image: url("/img/icon-plus.svg");
       width: 61px;
       height: 61px;
-      top: -100px;
-      left: 35px;
+      top: -110px;
+      left: 39px;
       opacity: 0.2;
     }
   }
@@ -103,18 +109,18 @@
 
     font-size: 16px;
 
-    margin-left: 80px;
-    margin-bottom: 155px;
+    margin-top: 28px;
   }
 
   .more-goods__button {
     width: 249px;
     height: 40px;
 
-    margin-left: 35px;
+    margin-top: 87px;
+    margin-left: 0;
   }
 }
-
+/*-----------------------------Десктоп версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .more__goods {
     min-width: 235px;
@@ -124,16 +130,16 @@
   .more-goods__title {
     width: 140px;
 
-    margin-left: 50px;
+    margin-left: 0;
   }
 
   .more-goods__subtitle {
-    margin-left: 40px;
+    margin-left: 0;
   }
 
   .more-goods__button {
     width: 169px;
 
-    margin-left: 40px;
+    margin-left: 0;
   }
 }

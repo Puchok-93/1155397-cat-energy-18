@@ -1,13 +1,15 @@
-
 .header-top {
-  outline: 1px solid red;
+  padding-top: 9px;
+  padding-bottom: 11px;
 }
 
 .header-top__logo {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 17px;
   padding-left: 20px;
+
+  &--program {
+    margin-top: 4px;
+  }
 
   &:hover,
   &:focus {
@@ -23,10 +25,27 @@
   .header-top {
     display: flex;
   }
+
+  .header-top__logo {
+    width: 174px;
+    height: 59px;
+
+    padding-left: 0;
+    padding-top: 15px;
+    margin-left: 0;
+  }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
+  .header-top {
+    z-index: 1;
+  }
+
   .header-top__logo {
-    margin-top: 16px;
+    width: 203px;
+    height: 59px;
+
+    margin-top: 30px;
+    margin-left: 0;
   }
 }

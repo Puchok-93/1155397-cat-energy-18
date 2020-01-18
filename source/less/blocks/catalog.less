@@ -1,5 +1,5 @@
 .catalog {
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 .catalog__list {
@@ -7,13 +7,27 @@
 }
 
 .catalog__list-item {
-  border-top: 1px solid @border-grey;
-  border-bottom: 1px solid @border-grey;
+  width: 320px;
   min-height: 210px;
+
+  border: 1px solid @border-grey;
+  box-sizing: border-box;
+
+  margin-top: -1px;
 }
 
 .catalog__link {
   text-decoration: none;
+}
+
+
+.catalog__info-block {
+  min-width: 50px;
+}
+
+.catalog__image {
+  margin-top: 2px;
+  margin-left: 19px;
 }
 
 .catalog__title-item {
@@ -26,24 +40,30 @@
   text-decoration: none;
   color: @black1;
 
+  margin: 0;
+  margin-top: 24px;
   margin-right: 80px;
+  margin-bottom: 11px;
 }
 
-.catalog__table-item td {
+.catalog__table {
+  width: 140px;
+  border-collapse: collapse;
+  padding: 0;
+}
+
+.catalog__table-cell {
   font-family: @arial;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  text-align: left;
   color: @brown;
 
   margin: 0;
   padding: 0;
-  /*padding-top: 5px;
-  padding-bottom: 5px;*/
+  padding-bottom: 1px;
 
-  &:nth-child(2n) {
-    padding-left: 60px;
+  &--value {
     text-align: right;
   }
 }
@@ -65,9 +85,7 @@
   color: @white;
   background-color: @green;
 
-  margin-top: 5px;
-  margin-left: 20px;
-  margin-bottom: 25px;
+  margin-left: 19px;
 
   &:hover,
   &:focus {
@@ -81,28 +99,28 @@
 
 .catalog__product-info {
   display: flex;
+  margin-bottom: -4px;
 }
-
-.catalog__info-block {
-  min-width: 50px;
-}
-
+/*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .catalog__list {
     display: flex;
     flex-wrap: wrap;
+
+    margin-top: 165px;
   }
 
   .catalog__list-item {
-    min-width: 320px;
+    width: 324px;
     min-height: 410px;
     background-color: @light-grey;
+    border: none;
 
-    margin-bottom: 50px;
-    margin-right: 60px;
+    margin-bottom: 140px;
+    margin-right: 0;
 
-    &:nth-child(2n) {
-      margin-right: 0;
+    &:nth-child(odd) {
+      margin-right: 60px;
     }
 
     &:last-child {
@@ -111,25 +129,37 @@
   }
 
   .catalog__title-item {
-    width: 165px;
+    width: 150px;
 
     font-size: 20px;
     text-align: center;
 
+    margin-top: 34px;
     margin-right: 0;
     margin-left: 50px;
+    margin-bottom: 23px;
   }
 
-  .catalog__table-item td {
+  .catalog__image {
+    margin-top: -46px;
+    margin-left: 0;
+
+    &--big {
+      margin-top: -82px;
+      margin-left: 0;
+    }
+  }
+
+  .catalog__table {
+    width: 250px;
+  }
+
+  .catalog__table-cell {
     font-size: 16px;
     border-bottom: 1px solid @grey;
 
-    padding-top: 5px;
-    padding-bottom: 10px;
-
-    &:nth-child(2n) {
-      padding-left: 140px;
-    }
+    padding-top: 6px;
+    padding-bottom: 8px;
   }
 
   .catalog__product-info {
@@ -140,38 +170,57 @@
   .catalog__button {
     width: 249px;
     height: 40px;
-    margin-top: 35px;
-    margin-left: 35px;
+    margin-top: 36px;
+    margin-bottom: 39px;
+    margin-left: 38px;
   }
 }
-
+/*-----------------------------Десктоп версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .catalog__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .catalog__list-item {
-    min-width: 245px;
-    margin-right: 0;
-  }
-  /*&:nth-child(2n) {
+    width: 245px;
+    margin-right: 80px;
+
+    &:nth-child(1n) {
+      margin-right: 80px;
+    }
+
+    &:nth-child(4n) {
       margin-right: 0;
-    }*/
+    }
+  }
+
+  .catalog__image {
+    margin-top: -44px;
+    margin-left: 0;
+
+    &--big {
+      margin-top: -80px;
+      margin-left: 0;
+    }
+  }
 
   .catalog__title-item {
-    margin-left: 0;
+    margin-left: 10px;
+    margin-bottom: 22px;
   }
 
-  .catalog__table-item td {
-    &:nth-child(2n) {
-      padding-left: 60px;
-    }
+  .catalog__table {
+    width: 170px;
+  }
+
+  .catalog__table-cell {
+    padding-top: 6px;
+    padding-bottom: 8px;
   }
 
   .catalog__button {
     width: 169px;
-    margin-left: 35px;
+    margin-left: 38px;
   }
 }
