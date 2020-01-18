@@ -171,9 +171,23 @@
   }
 }
 
+.program-selection__input--name,
+.program-selection__input--weight,
+.program-selection__input--email,
+.program-selection__input--phone {
+  &:focus:invalid {
+    border: 2px solid @red-error;
+  }
+}
+
 .program-selection__input--email:focus + span,
 .program-selection__input--phone:focus + span {
   fill: @green;
+}
+
+.program-selection__input--email:focus:invalid + span,
+.program-selection__input--phone:focus:invalid + span {
+  fill: @red-error;
 }
 
 /*------------------Блок контакты------------------------*/
