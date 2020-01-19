@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-size: 320px 306px;
   background-position: 50% 0;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("/img/index-background-mobile@2x.jpg");
+  }
 }
 
 .store__info {
@@ -135,6 +139,11 @@
     background: url("../img/index-background-desktop@1x.jpg") no-repeat right, linear-gradient(to right, @white 50%, @grass 50%);
 
     padding-bottom: 188px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px 696px;
+    }
   }
 
   .store__title {
