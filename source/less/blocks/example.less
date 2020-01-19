@@ -120,8 +120,7 @@
   display: none;
 }
 
-.fat-cat:checked ~ .example__slider-list .example__slider-item--fat-cat,
-.slim-cat:checked ~ .example__slider-list .example__slider-item--slim-cat {
+.example__slider-item--fat-cat {
   display: block;
 }
 
@@ -334,6 +333,10 @@
 @media (min-width: @desktop-width) {
   .example {
     background: linear-gradient(to right, @light-grey calc(50% + 325px), #eaeaea calc(50% + 325px));
+  }
+
+  .example__wrapper {
+    margin-top: 0;
   }
 
   .example__title {

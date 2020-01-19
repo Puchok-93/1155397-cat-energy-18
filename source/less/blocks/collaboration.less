@@ -2,11 +2,17 @@
   margin-top: 0;
 }
 
+.collaboration__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .collaboration__info {
   display: flex;
   justify-content: space-between;
 
-  margin: 0;
+  margin: 0 auto;
 }
 
 .collaboration__title {
@@ -27,7 +33,6 @@
 .collaboration__address {
   display: flex;
   flex-direction: column;
-  position: relative;
 
   font-family: @arial;
   font-size: 14px;
@@ -40,19 +45,6 @@
   margin-right: 10px;
   padding-top: 30px;
   padding-bottom: 25px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 55px;
-    height: 53px;
-    top: 254px;
-    left: -27px;
-
-    background-image: url("/img/map-pin.png");
-    background-repeat: no-repeat;
-    background-size: 55px 53px;
-  }
 }
 
 .collaboration__street {
@@ -70,9 +62,23 @@
   background-color: @grey;
   width: 320px;
   height: 360px;
+  position: relative;
 
   margin-left: auto;
   margin-right: auto;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 53px;
+    top: 140px;
+    left: 132px;
+
+    background-image: url("/img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 55px 53px;
+  }
 }
 
 /*-----------------------------Планшетная версия--------------------------------------------*/
@@ -81,6 +87,12 @@
     padding-top: 65px;
     padding-bottom: 61px;
   }*/
+
+  .collaboration__wrapper {
+    width: 767px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
   .collaboration__title {
     width: 170px;
@@ -103,18 +115,6 @@
     margin-right: 82px;
     padding-top: 65px;
     padding-bottom: 61px;
-
-    &::after {
-
-      width: 113px;
-      height: 106px;
-      top: 345px;
-      left: -199px;
-
-      background-image: url("/img/map-pin.png");
-      background-repeat: no-repeat;
-      background-size: 113px 106px;
-    }
   }
 
   .collaboration__street {
@@ -131,8 +131,18 @@
   .collaboration__map {
     width: 767px;
     height: 400px;
-    margin-left: auto;
-    margin-right: auto;
+
+    &::after {
+
+      width: 113px;
+      height: 106px;
+      top: 144px;
+      left: 325px;
+
+      background-image: url("/img/map-pin.png");
+      background-repeat: no-repeat;
+      background-size: 113px 106px;
+    }
   }
 }
 /*-----------------------------Десктопная версия--------------------------------------------*/
@@ -146,6 +156,8 @@
     position: absolute;
     top: 298px;
     left: -325px;
+
+    z-index: 1;
   }
 
   .collaboration__title {
@@ -162,13 +174,18 @@
 
     margin: 0;
     margin-right: 85px;
+  }
+
+  .collaboration__map {
+    position: relative;
+
 
     &::after {
 
       width: 113px;
       height: 106px;
-      top: 57px;
-      left: 567px;
+      top: 152px;
+      left: 666px;
 
       background-image: url("/img/map-pin.png");
       background-repeat: no-repeat;
@@ -176,9 +193,15 @@
     }
   }
 
-  .collaboration__map {
+  .collaboration__map-img {
     width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    left: calc(50% - 720px);
+  }
+
+  .collaboration__wrapper {
+    position: relative;
+    width: 570px;
+    padding: 0;
   }
 }
