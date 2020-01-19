@@ -7,8 +7,6 @@
   justify-content: space-between;
 
   margin: 0;
-  padding-top: 30px;
-  padding-bottom: 25px;
 }
 
 .collaboration__title {
@@ -22,6 +20,8 @@
 
   margin: 0;
   margin-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 25px;
 }
 
 .collaboration__address {
@@ -38,13 +38,15 @@
 
   margin: 0;
   margin-right: 10px;
+  padding-top: 30px;
+  padding-bottom: 25px;
 
   &::after {
     position: absolute;
     content: "";
     width: 55px;
     height: 53px;
-    top: 224px;
+    top: 254px;
     left: -27px;
 
     background-image: url("/img/map-pin.png");
@@ -75,10 +77,10 @@
 
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
-  .collaboration__info {
+  /*.collaboration__info {
     padding-top: 65px;
     padding-bottom: 61px;
-  }
+  }*/
 
   .collaboration__title {
     width: 170px;
@@ -87,6 +89,9 @@
     line-height: 25px;
 
     margin-left: 70px;
+
+    padding-top: 65px;
+    padding-bottom: 61px;
   }
 
   .collaboration__address {
@@ -96,12 +101,14 @@
     font-size: 16px;
 
     margin-right: 82px;
+    padding-top: 65px;
+    padding-bottom: 61px;
 
     &::after {
 
       width: 113px;
       height: 106px;
-      top: 282px;
+      top: 345px;
       left: -199px;
 
       background-image: url("/img/map-pin.png");
@@ -130,36 +137,38 @@
 }
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
+  .collaboration {
+    margin-top: -203px;
+  }
+
   .collaboration__info {
     background-color: @white;
-    width: 570px;
     position: absolute;
-    top: 96px;
-    left: 20px;
-
-    z-index: 10;
+    top: 298px;
+    left: -325px;
   }
 
   .collaboration__title {
     font-size: 20px;
     line-height: 25px;
-
-    margin-top: 1px;
-    margin-left: 76px;
+    margin: 0;
+    margin-top: 2px;
+    margin-left: 75px;
   }
 
   .collaboration__address {
     text-align: left;
     font-size: 16px;
 
+    margin: 0;
     margin-right: 85px;
 
     &::after {
 
       width: 113px;
       height: 106px;
-      top: -9px;
-      left: 568px;
+      top: 57px;
+      left: 567px;
 
       background-image: url("/img/map-pin.png");
       background-repeat: no-repeat;

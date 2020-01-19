@@ -9,40 +9,37 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="header-wrapper">
-      <div class="header-top">
-        <a>
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="45" alt="Логотип Cat Energy">
-          </picture>
-        </a>
-      </div>
-      <div class="header-nav">
-        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
-          <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
-              меню</span></button>
-          <ul class="site-list site-list--index">
-            <li class="site-list__item site-list__item--active-index">
-              <a>Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-        </div>
-      </div>
+  <header>
+    <div class="wrapper-header">
+      <a class="header-logo">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header-logo__cat-energy-logo" src="img/logo-mobile.svg" width="191" height="45"
+            alt="Логотип Cat Energy">
+        </picture>
+      </a>
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
+            меню</span></button>
+        <ul class="site-list site-list--index">
+          <li class="site-list__item site-list__item--active-index">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="store">
-      <div class="wrapper-store">
+      <div class="wrapper">
         <div class="store__info">
           <h1 class="store__title">Функциональное питание для котов</h1>
           <p class="store__slogan">Занялся собой? Займись котом!</p>
@@ -50,9 +47,11 @@
             <!-- <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="/img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
             <source class="store__image-item" type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">-->
-            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 1300px)"
+              srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-            <img class="store__image-item" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Корм Cat Energy Pro со вкусом курицы">
+            <img class="store__image-item" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"
+              alt="Корм Cat Energy Pro со вкусом курицы">
           </picture>
           <a href="form.html" class="store__button" aria-label="Перейти на страницу подбора программыы">Подобрать
             программу</a>
@@ -140,7 +139,8 @@
                 <picture>
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="example__cat example__cat--fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до">
+                  <img class="example__cat example__cat--fat-cat" src="img/before-mobile@1x.png"
+                    srcset="img/before-mobile@2x.png 2x" alt="Борис до">
                 </picture>
               </li>
 
@@ -148,17 +148,18 @@
                 <picture>
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img class="example__cat example__cat--slim-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Борис после">
+                  <img class="example__cat example__cat--slim-cat" src="img/after-mobile@1x.png"
+                    srcset="img/after-mobile@2x.png 2x" alt="Борис после">
                 </picture>
               </li>
             </ul>
 
             <div class="example__progressbar">
-              <label for="product-1" class="example__progressbar-label">Было</label>
+              <span class="example__progressbar-label">Было</span>
               <div class="example__progressbar-toggle">
                 <div class="example__progressbar-range"></div>
               </div>
-              <label for="product-2" class="example__progressbar-label">Стало</label>
+              <span class="example__progressbar-label">Стало</span>
             </div>
           </div>
         </div>
@@ -166,22 +167,19 @@
     </section>
 
     <section class="collaboration">
-      <div class="wrapper-collaboration">
-        <div class="collaboration__info">
+      <div class="wrapper-collaboration collaboration__info">
           <h2 class="collaboration__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
           <div class="collaboration__address">
             <p class="collaboration__street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="collaboration__city"> Санкт-Петербург</p>
           </div>
-        </div>
       </div>
-        <a class="collaboration__map-link" href="#">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img class="collaboration__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Интернет-магазин на карте города">
-          </picture>
-        </a>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="collaboration__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+            alt="Интернет-магазин на карте города">
+        </picture>
     </section>
   </main>
 
@@ -195,26 +193,34 @@
         <li class="social-list__item">
           <a href="#" class="social-list__icon social-list__icon--vkontakte" aria-label="Перейти на страницу Вконтакте">
             <span class="visually-hidden">Вконтакте</span>
-            <svg class="social-list__vkontakte" width="22" height="18"><use xlink:href="img/sprite.svg#icon-vkontakte"></use></svg>
+            <svg class="social-list__vkontakte" width="22" height="18">
+              <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__icon" aria-label="Перейти на страницу Instagram">
             <span class="visually-hidden">Instagram</span>
-            <svg class="social-list__instagram" width="17" height="17"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+            <svg class="social-list__instagram" width="17" height="17">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__icon social-list__icon--facebook" aria-label="Перейти на страницу Facebook">
             <span class="visually-hidden">Facebook</span>
-            <svg class="social-list__facebook" width="10" height="19"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+            <svg class="social-list__facebook" width="10" height="19">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
       </ul>
 
       <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
         title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
-        <svg class="developer__icon" width="40" height="44"><use xlink:href="img/sprite.svg#icon-html-academy"></use></svg>
+        <svg class="developer__icon" width="40" height="44">
+          <use xlink:href="img/sprite.svg#icon-html-academy"></use>
+        </svg>
       </a>
     </div>
   </footer>
@@ -235,6 +241,7 @@
       navMain.classList.remove('main-navigation--opened');
     }
   });
+
 </script>
 
 </html>

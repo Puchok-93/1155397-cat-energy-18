@@ -3,9 +3,13 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  border-bottom: 1px solid  @border-grey;
+  width: 320px;
+  min-height: 210px;
+
+  border: 1px solid @border-grey;
   box-sizing: border-box;
 
+  margin: 0;
   margin-top: -1px;
 }
 
@@ -81,7 +85,8 @@
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .more-goods {
-    min-height: 410px;
+    width: 324px;
+    height: 432px;
     align-items: center;
 
     box-sizing: border-box;
@@ -122,8 +127,8 @@
 }
 /*-----------------------------Десктоп версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
-  .more__goods {
-    min-width: 235px;
+  .more-goods {
+    width: 245px;
     box-sizing: border-box;
   }
 
