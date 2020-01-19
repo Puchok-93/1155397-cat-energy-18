@@ -137,7 +137,7 @@
 
               <li class="example__slider-item example__slider-item--fat-cat">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                   <img class="example__cat example__cat--fat-cat" src="img/before-mobile@1x.png"
                     srcset="img/before-mobile@2x.png 2x" alt="Борис до">
@@ -224,24 +224,8 @@
       </a>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
-
-<script>
-  var navMain = document.querySelector('.main-navigation');
-  var navToggle = document.querySelector('.main-navigation__toggle');
-
-  navMain.classList.remove('main-navigation--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-navigation--closed')) {
-      navMain.classList.remove('main-navigation--closed');
-      navMain.classList.add('main-navigation--opened');
-    } else {
-      navMain.classList.add('main-navigation--closed');
-      navMain.classList.remove('main-navigation--opened');
-    }
-  });
-
-</script>
-
 </html>
