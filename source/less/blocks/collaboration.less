@@ -1,3 +1,4 @@
+
 .collaboration {
   margin-top: 0;
 }
@@ -81,6 +82,11 @@
   }
 }
 
+.collaboration__map-img {
+  width: 320px;
+  height: 360px;
+}
+
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   /*.collaboration__info {
@@ -144,11 +150,17 @@
       background-size: 113px 106px;
     }
   }
+
+  .collaboration__map-img {
+    width: 767px;
+    height: 400px;
+  }
 }
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .collaboration {
     margin-top: -203px;
+    overflow-x: hidden;
   }
 
   .collaboration__info {
