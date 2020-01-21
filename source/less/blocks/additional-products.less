@@ -16,15 +16,14 @@
   margin-bottom: 34px;
   margin-left: -1px;
 
-  &::before {
-    display: block;
+  &::after {
     position: absolute;
     content: "";
-    width: 300px;
+    width: 54px;
     height: 3px;
     top: 14px;
-    z-index: -1;
-    background-color: @green;
+    right: -54px;
+    background-color: #68b738;
   }
 }
 
@@ -168,11 +167,21 @@
     &::before {
       position: absolute;
       content: "";
-      width: 768px;
+      width: 28px;
       height: 3px;
       top: 22px;
-      left: -30px;
-      background-color: @green;
+      left: -29px;
+      background-color: #68b738;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 327px;
+      height: 3px;
+      top: 22px;
+      right: -328px;
+      background-color: #68b738;
     }
   }
 
@@ -256,10 +265,23 @@
     padding-left: 39px;
 
     &::before {
-      width: 2500px;
+      position: absolute;
+      content: "";
+      width: 70px;
       height: 3px;
-      top: 21px;
-      left: -620px;
+      top: 22px;
+      left: -70px;
+      background-color: #68b738;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 957px;
+      height: 3px;
+      top: 22px;
+      right: -957px;
+      background-color: #68b738;
     }
   }
 
