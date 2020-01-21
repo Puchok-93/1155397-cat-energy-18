@@ -135,15 +135,37 @@
 
 @media (min-width: @desktop-width) {
   .store {
+    position: relative;
+    padding: 0;
     margin-top: -125px;
-    background: url("../img/index-background-desktop@1x.jpg") no-repeat right, linear-gradient(to right, @white 50%, @grass 50%);
+    background: linear-gradient(to right, @white 50%, @grass 50%);
 
-    padding-bottom: 188px;
+    &::after {
+      position: absolute;
+      content: "";
 
-    @media (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
-      background-size: 720px 696px;
+      top: 0;
+      left: 50%;
+      min-width: 721px;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position-x: right;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px 696px;
+        background-repeat: no-repeat;
+      }
     }
+  }
+
+  .store__info {
+    min-height: 696px;
+    width: 50%;
+    background-color: @white;
   }
 
   .store__title {
@@ -153,6 +175,7 @@
   }
 
   .store__slogan {
+    margin: 0;
     margin-top: 40px;
     margin-left: 80px;
   }

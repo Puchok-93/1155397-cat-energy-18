@@ -1,5 +1,5 @@
 .additional-products {
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 .additional-products__title {
@@ -10,19 +10,20 @@
   line-height: 24px;
   text-align: left;
   color: @black1;
-
+  background-color: @white;
+  width: 247px;
   margin: 0;
-  margin-top: 30px;
   margin-bottom: 34px;
   margin-left: -1px;
 
-  &::after {
+  &::before {
+    display: block;
     position: absolute;
     content: "";
-    width: 53px;
+    width: 300px;
     height: 3px;
     top: 14px;
-    right: -20px;
+    z-index: -1;
     background-color: @green;
   }
 }
@@ -32,9 +33,6 @@
 }
 
 .additional-products__list-item {
-  /*padding-top: 13px;
-  padding-bottom: 19px;*/
-
   box-sizing: border-box;
   border-bottom: 1px solid @grey;
 
@@ -138,7 +136,8 @@
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
   .additional-products {
-    margin-top: -105px;
+    margin-top: -76px;
+    overflow-x: hidden;
   }
 
   .additional-products__table {
@@ -161,26 +160,18 @@
     font-size: 36px;
     line-height: 36px;
 
-    margin-left: 37px;
     margin-bottom: 81px;
+    padding-right: 34px;
+    padding-left: 37px;
+    width: 340px;
 
     &::before {
       position: absolute;
       content: "";
-      width: 28px;
+      width: 768px;
       height: 3px;
-      top: 24px;
-      left: -67px;
-      background-color: @green;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 326px;
-      height: 3px;
-      top: 24px;
-      right: -29px;
+      top: 22px;
+      left: -30px;
       background-color: @green;
     }
   }
@@ -205,7 +196,6 @@
   .additional-products__title-item {
     font-size: 20px;
     margin: 0;
-    /*margin-bottom: 11px;*/
     margin-bottom: 29px;
   }
 
@@ -256,28 +246,20 @@
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .additional-products {
-    margin-top: -95px;
+    margin-top: -105px;
     margin-bottom: 84px;
   }
 
   .additional-products__title {
-    margin-left: 0;
+    /*margin-left: 0;*/
+    margin-left: -40px;
+    padding-left: 39px;
 
     &::before {
-      width: 500px;
+      width: 2500px;
       height: 3px;
       top: 21px;
-      left: -540px;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 1206px;
-      height: 3px;
-      top: 21px;
-      right: -359px;
-      background-color: @green;
+      left: -620px;
     }
   }
 
@@ -343,7 +325,7 @@
     height: 289px;
 
     margin: 0;
-    margin-top: -2px;
+    margin-top: -1px;
     margin-left: 80px;
 
     @media (min-resolution: @retina-dppx) {

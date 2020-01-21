@@ -6,21 +6,22 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="header-wrapper">
-      <div class="header-top">
-        <a href="index.html">
+  <header>
+    <div class="wrapper wrapper--header">
+        <a href="index.html" class="header-logo">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="45" alt="Логотип Cat Energy">
+            <img class="header-logo__cat-energy-logo" src="img/logo-mobile.svg" width="191" height="45" alt="Логотип Cat Energy">
           </picture>
         </a>
-      </div>
-      <div class="header-nav">
         <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
               меню</span></button>
@@ -36,8 +37,7 @@
                 </li>
               </ul>
         </nav>
-        </div>
-    </div>
+      </div>
   </header>
 
 
@@ -102,6 +102,7 @@
                   name="user-email" placeholder="kuklachev@gmail.com" required>
                 <span class="program-selection__email-icon">
                   <svg width="18" height="14"><use xlink:href="img/sprite.svg#icon-email"></use></svg>
+                </span>
               </li>
 
               <li class="program-selection__list-item">
@@ -161,28 +162,30 @@
     </div>
 
     <section class="collaboration">
-      <div class="wrapper-collaboration">
-        <div class="collaboration__info">
+      <div class="collaboration__wrapper collaboration__info">
           <h2 class="collaboration__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
           <div class="collaboration__address">
             <p class="collaboration__street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="collaboration__city"> Санкт-Петербург</p>
           </div>
-        </div>
       </div>
-        <a class="collaboration__map-link" href="#">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img class="collaboration__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Интернет-магазин на карте города">
-          </picture>
-        </a>
+        <picture class="collaboration__map">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x">
+          <source class="store__image-item" type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="collaboration__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+            alt="Интернет-магазин на карте города">
+        </picture>
+        <iframe class="collaboration__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d16cfb634a0a0ac076df8dccdc6522f14393cfaef797ef448062c7ff8bf916f&amp;source=constructor" width="100%" height="363" frameborder="0"></iframe>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper wrapper-footer">
+    <div class="wrapper wrapper--page-footer">
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
@@ -214,21 +217,6 @@
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
-<script>
-  var navMain = document.querySelector('.main-navigation');
-  var navToggle = document.querySelector('.main-navigation__toggle');
-
-  navMain.classList.remove('main-navigation--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-navigation--closed')) {
-      navMain.classList.remove('main-navigation--closed');
-      navMain.classList.add('main-navigation--opened');
-    } else {
-      navMain.classList.add('main-navigation--closed');
-      navMain.classList.remove('main-navigation--opened');
-    }
-  });
-</script>
 </html>

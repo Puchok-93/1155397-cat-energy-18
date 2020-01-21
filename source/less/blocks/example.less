@@ -120,8 +120,7 @@
   display: none;
 }
 
-.fat-cat:checked ~ .example__slider-list .example__slider-item--fat-cat,
-.slim-cat:checked ~ .example__slider-list .example__slider-item--slim-cat {
+.example__slider-item--fat-cat {
   display: block;
 }
 
@@ -336,6 +335,10 @@
     background: linear-gradient(to right, @light-grey calc(50% + 325px), #eaeaea calc(50% + 325px));
   }
 
+  .example__wrapper {
+    margin-top: 0;
+  }
+
   .example__title {
     margin-top: -136px;
   }
@@ -408,7 +411,7 @@
   }
 
   .example__progressbar-range:active {
-    border: 2px solid @green;
+    box-shadow: 0 0 0 2px @green inset;
   }
 
   .example__progressbar-label {

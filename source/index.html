@@ -6,53 +6,56 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Интернет-магазин фитнес еды для котиков</title>
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="header-wrapper">
-      <div class="header-top">
-        <a>
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="header-top__logo" src="img/logo-mobile.svg" width="191" height="45" alt="Логотип Cat Energy">
-          </picture>
-        </a>
-      </div>
-      <div class="header-nav">
-        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
-          <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
-              меню</span></button>
-          <ul class="site-list site-list--index">
-            <li class="site-list__item site-list__item--active-index">
-              <a>Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-        </div>
-      </div>
+  <header>
+    <div class="wrapper wrapper--header">
+      <a class="header-logo">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header-logo__cat-energy-logo" src="img/logo-mobile.svg" width="191" height="45"
+            alt="Логотип Cat Energy">
+        </picture>
+      </a>
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <button type="button" class="main-navigation__toggle"><span class="visually-hidden">Открыть
+            меню</span></button>
+        <ul class="site-list site-list--index">
+          <li class="site-list__item site-list__item--active-index">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="store">
-      <div class="wrapper-store">
+      <div class="wrapper">
         <div class="store__info">
           <h1 class="store__title">Функциональное питание для котов</h1>
           <p class="store__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <!-- <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="/img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
-            <source class="store__image-item" type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">-->
-            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
+            <source class="store__image-item" type="image/webp" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
+            <source media="(min-width: 1300px)"
+              srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-            <img class="store__image-item" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Корм Cat Energy Pro со вкусом курицы">
+            <img class="store__image-item" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"
+              alt="Корм Cat Energy Pro со вкусом курицы">
           </picture>
           <a href="form.html" class="store__button" aria-label="Перейти на страницу подбора программыы">Подобрать
             программу</a>
@@ -99,14 +102,13 @@
           <li class="advantages__list-item advantages__list-item--food">Замените один-два приема обычной еды на наше
             функциональное питание.</li>
           <li class="advantages__list-item advantages__list-item--time">Уже через месяц наслаждайтесь изменениями к
-            лучшему
-            вашего питомца!</li>
+            лучшему вашего питомца!</li>
         </ul>
       </div>
     </section>
 
     <section class="example">
-      <div class="wrapper wrapper-example">
+      <div class="wrapper wrapper--example">
         <div class="example__content">
           <div class="example__info">
             <h2 class="example__title">Живой пример</h2>
@@ -132,33 +134,41 @@
             </div>
           </div>
           <div class="example__slider">
-            <input class="visually-hidden fat-cat" type="radio" name="toggle" checked>
-            <input class="visually-hidden slim-cat" type="radio" name="toggle">
             <ul class="example__slider-list">
 
               <li class="example__slider-item example__slider-item--fat-cat">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png img/before-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
+                  <source class="store__image-item" type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="example__cat example__cat--fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до">
+                  <img class="example__cat example__cat--fat-cat" src="img/before-mobile@1x.png"
+                    srcset="img/before-mobile@2x.png 2x" alt="Борис до">
                 </picture>
               </li>
 
               <li class="example__slider-item example__slider-item--slim-cat">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x">
+                  <source class="store__image-item" type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img class="example__cat example__cat--slim-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Борис после">
+                  <img class="example__cat example__cat--slim-cat" src="img/after-mobile@1x.png"
+                    srcset="img/after-mobile@2x.png 2x" alt="Борис после">
                 </picture>
               </li>
             </ul>
 
             <div class="example__progressbar">
-              <label for="product-1" class="example__progressbar-label">Было</label>
+              <span class="example__progressbar-label">Было</span>
               <div class="example__progressbar-toggle">
                 <div class="example__progressbar-range"></div>
               </div>
-              <label for="product-2" class="example__progressbar-label">Стало</label>
+              <span class="example__progressbar-label">Стало</span>
             </div>
           </div>
         </div>
@@ -166,27 +176,29 @@
     </section>
 
     <section class="collaboration">
-      <div class="wrapper-collaboration">
-        <div class="collaboration__info">
+      <div class="collaboration__wrapper collaboration__info">
           <h2 class="collaboration__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
           <div class="collaboration__address">
             <p class="collaboration__street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="collaboration__city"> Санкт-Петербург</p>
           </div>
-        </div>
       </div>
-        <a class="collaboration__map-link" href="#">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img class="collaboration__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Интернет-магазин на карте города">
-          </picture>
-        </a>
+        <picture class="collaboration__map">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x">
+          <source class="store__image-item" type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="collaboration__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+            alt="Интернет-магазин на карте города">
+        </picture>
+        <iframe class="collaboration__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d16cfb634a0a0ac076df8dccdc6522f14393cfaef797ef448062c7ff8bf916f&amp;source=constructor" width="100%" height="363" frameborder="0"></iframe>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper wrapper-footer">
+    <div class="wrapper wrapper--page-footer">
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
@@ -195,46 +207,39 @@
         <li class="social-list__item">
           <a href="#" class="social-list__icon social-list__icon--vkontakte" aria-label="Перейти на страницу Вконтакте">
             <span class="visually-hidden">Вконтакте</span>
-            <svg class="social-list__vkontakte" width="22" height="18"><use xlink:href="img/sprite.svg#icon-vkontakte"></use></svg>
+            <svg class="social-list__vkontakte" width="22" height="18">
+              <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__icon" aria-label="Перейти на страницу Instagram">
             <span class="visually-hidden">Instagram</span>
-            <svg class="social-list__instagram" width="17" height="17"><use xlink:href="img/sprite.svg#icon-instagram"></use></svg>
+            <svg class="social-list__instagram" width="17" height="17">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a href="#" class="social-list__icon social-list__icon--facebook" aria-label="Перейти на страницу Facebook">
             <span class="visually-hidden">Facebook</span>
-            <svg class="social-list__facebook" width="10" height="19"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+            <svg class="social-list__facebook" width="10" height="19">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
       </ul>
 
       <a class="developer" href="https://htmlacademy.ru/intensive/adaptive"
         title="Профессиональный онлайн‑курс HTML и CSS, уровень 2">HTML Academy
-        <svg class="developer__icon" width="40" height="44"><use xlink:href="img/sprite.svg#icon-html-academy"></use></svg>
+        <svg class="developer__icon" width="40" height="44">
+          <use xlink:href="img/sprite.svg#icon-html-academy"></use>
+        </svg>
       </a>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
-
-<script>
-  var navMain = document.querySelector('.main-navigation');
-  var navToggle = document.querySelector('.main-navigation__toggle');
-
-  navMain.classList.remove('main-navigation--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-navigation--closed')) {
-      navMain.classList.remove('main-navigation--closed');
-      navMain.classList.add('main-navigation--opened');
-    } else {
-      navMain.classList.add('main-navigation--closed');
-      navMain.classList.remove('main-navigation--opened');
-    }
-  });
-</script>
-
 </html>
