@@ -7,7 +7,6 @@
   width: 320px;
   margin: 0 auto;
   padding: 0;
-  z-index: 20;
 }
 
 .collaboration__info {
@@ -15,7 +14,6 @@
   justify-content: space-between;
 
   margin: 0 auto;
-  z-index: 1;
 }
 
 .collaboration__title {
@@ -43,7 +41,6 @@
   line-height: 20px;
   text-align: left;
   color: @brown;
-  z-index: 1;
 
   margin: 0;
   margin-right: 10px;
@@ -98,6 +95,11 @@
 
 /*-----------------------------Планшетная версия--------------------------------------------*/
 @media (min-width: @tablet-width) {
+  /*.collaboration__info {
+    padding-top: 65px;
+    padding-bottom: 61px;
+  }*/
+
   .collaboration__wrapper {
     width: 767px;
     margin: 0 auto;
@@ -168,14 +170,15 @@
 /*-----------------------------Десктопная версия--------------------------------------------*/
 @media (min-width: @desktop-width) {
   .collaboration {
-    margin-top: -203px;
+    margin: 0;
+    height: 400px;
     overflow-x: hidden;
   }
 
   .collaboration__info {
     background-color: @white;
     position: absolute;
-    top: 298px;
+    top: 95px;
     left: -325px;
 
     z-index: 1;
@@ -199,10 +202,11 @@
 
   .collaboration__map {
     position: relative;
-
+    margin-top: -203px;
 
     &::after {
-
+      position: absolute;
+      content: "";
       width: 113px;
       height: 106px;
       top: 152px;
@@ -224,5 +228,10 @@
     position: relative;
     width: 570px;
     padding: 0;
+  }
+
+  .collaboration__map-iframe {
+    top: 0;
+    height: 400px;
   }
 }
