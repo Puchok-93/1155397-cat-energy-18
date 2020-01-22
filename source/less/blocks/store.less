@@ -139,6 +139,7 @@
     padding: 0;
     margin-top: -125px;
     background: linear-gradient(to right, @white 50%, @grass 50%);
+    overflow: hidden;
 
     &::after {
       position: absolute;
@@ -153,6 +154,7 @@
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position-x: right;
+      background-size: contain;
 
       @media (min-resolution: @retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
