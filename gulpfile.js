@@ -15,6 +15,15 @@ var svgstore = require("gulp-svgstore");
 var del = require("del");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlminify = require("gulp-html-minify");
+var uglify = require('gulp-uglify-es').default;
+
+gulp.task("uglify", function () {
+  return gulp.src("build/js/*.js", {
+  })
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
+});
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -33,19 +42,20 @@ gulp.task("css", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon-*.svg")
-  .pipe(svgstore({
+    .pipe(svgstore({
       inlineSvg: true
-  }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
+    .pipe(posthtml([
       include()
-  ]))
-  .pipe(gulp.dest("build"));
+    ]))
+    .pipe(htmlminify())
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("images", function () {
@@ -86,6 +96,7 @@ gulp.task("copy", function () {
   "images",
   "webp",
   "css",
+  "uglify",
   "sprite",
   "html"
  ));
