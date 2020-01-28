@@ -730,7 +730,7 @@
 @media (min-width: @desktop-width) {
   .program-selection {
     margin-top: 63px;
-    margin-bottom: 81px;
+    margin-bottom: 77px;
   }
 
   .program-selection__container {
@@ -885,6 +885,7 @@
 
     margin: 0;
     margin-top: 20px;
+    margin-bottom: 18px;
   }
 
   .program-selection__contacts li {
@@ -938,29 +939,38 @@
     left: 13px;
   }
 
+  .program-selection__radio-input:focus + .program-selection__radio-label::before {
+    border: 1px solid @pinkish-grey;
+    box-shadow: 0 0 4px 0 @pinkish-grey;
+  }
+
   /*------------------Чекбоксы------------------*/
   .program-selection__checkbox-list {
+    width: 1220px;
     margin-left: 0;
     margin-top: 29px;
+    margin-bottom: 20px;
+    justify-content: start;
   }
+
 
   .program-selection__checkbox {
-    margin-right: 108px;
+    min-width: 245px;
+    margin: 0;
+    margin-right: 80px;
+    margin-bottom: 20px;
 
-    &:nth-child(2) {
-      margin-right: 140px;
+    &:nth-child(4n+4) {
+      margin-right: 0;
     }
 
     &:last-child {
-      margin-left: 90px;
-      margin-right: 0;
+      margin: 0;
     }
   }
 
-  .program-selection__checkbox-label {
-    &:last-child {
-      padding-left: 58px;
-    }
+  .program-selection__checkbox-input:focus + .program-selection__checkbox-label::before {
+    border: 1px solid @pinkish-grey;
   }
 
   /*------------------Кнопка контейнера------------------*/
